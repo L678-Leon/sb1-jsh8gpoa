@@ -327,24 +327,12 @@ const AboutPage = () => {
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-12">
+          <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="flex items-center justify-center">
               <img
                 src="Screenshot_13-8-2025_2057_.jpeg"
                 alt="Our Partners"
-                className="max-w-1000 h-84 object-contain rounded-lg"
-                onError={(e) => {
-                  const fallback = document.createElement('div');
-                  fallback.className = 'bg-gray-100 h-64 w-full rounded-lg flex items-center justify-center';
-                  fallback.innerHTML = `
-                    <div class="text-center">
-                      <div class="text-gray-400 mb-4">👥</div>
-                      <p class="text-gray-600 font-medium text-lg">Our Strategic Partners</p>
-                      <p class="text-gray-500">Leading technology and equipment manufacturers worldwide</p>
-                    </div>
-                  `;
-                  e.currentTarget.parentNode?.replaceChild(fallback, e.currentTarget);
-                }}
+                className="max-w-90 w-90 h-auto object-contain rounded-lg"
               />
             </div>
           </div>

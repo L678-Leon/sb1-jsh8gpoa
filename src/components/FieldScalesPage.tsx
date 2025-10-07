@@ -49,7 +49,7 @@ const FieldScalesPage: React.FC<FieldScalesPageProps> = ({ onBack }) => {
             {/* Left Column - Image */}
             <div>
               <img
-                src="/images/Screenshot_26-8-2025_21440_.jpeg"
+                src={id === 'xk315' ? '/images/XK315.jpg' : '/images/Screenshot_26-8-2025_21440_.jpeg'}
                 alt={title}
                 className="w-full h-full object-cover rounded-lg shadow-md mb-4"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
@@ -210,7 +210,7 @@ const FieldScalesPage: React.FC<FieldScalesPageProps> = ({ onBack }) => {
           id="xk315"
           title="B) XK315"
           overview="Advanced field scale ideal for collection in all sectors with comprehensive functionality including manual/automatic accumulation, programmable features, and Bluetooth connectivity."
-          image="/images/Screenshot_26-8-2025_21456_.jpeg"
+          image="/images/XK315.jpg"
           bgColor="bg-gray-800"
           features={[
             "Ideal for field collection in all sectors",

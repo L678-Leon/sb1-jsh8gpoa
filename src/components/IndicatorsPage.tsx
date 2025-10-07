@@ -50,22 +50,19 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           <div className="grid lg:grid-cols-2 gap-8 mb-6">
             {/* Left Column - Image */}
             <div>
-              {id === "dd700" ? (
-                <div className="bg-gray-100 h-full rounded-lg shadow-md mb-4 flex items-center justify-center border-2 border-dashed border-gray-300">
-                  <div className="text-center">
-                    <div className="text-gray-500 mb-2">📱</div>
-                    <p className="text-gray-600 font-medium">DD700/DD700ic</p>
-                    <p className="text-gray-500 text-sm">Click "Learn More" to view image</p>
-                  </div>
-                </div>
-              ) : (
-                <img
-                  src="/images/Screenshot_26-8-2025_1147_.jpeg"
-                  alt={title}
-                  className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                />
-              )}
+              <img
+                src={id === 'dd1010' ? '/images/Screenshot_26-8-2025_1025_.jpeg' :
+                     id === 'dd1050' ? '/images/Screenshot_26-8-2025_1051_.jpeg' :
+                     id === 'd39' ? '/images/Screenshot_26-8-2025_1124_.jpeg' :
+                     id === 'dd700' ? '/images/Screenshot_26-8-2025_1147_.jpeg' :
+                     id === 'bws-r-t' ? '/images/Screenshot_26-8-2025_21235_.jpeg' :
+                     id === 'xk315-indicator' ? '/images/Screenshot_26-8-2025_21259_.jpeg' :
+                     id === 'hw-indicator' ? '/images/Screenshot_26-8-2025_21310_.jpeg' :
+                     '/images/Screenshot_26-8-2025_1025_.jpeg'}
+                alt={title}
+                className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
+                onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
+              />
             </div>
             
             {/* Right Column - Key Features and overview */}
@@ -220,59 +217,6 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                   <h4 className="font-bold text-red-600">B) PLATFORM INDICATORS</h4>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Indicators Images Section */}
-        <div className="mb-12">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-2xl font-bold text-black mb-6 text-center">Indicators Categories</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_1025_.jpeg"
-                  alt="DD1010/DD1010iFLYNET"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">DD1010/DD1010iFLYNET</h4>
-                <p className="text-xs text-gray-600">Advanced Touch Screen</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_1051_.jpeg"
-                  alt="DD1050"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">DD1050</h4>
-                <p className="text-xs text-gray-600">Industrial Grade</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_1124_.jpeg"
-                  alt="D39"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">D39</h4>
-                <p className="text-xs text-gray-600">Color Touch Display</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_1147_.jpeg"
-                  alt="DD700/DD700ic"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">DD700/DD700ic</h4>
-                <p className="text-xs text-gray-600">Desktop/Wall Mount</p>
               </div>
             </div>
           </div>

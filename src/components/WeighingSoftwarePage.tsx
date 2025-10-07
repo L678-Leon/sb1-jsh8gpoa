@@ -48,19 +48,22 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
         <div className="p-8">
           {/* Two Column Layout */}
           <div className="grid lg:grid-cols-2 gap-8 mb-6">
-            {/* Left Column - Image and Overview */}
+            {/* Left Column - Image */}
             <div>
               <img
-                src="/images/Screenshot_26-8-2025_21816_.jpeg"
+                src={id === 'pimapp-software' ? '/images/Screenshot_26-8-2025_21816_.jpeg' :
+                     id === 'smartweigh-factory' ? '/images/Screenshot_26-8-2025_21832_.jpeg' :
+                     id === 'smartweigh-weighbridge' ? '/images/Screenshot_26-8-2025_21844_.jpeg' :
+                     '/images/Screenshot_26-8-2025_21816_.jpeg'}
                 alt={title}
-                className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
-              <p className="text-gray-700 leading-relaxed">{overview}</p>
             </div>
             
-            {/* Right Column - Key Features */}
+            {/* Right Column - Key Features and overview */}
             <div>
+              <p className="text-gray-700 leading-relaxed">{overview}</p>
               <h4 className="text-xl font-bold text-black mb-4 flex items-center">
                 <Info className="h-5 w-5 mr-2 text-red-600" />
                 Key Features
@@ -225,7 +228,7 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
           id="smartweigh-weighbridge"
           title="B) SMARTWEIGH (Weighbridge)"
           overview="Scales & Software (K) Ltd provides an automated solution that enables automatic weighbridge weighing, issue receipts and upload the weighments to a back-end software or ERP. This software is called SMARTWEIGH."
-          image="/images/Screenshot_26-8-2025_21844_.jpeg"
+          image="Screenshot_26-8-2025_21844_.jpeg"
           bgColor="bg-gray-800"
           features={[
             "Automated weighbridge weighing solution",
@@ -259,7 +262,7 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
           id="smartweigh-factory"
           title="C) SMARTWEIGH (Factory Collection)"
           overview="Automated factory reception weighing solution for products like milk. Issues receipts and uploads to ERP with seamless integration."
-          image="/images/Screenshot_26-8-2025_21832_.jpeg"
+          image="Screenshot_26-8-2025_21832_.jpeg"
           features={[
             "Automated factory reception weighing",
             "Receipt generation and printing",

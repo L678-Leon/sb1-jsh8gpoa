@@ -228,7 +228,7 @@ const accessories = {
     {
       id: 'carrier-bags',
       name: 'Carrier Bags',
-      image: '/images/Screenshot_28-8-2025_32057_.jpeg',
+      image: '/images/WhatsApp Image bags.jpg',
       description: 'Durable carrying cases for portable scales.',
       features: [
         'Durable construction',
@@ -425,7 +425,7 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-32 object-cover rounded-lg mb-3 cursor-pointer hover:opacity-80 transition-opacity"
+                    className="w-full h-56 object-contain rounded-lg mb-3 cursor-pointer hover:opacity-80 transition-opacity bg-white"
                     onClick={() => handleImageClick(item.image, item.name)}
                     onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                   />

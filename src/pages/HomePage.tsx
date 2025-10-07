@@ -70,8 +70,8 @@ const categories = [
 ];
 
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/Screenshot_25-8-2025_165946_.jpeg',
-  'INDUSTRIAL SCALES': '/images/Screenshot_25-8-2025_17033_.jpeg', 
+  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg',
+  'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales copy.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
   'FIELD SCALES': '/images/Screenshot_26-8-2025_21440_.jpeg',
   'PRECISION SCALES': '/images/Screenshot_26-8-2025_21621_.jpeg',

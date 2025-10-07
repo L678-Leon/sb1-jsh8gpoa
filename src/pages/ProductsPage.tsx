@@ -29,12 +29,12 @@ const categoryImages: { [key: string]: string } = {
   'WEIGHBRIDGES': '/images/Screenshot_25-8-2025_165946_.jpeg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales copy.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
-  'FIELD SCALES': '/images/Screenshot_26-8-2025_21456_.jpeg',
+  'FIELD SCALES': '/images/XK315.jpg',
   'PRECISION SCALES': '/images/Screenshot_26-8-2025_21621_.jpeg',
   'INDICATORS': '/images/Screenshot_26-8-2025_1025_.jpeg',
   'PERSONAL DIGITAL ASSISTANTS': '/images/Screenshot_26-8-2025_21721_.jpeg',
   'WEIGHING SOFTWARE': '/images/Screenshot_26-8-2025_21816_.jpeg',
-  'ACCESSORIES CONSUMABLES AND SPARES': '/images/Screenshot_26-8-2025_14141_.jpeg',
+  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg',
 };
 
 // Product image mappings - update specific products

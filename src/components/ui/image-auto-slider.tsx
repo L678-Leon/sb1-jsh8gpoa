@@ -13,6 +13,30 @@ const productData = [
   {
     name: "EHB Precision Scale",
     image: "/images/Screenshot_26-8-2025_21621_.jpeg"
+  },
+  {
+    name: "XK315 Field Scale",
+    image: "/images/XK315.jpg"
+  },
+  {
+    name: "Weighbridge System",
+    image: "/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
+  },
+  {
+    name: "Weighing Solutions",
+    image: "/images/WhatsApp Image 2025-09-30 at 21.33.46_d557234c.jpg"
+  },
+  {
+    name: "Indicators & Software",
+    image: "/images/Screenshot_26-8-2025_21832_.jpeg"
+  },
+  {
+    name: "Weighing Software",
+    image: "/images/Screenshot_26-8-2025_21816_.jpeg"
+  },
+  {
+    name: "Accessories & Spares",
+    image: "/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg"
   }
 ];
 

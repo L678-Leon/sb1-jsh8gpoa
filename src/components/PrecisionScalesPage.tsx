@@ -52,7 +52,11 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
             {/* Left Column - Image  */}
             <div>
               <img
-                src="/images/Screenshot_26-8-2025_21621_.jpeg"
+                src={id === 'ehb-scale' ? '/images/Screenshot_26-8-2025_21621_.jpeg' :
+                     id === 'ahw-scale' ? '/images/Screenshot_26-8-2025_21629_.jpeg' :
+                     id === 'baby-scale' ? '/images/Screenshot_26-8-2025_21646_.jpeg' :
+                     id === 'personal-scale' ? '/images/Screenshot_26-8-2025_21659_.jpeg' :
+                     '/images/Screenshot_26-8-2025_21621_.jpeg'}
                 alt={title}
                 className="w-full h-full object-cover rounded-lg shadow-md mb-4"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
@@ -200,58 +204,6 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
           </div>
         </div>
 
-        {/* Precision Scales Images Section */}
-        <div className="mb-12">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-2xl font-bold text-black mb-6 text-center">Precision Scales Categories</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_21621_.jpeg"
-                  alt="EHB Precision Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">EHB Scale</h4>
-                <p className="text-xs text-gray-600">Lab & Precious Metal</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_21629_.jpeg"
-                  alt="AHW Precision Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">AHW Scale</h4>
-                <p className="text-xs text-gray-600">High-Precision Laboratory</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_21646_.jpeg"
-                  alt="BABY Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">Baby Scale</h4>
-                <p className="text-xs text-gray-600">Pediatric Hospitals</p>
-              </div>
-              <div className="text-center">
-                <img
-                  src="/images/Screenshot_26-8-2025_21659_.jpeg"
-                  alt="Personal Scales"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
-                  onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                  loading="lazy"
-                />
-                <h4 className="text-sm font-bold text-black">Personal Scale</h4>
-                <p className="text-xs text-gray-600">OIML Approved</p>
-              </div>
-            </div>
-          </div>
-        </div>
         {/* EHB Scale */}
         <ExpandableCard
           id="ehb-scale"
@@ -284,7 +236,7 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
           id="ahw-scale"
           title="B) AHW SCALE"
           overview="High-precision laboratory scale with up to 300,000 resolution. OIML approved with comprehensive applications and optional connectivity features."
-          image="/images/Screenshot_26-8-2025_21629_.jpeg"
+          image="/images/Screenshot_26-8-2025_21629_.jpeg "
           bgColor="bg-gray-800"
           features={[
             "Up to 300,000 resolution",
@@ -343,7 +295,7 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
           id="personal-scale"
           title="D) PERSONAL SCALE"
           overview="OIML approved personal scale with 250kg capacity and high-precision 100g resolution. Features durable construction and long battery life."
-          image="/images/Screenshot_26-8-2025_21659_.jpeg"
+          image="/images/Screenshot_26-8-2025_21659_.jpeg "
           bgColor="bg-gray-800"
           features={[
             "OIML approved",

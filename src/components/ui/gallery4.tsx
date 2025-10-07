@@ -181,20 +181,21 @@ const Gallery4 = ({
                 >
                   <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                     <img
-                      src={item.id === 'indicators' ? '/images/Screenshot_26-8-2025_1025_.jpeg' : 
-                           item.id === 'field-scales' ? '/images/Screenshot_26-8-2025_21456_.jpeg' : 
-                           item.id === 'precision-scales' ? '/images/Screenshot_26-8-2025_21621_.jpeg' : 
-                           item.id === 'industrial-scales' ? '/images/Screenshot_25-8-2025_17033_.jpeg' :
+                      src={item.id === 'indicators' ? '/images/Screenshot_26-8-2025_1025_.jpeg' :
+                           item.id === 'field-scales' ? '/images/Screenshot_26-8-2025_21456_.jpeg' :
+                           item.id === 'precision-scales' ? '/images/Screenshot_26-8-2025_21621_.jpeg' :
+                           item.id === 'industrial-scales' ? '/images/WhatsApp Image industrial scales copy.jpg' :
                            item.id === 'retail-scales' ? '/images/Screenshot_26-8-2025_21549_.jpeg' :
-                           item.id === 'weighing-software' ? '/images/Screenshot_26-8-2025_21816_.jpeg' : 
-                           item.id === 'personal-digital-assistants' ? '/images/Screenshot_26-8-2025_21721_.jpeg' : 
-                           item.id === 'accessories-consumables-and-spares' ? '/images/Screenshot_26-8-2025_14141_.jpeg' :
+                           item.id === 'weighing-software' ? '/images/Screenshot_26-8-2025_21816_.jpeg' :
+                           item.id === 'personal-digital-assistants' ? '/images/Screenshot_26-8-2025_21721_.jpeg' :
+                           item.id === 'accessories-consumables-and-spares' ? '/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg' :
+                           item.id === 'weighbridges' ? '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg' :
                            item.image}
                       alt={item.title}
                       className="absolute h-full w-full object-center transition-transform duration-300 group-hover:scale-105"
-                      style={{ 
-                        objectFit: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' ? 'contain' : 'cover',
-                        backgroundColor: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' ? '#f8f9fa' : 'transparent'
+                      style={{
+                        objectFit: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' ? 'contain' : 'cover',
+                        backgroundColor: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' ? '#f8f9fa' : 'transparent'
                       }}
                       loading="lazy"
                       onError={(e) => {

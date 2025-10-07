@@ -19,17 +19,16 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
     }));
   };
 
-  // Error handling for broken images - fallback to placeholder
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
     target.src = 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800';
     target.alt = 'Weighbridge product image - placeholder';
   };
 
-  const ExpandableCard = ({ 
-    id, 
-    title, 
-    overview, 
+  const ExpandableCard = ({
+    id,
+    title,
+    overview,
     features,
     dimensions,
     image,
@@ -46,28 +45,22 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
     bgColor?: string;
   }) => {
     const isExpanded = expandedSections[id];
-    
     return (
       <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 max-w-4xl mx-auto">
         <div className={`${bgColor} text-white p-8`}>
           <h3 className="text-2xl font-bold">{title}</h3>
         </div>
-        
         <div className="p-8">
-          {/* Two Column Layout */}
           <div className="grid lg:grid-cols-2 gap-8 mb-6">
-            {/* Left Column - Image  */}
             <div>
               <img
                 src={image}
                 alt={imageAlt}
                 className="w-full h-full object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
-                onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
+                onError={handleImageError}
                 loading="lazy"
               />
             </div>
-            
-            {/* Right Column - Key Features and Overview */}
             <div>
               <p className="text-gray-700 leading-relaxed">{overview}</p>
               <h4 className="text-xl font-bold text-black mb-4 flex items-center">
@@ -75,9 +68,9 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
                 Key Features
               </h4>
               <div className="space-y-3">
-                {features.slice(0, 6).map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                {features.slice(0, 6).map((feature, idx) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
                 ))}
@@ -85,7 +78,6 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
             </div>
           </div>
 
-          {/* Learn More Button */}
           <button
             onClick={() => toggleSection(id)}
             className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-200 text-black font-medium py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 border border-gray-200"
@@ -94,35 +86,30 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
             {isExpanded ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
           </button>
 
-          {/* Expandable Detailed Specifications */}
           {isExpanded && (
             <div className="mt-6 pt-6 border-t border-gray-200">
-              {/* Two Column Detailed Layout */}
               <div className="grid lg:grid-cols-2 gap-8">
-                {/* Complete Features */}
                 <div>
                   <h5 className="text-lg font-bold text-black mb-4">Complete Feature Set</h5>
                   <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg border border-gray-200">
                     <ul className="space-y-3">
-                      {features.map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                      {features.map((f, i) => (
+                        <li key={i} className="flex items-start space-x-3">
+                          <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{f}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-
-                {/* Complete Dimensions */}
                 <div>
                   <h5 className="text-lg font-bold text-black mb-4">Available Dimensions & Specifications</h5>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
                     <ul className="space-y-3">
-                      {dimensions.map((dimension, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 font-mono text-sm">{dimension}</span>
+                      {dimensions.map((dim, i) => (
+                        <li key={i} className="flex items-start space-x-3">
+                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-gray-700 font-mono text-sm">{dim}</span>
                         </li>
                       ))}
                     </ul>
@@ -170,10 +157,10 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
               SCALES & SOFTWARE (K) LTD offers your ideal choice for weighbridges which are safe, easy to install and calibrate.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              We have 3 classes of weighbridges:
+              We have 5 classes of weighbridges: Class 1, Class 2, Class 3, Mobile Weighbridge, Multi-Deck Axle Weighbridge
             </p>
             <div className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-xl text-center border border-red-200">
-              <h3 className="text-2xl font-bold text-red-600">CLASS 1, CLASS 2, CLASS 3</h3>
+              <h3 className="text-2xl font-bold text-red-600">CLASS 1, CLASS 2, CLASS 3, Mobile, Multi-Deck Axle</h3>
             </div>
           </div>
         </div>
@@ -207,7 +194,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <img
-                  src="/images/Screenshot_25-8-2025_165946_.jpeg"
+                  src="/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
                   alt="Steel Weighbridge SBP/M Model"
                   className="w-full h-48 object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
                   onError={handleImageError}
@@ -241,12 +228,13 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
             </div>
           </div>
         </div>
-        {/* Steel Weighbridge SBP/M Model */}
+
+        {/* Cards in order */}
         <ExpandableCard
           id="steel-weighbridge"
           title="A) STEEL WEIGHBRIDGE SBP/M MODEL"
           overview="Optimised steel structure designed for concentrated loads and frequent use. Features easy installation options and high resistance to harsh environmental conditions."
-          image="/images/Screenshot_25-8-2025_165946_.jpeg"
+          image="/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
           imageAlt="Steel Weighbridge SBP/M Model"
           features={[
             "Optimised steel structure designed for concentrated loads and frequent use",
@@ -268,7 +256,6 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           ]}
         />
 
-        {/* Concrete Weighbridge SBP/CO Model */}
         <ExpandableCard
           id="concrete-weighbridge"
           title="B) CONCRETE WEIGHBRIDGE SBP/CO MODEL"
@@ -294,7 +281,6 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           ]}
         />
 
-        {/* Transportable Weighbridge */}
         <ExpandableCard
           id="transportable-weighbridge"
           title="C) TRANSPORTABLE WEIGHBRIDGE"
@@ -319,12 +305,10 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           ]}
         />
 
-      
-        {/* CLASS 2 */}
         <ExpandableCard
           id="class2-weighbridge"
           title="CLASS 2 - MEDIUM QUALITY WEIGHBRIDGE"
-          overview="Balanced solution offering reliable performance with optimized steel construction. Designed for regular commercial use with excellent environmental resistance."
+          overview="Balanced solution offering reliable performance with optimized steel construction."
           image="/images/Screenshot_25-8-2025_162148_.jpeg"
           imageAlt="CLASS 2 Medium Quality Weighbridge"
           bgColor="bg-gray-800"
@@ -347,11 +331,10 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           ]}
         />
 
-        {/* CLASS 3 */}
         <ExpandableCard
           id="class3-weighbridge"
           title="CLASS 3 - STANDARD WEIGHBRIDGE"
-          overview="Cost-effective weighbridge solution with essential features for standard weighing operations. Features interconnected load cells and reliable construction."
+          overview="Cost-effective weighbridge solution with essential features."
           image="/images/Screenshot_25-8-2025_16579_.jpeg"
           imageAlt="CLASS 3 Standard Weighbridge"
           bgColor="bg-gray-800"
@@ -373,84 +356,129 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           ]}
         />
 
-        {/* Installation & Calibration Section */}
+        <ExpandableCard
+          id="mobile-weighbridge"
+          title="Mobile Weighbridge"
+          overview="Semi-permanent structure made of aluminum; portable & easy to carry; possible to display the weight of each wheel or all wheels; water resistant & vibration-proof; measures small/large vehicles; high accuracy; low profile (39 mm)."
+          image="/images/mobile-weighbridge.jpg"
+          imageAlt="Mobile Weighbridge"
+          features={[
+            "Semi-permanent aluminum structure",
+            "Portable & easy to carry",
+            "Displays weight per wheel or all wheels",
+            "Water resistant and vibration-proof",
+            "Measures small and large vehicles",
+            "High accuracy, low profile (39 mm)"
+          ]}
+          dimensions={[
+            "39 mm profile height",
+            "Wheel-level weighing modes",
+            "Aluminum frame model dimensions vary"
+          ]}
+        />
+
+        <ExpandableCard
+          id="multi-deck-axle-weighbridge"
+          title="Multi-Deck Axle Weighbridge"
+          overview="Multiple independent decks that allow axle-by-axle weighing and total weight calculation with rugged construction and smart integration."
+          image="/images/WhatsApp Image 2025-09-30 at 13.39.59_9be18ec5.jpg"
+          imageAlt="Multi-Deck Axle Weighbridge"
+          features={[
+            "Multiple independent decks",
+            "High-precision load cells",
+            "Axle-by-axle weighing",
+            "Integrated summation for GVW",
+            "Rugged construction (steel or concrete)",
+            "Static or slow-speed dynamic weighing",
+            "Smart indicator & connectivity",
+            "ERP integration & data management",
+            "Independent deck calibration",
+            "Overload alerts",
+            "Traffic control accessories optional",
+            "Weather & corrosion resistant",
+            "Optional legal-for-trade certification"
+          ]}
+          dimensions={[
+            "Deck modules per axle group",
+            "Load cell layouts: digital or analog",
+            "Configurable for static/dynamic use"
+          ]}
+        />
+
+        {/* Installation & Calibration & Technical Support sections follow */}
         <div className="mt-16">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-gray-900 to-black text-white p-8 rounded-t-xl">
-            <h2 className="text-3xl font-bold flex items-center">
-              <Wrench className="h-8 w-8 mr-3" />
-              WEIGHBRIDGE INSTALLATION & CALIBRATION
-            </h2>
-          </div>
+              <h2 className="text-3xl font-bold flex items-center">
+                <Wrench className="h-8 w-8 mr-3" />
+                WEIGHBRIDGE INSTALLATION & CALIBRATION
+              </h2>
+            </div>
             <div className="bg-white border border-gray-200 rounded-b-xl p-8 shadow-lg">
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-xl font-bold text-black mb-4 flex items-center">
-                    <Clock className="h-5 w-5 mr-2 text-red-600" />
-                    Professional Services
-                  </h4>
-                  <p className="text-lg text-gray-700 mb-4">
-                    S & S (K) Ltd has a well-trained maintenance crew nationally, fully licensed under the Weights & Measures Act Cap 503.
-                  </p>
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-black mb-4 flex items-center">
+                      <Clock className="h-5 w-5 mr-2 text-red-600" />
+                      Professional Services
+                    </h4>
+                    <p className="text-lg text-gray-700 mb-4">
+                      S & S (K) Ltd has a well-trained maintenance crew nationally, fully licensed under the Weights & Measures Act Cap 503.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-bold text-black mb-3">Service Commitment</h5>
+                    <p className="text-gray-700 mb-4">
+                      The company is committed to training its staff as a central pillar of:
+                    </p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Customer service</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Productivity</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Profitability</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                
                 <div>
-                  <h5 className="text-lg font-bold text-black mb-3">Service Commitment</h5>
-                  <p className="text-gray-700 mb-4">
-                    The company is committed to training its staff as a central pillar of:
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span>Customer service</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span>Productivity</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span>Profitability</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div>
-                <h5 className="text-lg font-bold text-black mb-3">Training Approach</h5>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Business managers jointly develop training content and schedules</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Training conducted by experienced professionals</span>
-                    </li>
-                  </ul>
+                  <h5 className="text-lg font-bold text-black mb-3">Training Approach</h5>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start space-x-3">
+                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Business managers jointly develop training content and schedules</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div classifiable="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Training conducted by experienced professionals</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
 
-        {/* Technical Support Notice */}
         <div className="mt-12 max-w-4xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-sm">
           <div className="flex items-start space-x-3">
             <Info className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
             <div>
               <h4 className="text-lg font-bold text-blue-900 mb-2">Technical Consultation Available</h4>
               <p className="text-blue-800">
-                For detailed technical specifications, custom configurations, or engineering consultations, 
-                please contact our technical team. All specifications are subject to site conditions and 
-                regulatory requirements.
+                For detailed technical specifications, custom configurations, or engineering consultations, please contact our technical team. All specifications are subject to site conditions and regulatory requirements.
               </p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

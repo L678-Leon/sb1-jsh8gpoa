@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/images/company-logo.jpg"
+                src="/images/WhatsApp Image 2025-07-30 at 16.20.25_66323b2c.jpg"
                 alt="Scales & Software Logo"
                 className="h-12 w-12 mr-3 rounded-full object-cover"
                 onError={(e) => {

@@ -237,7 +237,8 @@ const ServicesPage = () => {
               <h3 className="text-xl font-serif font-semibold text-black mb-4">Scheduled Service</h3>
               <p className="text-gray-600 mb-4">Plan your maintenance and service visits</p>
               <div className="space-y-2">
-                <p className="font-semibold text-black">service@scale-software.co.ke</p>
+                <p className="font-semibold text-black">info@scale-software.co.ke
+</p>
                 <p className="text-sm text-gray-600">Response within 4 hours</p>
               </div>
             </div>
