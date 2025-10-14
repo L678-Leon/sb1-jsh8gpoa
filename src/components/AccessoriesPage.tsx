@@ -243,7 +243,7 @@ const accessories = {
     {
       id: 'charger-battery-pda',
       name: 'Charger Battery (PDA)',
-      image: '/images/WhatsApp Image 2025-09-26 at 12.10.41_f604aada.jpg',
+      image: '/images/WhatsApp Image 2025-09-30 at 21.38.15_5a733061.jpg',
       description: 'Power solutions for PDA devices.',
       features: [
         'Fast charging',
@@ -504,7 +504,7 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
                 <p className="text-sm text-gray-600">PDA components and replacement parts</p>
               </div>
               <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                <h4 className="font-bold text-purple-600 mb-2">🟪 Test Equipment</h4>
+                <h4 className="font-bold text-purple-600 mb-2">🟪 Test weights</h4>
                 <p className="text-sm text-gray-600">Test weights and consumables</p>
               </div>
             </div>
@@ -539,7 +539,7 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
             color="bg-blue-600" 
           />
           <SubcategorySection 
-            title="🟪 Test Equipment & Consumables" 
+            title="🟪 Test Weights & Consumables" 
             subcategory="other" 
             color="bg-purple-600" 
           />

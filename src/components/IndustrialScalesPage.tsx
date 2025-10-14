@@ -221,7 +221,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
               <div className="text-center">
                 <img
-                  src="/images/Screenshot_25-8-2025_17033_.jpeg"
+                  src="/images/WhatsApp Image 2025-10-08 at 12.49.44_80f417c4.jpg"
                   alt="Pure Mild Steel Industrial Scale"
                   className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
                   onError={handleImageError}
@@ -282,7 +282,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
           id="pure-mild-steel"
           title="A) PURE MILD STEEL INDUSTRIAL SCALE"
           overview="Rugged and durable industrial scale for indoor and outdoor use. Heavy-duty design with factory calibration, quick connections and easy operation."
-          image="/images/Screenshot_25-8-2025_17033_.jpeg"
+          image="/images/WhatsApp Image 2025-10-08 at 12.49.44_80f417c4.jpg"
           imageAlt="Pure Mild Steel Industrial Scale"
           features={[
             "Application: Check weighing",

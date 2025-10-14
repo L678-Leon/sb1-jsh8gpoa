@@ -237,13 +237,10 @@ const AboutPage = () => {
               {/* Tea Sector */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
                 <h3 className="text-2xl font-serif font-bold text-red-700 mb-6">2. Tea Sector (Private & KTDA)</h3>
-                <div className="flex items-center space-x-2 mb-4 p-3 bg-red-50 rounded-lg">
-                  <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
-                  <span className="font-bold text-red-800">ALL KTDA FACTORIES</span>
-                </div>
+                           
                 <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
                   {[
-                    "DL KOISAGAT TEA FACTORY", "NYAYO TEA ZONE", "ELGON TEA-KAPSABET",
+                   "ALL KTDA FACTORIES", "ALL NYAYO TEA ZONE FACTORIES", "DL KOISAGAT TEA FACTORY", "ELGON TEA-KAPSABET",
                     "ELGON TEA-KITALE", "KAPCHEBET TEA FACTORY", "KAISUGU TEA FACTORY",
                     "TACHASIS TEA FACTORY", "SOT TEA FACTORY", "KIPTAGICH TEA FACTORY",
                     "TET TEA FACTORY", "KISYET TEA FACTORY", "TAIWET TEA FACTORY",

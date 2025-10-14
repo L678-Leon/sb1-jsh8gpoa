@@ -70,7 +70,7 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
                 <Info className="h-5 w-5 mr-2 text-red-600" />
                 Key Features
               </h4>
-              <div className="space-y-3">
+              <div className="space-y-3 mb-6">
                 {features.slice(0, 6).map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
@@ -78,6 +78,16 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
                   </div>
                 ))}
               </div>
+
+              {/* Book Consultation Button */}
+              <a
+                href="https://calendly.com/your-calendly-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                Book a Consultation
+              </a>
             </div>
           </div>
 

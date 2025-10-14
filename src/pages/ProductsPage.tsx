@@ -267,17 +267,17 @@ const ProductsPage = () => {
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer border border-gray-200"
                   onClick={() => setSelectedCategoryPage(category)}
                 >
-                  <div className="h-48 relative">
+                  <div className="h-48 relative bg-gray-50">
                     <img
                       src={categoryImage}
                       alt={category}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-3"
                       onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-xl font-bold text-white mb-2">{category}</h3>
-                      <p className="text-gray-200 text-sm">{categoryProducts.length} Products</p>
+                      <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">{category}</h3>
+                      <p className="text-gray-200 text-sm drop-shadow-lg">{categoryProducts.length} Products</p>
                     </div>
                   </div>
                   <div className="p-6">
@@ -320,11 +320,15 @@ const ProductsPage = () => {
                       viewMode === 'list' ? 'flex' : ''
                     }`}
                   >
-                    <div className={`${viewMode === 'list' ? 'w-1/3' : 'h-48'} relative`}>
+                    <div className={`${viewMode === 'list' ? 'w-1/3' : 'h-48'} relative bg-gray-50`}>
                       <img
                         src={productImage}
                         alt={product.name}
-                        className="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                        className={`w-full h-full cursor-pointer hover:opacity-80 transition-opacity ${
+                          ['baby-scale', 'dd1010-iflynet', 'd39', 'dd700-dd700ic', 'ehb-precision-scale', 'ahw-precision-scale', 'personal-scale', 'dd2060x-series', 'ksp-scale', 'sm-5300x-scale', 'bws-r-bws-t', 'hw-indicator-non-trade', 'indicators-fly-net', 'dd1050', 'xk315-indicator'].includes(product.id)
+                            ? 'object-contain p-6'
+                            : 'object-cover'
+                        }`}
                         onClick={() => handleImageClick(productImage, product.name)}
                         onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                       />
@@ -339,7 +343,7 @@ const ProductsPage = () => {
                       <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
                       
                       {product.features && (
-                        <div className="space-y-2">
+                        <div className="space-y-2 mb-4">
                           <h5 className="text-sm font-semibold text-black">Key Features:</h5>
                           <ul className="space-y-1">
                             {product.features.slice(0, 3).map((feature, index) => (
@@ -351,6 +355,15 @@ const ProductsPage = () => {
                           </ul>
                         </div>
                       )}
+
+                      <a
+                        href="https://calendly.com/your-calendly-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm"
+                      >
+                        Book a Consultation
+                      </a>
                     </div>
                   </div>
                 );

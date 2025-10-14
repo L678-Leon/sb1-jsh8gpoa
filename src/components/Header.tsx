@@ -78,21 +78,31 @@ const Header = () => {
             >
               Products
             </Link>
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className={`font-medium transition-colors ${
-                isActive('/services') 
-                  ? 'text-red-700 border-b-2 border-red-600' 
+                isActive('/services')
+                  ? 'text-red-700 border-b-2 border-red-600'
                   : 'text-black hover:text-red-600'
               }`}
             >
               Services
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/projects"
               className={`font-medium transition-colors ${
-                isActive('/contact') 
-                  ? 'text-red-700 border-b-2 border-red-600' 
+                isActive('/projects')
+                  ? 'text-red-700 border-b-2 border-red-600'
+                  : 'text-black hover:text-red-600'
+              }`}
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className={`font-medium transition-colors ${
+                isActive('/contact')
+                  ? 'text-red-700 border-b-2 border-red-600'
                   : 'text-black hover:text-red-600'
               }`}
             >
@@ -150,6 +160,15 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 Services
+              </Link>
+              <Link
+                to="/projects"
+                className={`block px-3 py-2 font-medium ${
+                  isActive('/projects') ? 'text-red-700 bg-red-100' : 'text-black hover:text-red-600'
+                }`}
+                onClick={toggleMenu}
+              >
+                Projects
               </Link>
               <Link
                 to="/contact"

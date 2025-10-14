@@ -542,6 +542,34 @@ export const products: Product[] = [
 
   // INDICATORS
   {
+    id: 'dd2060x-series',
+    name: 'DD2060X-Series',
+    category: 'INDICATORS',
+    description: 'Innovative weighbridge indicator with 12.1" touchscreen, ERP integration, voice control, and camera connectivity for automated weighbridge environments.',
+    image: '/images/Screenshot_8-10-2025_155133_www.weightron.com.jpeg',
+    isNew: true,
+    features: [
+      'High-resolution 12.1" capacitive touchscreen (sunlight readable)',
+      'Voice control and integrated VOIP intercom',
+      'ANPR & snapshot camera connectivity',
+      'Full cloud-based automation control suite',
+      'Waterproof AISI 304 stainless steel casing',
+      'Connect up to 4 digital or analogue scales',
+      'Ethernet TCP/IP, Wi-Fi, 4G, GPRS, GSM support',
+      'Integral thermal printer and RFID/QR code readers'
+    ],
+    specifications: [
+      'Display: 12.1" capacitive touchscreen (sunlight readable)',
+      'Casing: AISI 304 stainless steel, waterproof',
+      'Connectivity: Ethernet TCP/IP, Wi-Fi, 4G, GPRS, GSM',
+      'Fieldbus: Profinet & Profibus',
+      'Inputs/Outputs: 7 digital I/O',
+      'Serial ports: 6 (RS232, RS422)',
+      'Mounting: column, wall, or table',
+      'Peripheral: thermal printer, RFID/QR, VOIP intercom'
+    ]
+  },
+  {
     id: 'indicators-fly-net',
     name: 'Indicators Fly Net',
     category: 'INDICATORS',

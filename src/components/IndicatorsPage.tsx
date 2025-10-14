@@ -26,7 +26,8 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
     features,
     specifications,
     dimensions,
-    bgColor = "bg-red-600"
+    bgColor = "bg-red-600",
+    image,
   }: {
     id: string;
     title: string;
@@ -34,8 +35,8 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
     features: string[];
     specifications: string[];
     dimensions?: string[];
-    image: string;
     bgColor?: string;
+    image: string;
   }) => {
     const isExpanded = expandedSections[id];
     
@@ -51,16 +52,9 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             {/* Left Column - Image */}
             <div>
               <img
-                src={id === 'dd1010' ? '/images/Screenshot_26-8-2025_1025_.jpeg' :
-                     id === 'dd1050' ? '/images/Screenshot_26-8-2025_1051_.jpeg' :
-                     id === 'd39' ? '/images/Screenshot_26-8-2025_1124_.jpeg' :
-                     id === 'dd700' ? '/images/Screenshot_26-8-2025_1147_.jpeg' :
-                     id === 'bws-r-t' ? '/images/Screenshot_26-8-2025_21235_.jpeg' :
-                     id === 'xk315-indicator' ? '/images/Screenshot_26-8-2025_21259_.jpeg' :
-                     id === 'hw-indicator' ? '/images/Screenshot_26-8-2025_21310_.jpeg' :
-                     '/images/Screenshot_26-8-2025_1025_.jpeg'}
+                src={image}
                 alt={title}
-                className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
             </div>
@@ -72,14 +66,24 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
                 <Info className="h-5 w-5 mr-2 text-red-600" />
                 Key Features
               </h4>
-              <div className="space-y-3">
-                {features.slice(0, 6).map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+              <div className="space-y-3 mb-6">
+                {features.slice(0, 6).map((feature, idx) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
+
+              {/* Book Consultation Button */}
+              <a
+                href="https://calendly.com/your-calendly-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                Book a Consultation
+              </a>
             </div>
           </div>
 
@@ -95,51 +99,30 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           {/* Expandable Detailed Specifications */}
           {isExpanded && (
             <div className="mt-6 pt-6 border-t border-gray-200">
-              {/* DD700 Specific Image Section */}
-              {id === "dd700" && (
-                <div className="mb-8">
-                  <div className="bg-gradient-to-br from-gray-800 to-black p-6 rounded-lg">
-                    <h5 className="text-lg font-bold text-white mb-4 text-center">DD700 / DD700ic Product Image</h5>
-                    <div className="flex justify-center">
-                      <img
-                        src="/images/Screenshot_26-8-2025_1147_.jpeg"
-                        alt="DD700 / DD700ic Indicator"
-                        className="max-w-full h-64 object-contain rounded-lg shadow-xl border-2 border-gray-300"
-                        onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
-                      />
-                    </div>
-                    <p className="text-gray-300 text-center mt-4 text-sm">
-                      DD700/DD700ic - Desktop/Wall Mount Indicator with IP69K Protection
-                    </p>
-                  </div>
-                </div>
-              )}
-              
-              {/* Two Column Detailed Layout */}
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Complete Features */}
                 <div>
                   <h5 className="text-lg font-bold text-black mb-4">Complete Feature Set</h5>
                   <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg border border-gray-200">
                     <ul className="space-y-3">
-                      {features.map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                      {features.map((f, i) => (
+                        <li key={i} className="flex items-start space-x-3">
+                          <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{f}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
 
-                {/* Complete Specifications */}
+                {/* Technical Specifications */}
                 <div>
                   <h5 className="text-lg font-bold text-black mb-4">Technical Specifications</h5>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
                     <ul className="space-y-3">
-                      {specifications.map((spec, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      {specifications.map((spec, i) => (
+                        <li key={i} className="flex items-start space-x-3">
+                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                           <span className="text-gray-700 font-mono text-sm">{spec}</span>
                         </li>
                       ))}
@@ -154,10 +137,10 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
                   <h5 className="text-lg font-bold text-black mb-4">Additional Specifications</h5>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
                     <ul className="space-y-3">
-                      {dimensions.map((dimension, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 font-mono text-sm">{dimension}</span>
+                      {dimensions.map((dim, i) => (
+                        <li key={i} className="flex items-start space-x-3">
+                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-gray-700 font-mono text-sm">{dim}</span>
                         </li>
                       ))}
                     </ul>
@@ -226,10 +209,10 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
         <div className="mb-12">
           <div className="bg-gradient-to-r from-gray-900 to-black text-white p-8 rounded-xl shadow-lg">
             <h2 className="text-3xl font-bold">A) WEIGHBRIDGE INDICATORS</h2>
-            <p className="text-gray-300 mt-2">This category has five types:</p>
+            <p className="text-gray-300 mt-2">This category has **five** types:</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                <h4 className="font-bold">DD1010/DD1010iFLYNET</h4>
+                <h4 className="font-bold">DD1010 / DD1010iFLYNET</h4>
                 <p className="text-sm text-gray-300">Advanced Touch Screen</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
@@ -241,8 +224,12 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
                 <p className="text-sm text-gray-300">Color Touch Display</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                <h4 className="font-bold">DD700/DD700ic</h4>
-                <p className="text-sm text-gray-300">Desktop/Wall Mount</p>
+                <h4 className="font-bold">DD700 / DD700ic</h4>
+                <p className="text-sm text-gray-300">Desktop / Wall Mount</p>
+              </div>
+              <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                <h4 className="font-bold">DD2060 X-Series</h4>
+                <p className="text-sm text-gray-300">High Connectivity Indicator</p>
               </div>
             </div>
           </div>
@@ -253,12 +240,12 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           id="dd1010"
           title="1) DD1010 / DD1010iFLYNET"
           overview={`Advanced weighbridge indicator with 624 MHz processor, 5.7" touch screen color display, and comprehensive connectivity options. Features ABS or pure stainless steel body construction.`}
-          image="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600"
+          image="/images/Screenshot_26-8-2025_1025_.jpeg"
           features={[
             "624 MHz processor",
             "ABS / Pure stainless steel body",
             "128 MB RAM, 128 MB Flash Memory",
-            "5.7\\\" TOUCH SCREEN color display, TFT with LED backlight",
+            "5.7\" TOUCH SCREEN color display, TFT with LED backlight",
             "Ethernet Port 10/100 Mbps",
             "1 SD card expansion"
           ]}
@@ -266,7 +253,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             "624 MHz processor",
             "ABS / Pure stainless steel body",
             "128 MB RAM, 128 MB Flash Memory",
-            "5.7\\\" TOUCH SCREEN color display, TFT with LED backlight",
+            "5.7\" TOUCH SCREEN color display, TFT with LED backlight",
             "Ethernet Port 10/100 Mbps",
             "1 SD card expansion",
             "2 USB Host ports",
@@ -286,14 +273,14 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           id="dd1050"
           title="2) DD1050"
           overview={`Robust and versatile indicator for industrial use with 10.4" touch screen color display. Available in bench or wall-mounted versions with stainless steel IP67 option for harsh environments.`}
-          image="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600"
+          image="/images/Screenshot_26-8-2025_1051_.jpeg"
           bgColor="bg-gray-800"
           features={[
             "Robust and versatile for industrial use",
             "ABS body with stainless steel front",
             "Available in bench or wall-mounted versions",
             "Stainless steel version IP67 for harsh environments",
-            "10.4\\\" TOUCH SCREEN color display with customizable interface",
+            "10.4\" TOUCH SCREEN color display with customizable interface",
             "Supports networked communications and peripheral drivers"
           ]}
           specifications={[
@@ -301,7 +288,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             "ABS body with stainless steel front",
             "Available in bench or wall-mounted versions",
             "Stainless steel version IP67 for harsh environments",
-            "10.4\\\" TOUCH SCREEN color display with customizable interface",
+            "10.4\" TOUCH SCREEN color display with customizable interface",
             "Supports networked communications and peripheral drivers",
             "SQL relational database with remote connectivity",
             "Easy export to corporate databases",
@@ -322,7 +309,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           id="d39"
           title="3) D39"
           overview="Advanced indicator with 7-inch 800x480 TFT color touch display. High-accuracy, touch-sensitive operation with comprehensive connectivity and multilevel control system."
-          image="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600"
+          image="/images/Screenshot_26-8-2025_1124_.jpeg"
           features={[
             "7-inch 800x480 TFT color touch display",
             "High-accuracy, touch-sensitive (no keyboard needed)",
@@ -355,8 +342,8 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
         <ExpandableCard
           id="dd700"
           title="4) DD700 / DD700ic"
-          overview="Ideal for desktop or wall mounting with IC version in stainless steel for impact protection. Features CE approval and OIML R76-1 certification with IP69K construction."
-          image=""
+          overview="Ideal for desktop or wall mounting with IC version in stainless steel for impact protection and stacking. Features CE approval and OIML R76-1 certification with IP69K construction."
+          image="/images/Screenshot_26-8-2025_1147_.jpeg"
           bgColor="bg-gray-800"
           features={[
             "Ideal for desktop or wall mounting",
@@ -373,6 +360,47 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             "CE approved (Directive 2014/31/EU)",
             "OIML R76-1 certified",
             "IP69K stainless steel construction"
+          ]}
+        />
+
+        {/* DD2060  X-Series (new) */}
+        <ExpandableCard
+          id="dd2060x"
+          title="5) DD2060X-Series"
+          overview="The DD2060X-Series offers innovative connection solutions by integrating weighing operations with management systems (ERP) or other business processes. Its robust and high-visibility 12.1” colour touchscreen (sunlight-readable) allows quick and intuitive operation. Voice control, integrated intercom (VOIP), and camera connectivity make it ideal for automated weighbridge environments."
+          image="/images/Screenshot_8-10-2025_155133_www.weightron.com.jpeg"
+          bgColor="bg-gray-800"
+          features={[
+            "Connect up to 4 digital or analogue scales",
+            "Ideal for driver operated automated weighbridge solutions",
+            "Column, wall or table version",
+            "High-resolution 12.1” capacitive touchscreen display (sunlight readable)",
+            "Waterproof AISI 304 stainless steel casing",
+            "Built-in thermoregulation system",
+            "Integral thermal printer, RFID/QR code readers and VOIP intercom",
+            "ANPR & snapshot camera connectivity",
+            "Fieldbus interfaces: Profinet & Profibus",
+            "Ethernet TCP/IP, Wi-Fi, 3x USBs and RS-232/422 ports",
+            "Supports 4G, GPRS, GSM",
+            "Direct control & communication over LAN, WAN or Cloud network",
+            "Full cloud-based automation control suite",
+            "7 digital inputs / 7 digital outputs for impulse control",
+            "6 serial communication ports RS232, RS422"
+          ]}
+          specifications={[
+            "Display: 12.1” capacitive touchscreen (sunlight readable)",
+            "Casing: AISI 304 stainless steel, waterproof",
+            "Thermoregulation system built-in",
+            "Interface: Ethernet TCP/IP, Wi-Fi, RS-232/422, USB",
+            "Connectivity: 4G, GPRS, GSM support",
+            "Fieldbus: Profinet & Profibus",
+            "Inputs / Outputs: 7 digital I/O",
+            "Serial ports: 6 (RS232, RS422)",
+            "Mounting: column, wall, or table",
+            "Peripheral: thermal printer, RFID/QR, VOIP intercom",
+            "Camera: ANPR & snapshot integration",
+            "Network: LAN, WAN, Cloud control",
+            "Software: Full cloud automation suite"
           ]}
         />
 
@@ -403,7 +431,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
           id="bws-r-t"
           title="1) BWS-R / BWS-T"
           overview="Easy-to-use front panel indicator with comprehensive applications including zero, accumulation, check weighing, and animal weighing. Features OIML approval and IP65 waterproof construction."
-          image="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600"
+          image="/images/Screenshot_26-8-2025_21235_.jpeg"
           features={[
             "Easy-to-use front panel",
             "Applications: Zero, Accumulation, Check Weighing, Net/Gross shift, Unit conversion, Peak Hold, Animal Weighing",
@@ -469,14 +497,14 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
         <ExpandableCard
           id="hw-indicator"
           title="3) HW Indicator (Non-Trade)"
-          overview="Robust indicator suitable for any environment with fast and simple operation. Features maximum application flexibility with full programmability and networked communications support."
-          image="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600"
+          overview="Robust indicator suitable for any environment with fast and simple operation. Features maximum application flexibility with full programmability and network communications support."
+          image="/images/Screenshot_26-8-2025_21310_.jpeg"
           features={[
             "Robust and suitable for any environment",
             "Fast and simple to use",
             "Maximum application flexibility",
             "Fully programmable",
-            "Supports networked communications",
+            "Supports network communications",
             "Data management capable"
           ]}
           specifications={[
@@ -484,7 +512,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             "Fast and simple to use",
             "Maximum application flexibility",
             "Fully programmable",
-            "Supports networked communications",
+            "Supports network communications",
             "Data management capable"
           ]}
         />
@@ -496,9 +524,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
             <div>
               <h4 className="text-lg font-bold text-blue-900 mb-2">Technical Consultation Available</h4>
               <p className="text-blue-800">
-                For detailed technical specifications, custom configurations, or engineering consultations, 
-                please contact our technical team. All specifications are subject to site conditions and 
-                regulatory requirements.
+                For detailed technical specifications, custom configurations, or engineering consultations, please contact our technical team. All specifications are subject to site conditions and regulatory requirements.
               </p>
             </div>
           </div>

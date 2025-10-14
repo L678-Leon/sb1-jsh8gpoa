@@ -143,6 +143,15 @@ const newsItems = [
 const newReleaseProducts = [
   {
     id: 1,
+    name: "DD2060X-Series",
+    description: "Innovative weighbridge indicator with 12.1\" touchscreen, ERP integration, voice control, and camera connectivity for automated weighbridge environments.",
+    keyBenefits: ["12.1\" Touchscreen", "Voice Control", "ANPR Camera", "Cloud Automation"],
+    image: "/images/Screenshot_8-10-2025_155133_www.weightron.com.jpeg",
+    category: "Indicators",
+    isNew: true
+  },
+  {
+    id: 2,
     name: "Indicators Fly Net",
     description: "Advanced indicator system with fly net protection for outdoor weighing applications and enhanced durability.",
     keyBenefits: ["Fly Net Protection", "Outdoor Rated", "Advanced Display", "Weather Resistant"],
@@ -151,7 +160,7 @@ const newReleaseProducts = [
     isNew: true
   },
   {
-    id: 2,
+    id: 3,
     name: "XK 315",
     description: "Versatile weighing indicator suitable for both field scales and indicator applications with advanced functionality.",
     keyBenefits: ["Dual Purpose", "Advanced Features", "Durable Design", "Field Ready"],
@@ -262,23 +271,23 @@ const HomePage = () => {
                 </div>
 
                 {/* News Slideshow */}
-                <div className="relative overflow-hidden h-96">
-                  <div 
+                <div className="relative overflow-hidden" style={{ height: '500px' }}>
+                  <div
                     className="flex transition-transform duration-500 ease-in-out h-full"
                     style={{ transform: `translateX(-${currentNewsIndex * 100}%)` }}
                   >
                     {newsItems.map((news) => (
-                      <div key={news.id} className="w-full flex-shrink-0 p-4 flex flex-col">
-                        <div className="flex-1 mb-4">
+                      <div key={news.id} className="w-full flex-shrink-0 p-4 flex flex-col h-full">
+                        <div className="mb-4 bg-white rounded-lg p-2" style={{ height: '240px' }}>
                           <img
                             src={news.image}
                             alt={news.title}
-                            className="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                            className="w-full h-full object-contain rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
                             onClick={() => handleImageClick(news.image, news.title)}
                             onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                           />
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg flex-shrink-0">
                             <div className="flex items-center space-x-2 mb-2">
                               <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-orange-100 text-orange-700">
                                 {news.category}
@@ -291,10 +300,10 @@ const HomePage = () => {
                               {news.description}
                             </p>
                             <p className="text-xs text-gray-500">
-                              {new Date(news.date).toLocaleDateString('en-US', { 
-                                year: 'numeric', 
-                                month: 'long', 
-                                day: 'numeric' 
+                              {new Date(news.date).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
                               })}
                             </p>
                         </div>
@@ -343,22 +352,22 @@ const HomePage = () => {
                 </div>
 
                 {/* Products Slideshow */}
-                <div className="relative overflow-hidden h-96">
-                  <div 
+                <div className="relative overflow-hidden" style={{ height: '500px' }}>
+                  <div
                     className="flex transition-transform duration-500 ease-in-out h-full"
                     style={{ transform: `translateX(-${currentProductIndex * 100}%)` }}
                   >
                     {newReleaseProducts.map((product) => (
-                      <div key={product.id} className="w-full flex-shrink-0 p-4 flex flex-col">
-                        <div className="flex-1 mb-4">
-                          <div className="relative">
+                      <div key={product.id} className="w-full flex-shrink-0 p-4 flex flex-col h-full">
+                        <div className="mb-4" style={{ height: '240px' }}>
+                          <div className="relative h-full">
                             <img
                               src={product.image}
                               alt={product.name}
-                              className="w-full h-48 object-contain rounded-lg cursor-pointer hover:opacity-80 transition-opacity bg-gray-50 p-4"
+                              className="w-full h-full object-contain rounded-lg cursor-pointer hover:opacity-80 transition-opacity bg-gray-50 p-4"
                               onClick={() => handleImageClick(product.image, product.name)}
-                              onError={(e) => { 
-                                e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; 
+                              onError={(e) => {
+                                e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg';
                               }}
                             />
                             {product.isNew && (
@@ -368,7 +377,7 @@ const HomePage = () => {
                             )}
                           </div>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg flex-shrink-0">
                           <div className="mb-3">
                             <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
                               {product.category}

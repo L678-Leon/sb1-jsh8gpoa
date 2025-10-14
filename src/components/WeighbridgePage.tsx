@@ -56,7 +56,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
               <img
                 src={image}
                 alt={imageAlt}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 bg-gray-50"
                 onError={handleImageError}
                 loading="lazy"
               />
@@ -196,7 +196,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
                 <img
                   src="/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
                   alt="Steel Weighbridge SBP/M Model"
-                  className="w-full h-48 object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-48 object-contain p-3 rounded-lg shadow-md mb-4 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -207,7 +207,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
                 <img
                   src="/images/Screenshot_25-8-2025_165834_.jpeg"
                   alt="Concrete Weighbridge SBP/CO Model"
-                  className="w-full h-48 object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-48 object-contain p-3 rounded-lg shadow-md mb-4 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -216,9 +216,9 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
               </div>
               <div className="text-center">
                 <img
-                  src="/images/Screenshot_25-8-2025_165755_.jpeg"
+                  src="/images/WhatsApp Image 2025-10-08 at 13.03.37_27619429.jpg"
                   alt="Transportable Weighbridge"
-                  className="w-full h-48 object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-48 object-contain p-3 rounded-lg shadow-md mb-4 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -285,7 +285,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           id="transportable-weighbridge"
           title="C) TRANSPORTABLE WEIGHBRIDGE"
           overview="Modular metal structure with exceptional portability and rapid deployment capabilities. Ideal for temporary installations and mobile weighing operations."
-          image="/images/Screenshot_25-8-2025_165755_.jpeg"
+          image="/images/WhatsApp Image 2025-10-08 at 13.03.37_27619429.jpg"
           imageAlt="Transportable Weighbridge"
           features={[
             "Modular metal structure",
@@ -357,10 +357,10 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
         />
 
         <ExpandableCard
-          id="mobile-weighbridge"
+          id="mobile/foldable-weighbridge"
           title="Mobile Weighbridge"
           overview="Semi-permanent structure made of aluminum; portable & easy to carry; possible to display the weight of each wheel or all wheels; water resistant & vibration-proof; measures small/large vehicles; high accuracy; low profile (39 mm)."
-          image="/images/mobile-weighbridge.jpg"
+          image="/images/WhatsApp Image 2025-09-30 at 11.24.11_8a59f1b7.jpg"
           imageAlt="Mobile Weighbridge"
           features={[
             "Semi-permanent aluminum structure",

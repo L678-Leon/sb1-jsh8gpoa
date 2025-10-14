@@ -93,7 +93,7 @@ export const Component = () => {
         }
       `}</style>
       
-      <div className="w-full h-48 bg-gradient-to-b from-gray-100 to-white relative overflow-hidden flex items-center justify-center">
+      <div className="w-full h-64 bg-gradient-to-b from-gray-100 to-white relative overflow-hidden flex items-center justify-center py-4">
         {/* Scrolling images container */}
         <div className="relative z-10 w-full flex items-center justify-center">
           <div className="scroll-container w-full max-w-7xl">
@@ -104,11 +104,11 @@ export const Component = () => {
                   className="image-item flex-shrink-0 flex flex-col items-center"
                 >
                   {/* Product image */}
-                  <div className="w-[280px] h-[280px] relative rounded-lg overflow-hidden shadow-lg border border-gray-300">
+                  <div className="w-[240px] h-[220px] relative rounded-lg overflow-hidden shadow-lg border border-gray-300 bg-white">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-2"
                       loading="lazy"
                       onError={(e) => {
                         // Fallback to a default image if product image fails
