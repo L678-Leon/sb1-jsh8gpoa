@@ -309,7 +309,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           id="class2-weighbridge"
           title="CLASS 2 - MEDIUM QUALITY WEIGHBRIDGE"
           overview="Balanced solution offering reliable performance with optimized steel construction."
-          image="/images/Screenshot_25-8-2025_162148_.jpeg"
+          image="/images/Screenshot_25-8-2025_162257_.jpeg"
           imageAlt="CLASS 2 Medium Quality Weighbridge"
           bgColor="bg-gray-800"
           features={[
