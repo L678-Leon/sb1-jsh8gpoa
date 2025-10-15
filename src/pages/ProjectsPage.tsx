@@ -79,7 +79,7 @@ const projects: Project[] = [
     id: 9,
     title: "Private Weighbridge - Komool Farm",
     description: "Private weighbridge installed at Komool Farm in Uasin Gishu County",
-    image: "/images/private weighbridge .jpg",
+    image: "/images/private weighbridge.jpg",
     category: "Private",
     date: "2025"
   }
