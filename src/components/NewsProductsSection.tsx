@@ -50,11 +50,11 @@ const NewsProductsSection = () => {
     },
     {
       id: 3,
-      title: "Team Building Excellence Initiative",
-      description: "Annual team building program strengthens our commitment to collaborative excellence and professional development across all departments.",
+      title: "Weighbridge Installation Success",
+      description: "Successfully completed major weighbridge installation project, enhancing weighing accuracy and operational efficiency for our client.",
       date: "2024-09-15",
-      category: "Company Culture",
-      image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800"
+      category: "Project Completion",
+      image: "/images/WhatsApp Image 2025-09-12 at 15.37.23_cc8694bf news 3.jpg"
     },
     {
       id: 4,

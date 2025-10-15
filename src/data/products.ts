@@ -81,7 +81,7 @@ export const products: Product[] = [
     name: 'CLASS 1 - Transportable Weighbridge',
     category: 'WEIGHBRIDGES',
     description: 'Modular metal structure with exceptional portability and rapid deployment capabilities.',
-    image: '/images/Screenshot_25-8-2025_165755_.jpeg',
+    image: '/images/WhatsApp Image 2025-10-08 at 13.03.37_1f8bf1ea.jpg',
     features: [
       'Modular metal structure',
       'High resistance to corrosive elements',
