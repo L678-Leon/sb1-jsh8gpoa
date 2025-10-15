@@ -70,7 +70,7 @@ const categories = [
 ];
 
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg',
+  'WEIGHBRIDGES': '/images/weighbridge A.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
   'FIELD SCALES': '/images/Screenshot_26-8-2025_21440_.jpeg',
@@ -135,7 +135,7 @@ const newsItems = [
     description: "Ongoing weighbridge installation by skilled technical team from scales and software @ the soon to be launched soit sugar factory 2025",
     date: "2025-09-26",
     category: "Installation",
-    image: "/images/WhatsApp Image 2025-09-12 at news 3.jpg"
+    image: "/images/WhatsApp Image 2025-09-12 at 15.37.23_cc8694bf news 3.jpg"
   }
 ];
 
