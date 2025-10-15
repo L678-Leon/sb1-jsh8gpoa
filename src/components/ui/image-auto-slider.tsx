@@ -4,7 +4,7 @@ import React from 'react';
 const productData = [
   {
     name: "Industrial Scales",
-    image: "/images/WhatsApp Image industrial scales copy.jpg"
+    image: "/images/WhatsApp Image industrial scales.jpg"
   },
   {
     name: "Scales Equipment",

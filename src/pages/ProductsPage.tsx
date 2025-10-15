@@ -27,7 +27,7 @@ const categoryDescriptions: { [key: string]: string } = {
 // Category image mappings
 const categoryImages: { [key: string]: string } = {
   'WEIGHBRIDGES': '/images/Screenshot_25-8-2025_165946_.jpeg',
-  'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales copy.jpg',
+  'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
   'FIELD SCALES': '/images/XK315.jpg',
   'PRECISION SCALES': '/images/Screenshot_26-8-2025_21621_.jpeg',

@@ -184,7 +184,7 @@ const Gallery4 = ({
                       src={item.id === 'indicators' ? '/images/Screenshot_26-8-2025_1025_.jpeg' :
                            item.id === 'field-scales' ? '/images/Screenshot_26-8-2025_21456_.jpeg' :
                            item.id === 'precision-scales' ? '/images/Screenshot_26-8-2025_21621_.jpeg' :
-                           item.id === 'industrial-scales' ? '/images/WhatsApp Image industrial scales copy.jpg' :
+                           item.id === 'industrial-scales' ? '/images/WhatsApp Image industrial scales.jpg' :
                            item.id === 'retail-scales' ? '/images/Screenshot_26-8-2025_21549_.jpeg' :
                            item.id === 'weighing-software' ? '/images/Screenshot_26-8-2025_21816_.jpeg' :
                            item.id === 'personal-digital-assistants' ? '/images/Screenshot_26-8-2025_21721_.jpeg' :

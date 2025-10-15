@@ -238,7 +238,7 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
           id="smartweigh-weighbridge"
           title="B) SMARTWEIGH (Weighbridge)"
           overview="Scales & Software (K) Ltd provides an automated solution that enables automatic weighbridge weighing, issue receipts and upload the weighments to a back-end software or ERP. This software is called SMARTWEIGH."
-          image="Screenshot_26-8-2025_21844_.jpeg"
+          image="/images/Screenshot_26-8-2025_21844_.jpeg"
           bgColor="bg-gray-800"
           features={[
             "Automated weighbridge weighing solution",
@@ -272,7 +272,7 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
           id="smartweigh-factory"
           title="C) SMARTWEIGH (Factory Collection)"
           overview="Automated factory reception weighing solution for products like milk. Issues receipts and uploads to ERP with seamless integration."
-          image="Screenshot_26-8-2025_21832_.jpeg"
+          image="/images/Screenshot_26-8-2025_21832_.jpeg"
           features={[
             "Automated factory reception weighing",
             "Receipt generation and printing",
