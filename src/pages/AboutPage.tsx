@@ -44,7 +44,7 @@ const AboutPage = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/group 1.jpg"
                 alt="Our company heritage"
                 className="w-full h-96 object-cover rounded-lg shadow-xl border-4 border-gray-100"
               />
@@ -327,7 +327,7 @@ const AboutPage = () => {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="flex items-center justify-center">
               <img
-                src="Screenshot_13-8-2025_2057_.jpeg"
+                src="/images/Screenshot_16-10-2025_15525_.jpeg"
                 alt="Our Partners"
                 className="max-w-90 w-90 h-auto object-contain rounded-lg"
               />
@@ -365,7 +365,7 @@ const AboutPage = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="public/images/group 2.jpg"
                   alt="Our service commitment"
                   className="w-full h-80 object-cover rounded-lg shadow-2xl"
                 />
