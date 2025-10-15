@@ -135,7 +135,7 @@ const newsItems = [
     description: "Ongoing weighbridge installation by skilled technical team from scales and software @ the soon to be launched soit sugar factory 2025",
     date: "2025-09-26",
     category: "Installation",
-    image: "/images/WhatsApp Image 2025-09-12 at news 3.jpg"
+    image: "/images/WhatsApp Image 2025-09-12 at 15.37.23_cc8694bf news 3.jpg"
   }
 ];
 
