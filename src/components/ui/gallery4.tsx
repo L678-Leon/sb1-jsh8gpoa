@@ -189,7 +189,7 @@ const Gallery4 = ({
                            item.id === 'weighing-software' ? '/images/Screenshot_26-8-2025_21816_.jpeg' :
                            item.id === 'personal-digital-assistants' ? '/images/Screenshot_26-8-2025_21721_.jpeg' :
                            item.id === 'accessories-consumables-and-spares' ? '/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg' :
-                           item.id === 'weighbridges' ? '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg' :
+                           item.id === 'weighbridges' ? '/images/weighbridge A.jpg' :
                            item.image}
                       alt={item.title}
                       className="absolute h-full w-full object-center transition-transform duration-300 group-hover:scale-105"
