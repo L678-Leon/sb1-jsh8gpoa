@@ -123,47 +123,6 @@ const ServicesPage = () => {
           </div>
         </section>
 
-        {/* Our Promise Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-serif font-bold mb-6">Our Promise to You</h2>
-                <p className="text-lg font-light leading-relaxed mb-8">
-                  We are committed to delivering exceptional value through our comprehensive services. 
-                  Our promise is built on five core pillars that drive everything we do.
-                </p>
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="w-3 h-3 bg-red-200 rounded-full flex-shrink-0"></div>
-                      <span className="text-lg font-medium">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Our service team"
-                  className="w-full h-80 object-cover rounded-lg shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-red-600 p-3 rounded-full">
-                      <Clock className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-black">24/7 Support</div>
-                      <div className="text-sm text-gray-600">Always Available</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Service Areas */}
         <section className="mb-20">
           <div className="text-center mb-12">
