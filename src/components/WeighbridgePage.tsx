@@ -285,7 +285,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           id="transportable-weighbridge"
           title="C) TRANSPORTABLE WEIGHBRIDGE"
           overview="Modular metal structure with exceptional portability and rapid deployment capabilities. Ideal for temporary installations and mobile weighing operations."
-          image="/images/WhatsApp Image 2025-10-08 at 13.03.37_27619429.jpg"
+          image="/images/WhatsApp Image 2025-10-08 at 13.03.37_1f8bf1ea.jpg"
           imageAlt="Transportable Weighbridge"
           features={[
             "Modular metal structure",
