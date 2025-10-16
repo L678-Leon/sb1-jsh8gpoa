@@ -51,7 +51,7 @@ const FieldScalesPage: React.FC<FieldScalesPageProps> = ({ onBack }) => {
               <img
                 src={id === 'xk315' ? '/images/XK315.jpg' : '/images/Screenshot_26-8-2025_21440_.jpeg'}
                 alt={title}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 bg-gray-50"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
             </div>

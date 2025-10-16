@@ -54,7 +54,7 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
               <img
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 bg-gray-50"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
             </div>

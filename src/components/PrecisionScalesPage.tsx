@@ -58,7 +58,7 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
                      id === 'personal-scale' ? '/images/Screenshot_26-8-2025_21659_.jpeg' :
                      '/images/Screenshot_26-8-2025_21621_.jpeg'}
                 alt={title}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 bg-gray-50"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
             </div>

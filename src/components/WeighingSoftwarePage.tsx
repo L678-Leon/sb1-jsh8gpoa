@@ -56,7 +56,7 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
                      id === 'smartweigh-weighbridge' ? '/images/Screenshot_26-8-2025_21844_.jpeg' :
                      '/images/Screenshot_26-8-2025_21816_.jpeg'}
                 alt={title}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 bg-gray-50"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
               />
             </div>

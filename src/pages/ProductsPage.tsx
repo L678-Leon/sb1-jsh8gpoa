@@ -26,8 +26,6 @@ const categoryDescriptions: { [key: string]: string } = {
 
 // Category image mappings
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
-  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg',
   'WEIGHBRIDGES': '/images/weighbridge A.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
@@ -326,11 +324,7 @@ const ProductsPage = () => {
                       <img
                         src={productImage}
                         alt={product.name}
-                        className={`w-full h-full cursor-pointer hover:opacity-80 transition-opacity ${
-                          ['baby-scale', 'dd1010-iflynet', 'd39', 'dd700-dd700ic', 'ehb-precision-scale', 'ahw-precision-scale', 'personal-scale', 'dd2060x-series', 'ksp-scale', 'sm-5300x-scale', 'bws-r-bws-t', 'hw-indicator-non-trade', 'indicators-fly-net', 'dd1050', 'xk315-indicator'].includes(product.id)
-                            ? 'object-contain p-6'
-                            : 'object-cover'
-                        }`}
+                        className="w-full h-full object-contain p-4 cursor-pointer hover:opacity-80 transition-opacity"
                         onClick={() => handleImageClick(productImage, product.name)}
                         onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                       />

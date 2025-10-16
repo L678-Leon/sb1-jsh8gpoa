@@ -63,7 +63,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
               <img
                 src={image}
                 alt={imageAlt}
-                className="w-full h-full object-cover rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105"
+                className="w-full h-full object-contain p-4 rounded-lg shadow-md mb-4 transition-transform duration-300 hover:scale-105 bg-gray-50"
                 onError={(e) => { e.currentTarget.src = '/images/default-placeholder.jpg'; }}
                 loading="lazy"
               />
@@ -223,7 +223,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
                 <img
                   src="/images/WhatsApp Image 2025-10-08 at 12.49.44_80f417c4.jpg"
                   alt="Pure Mild Steel Industrial Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-32 object-contain p-2 rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -234,7 +234,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
                 <img
                   src="/images/Screenshot_25-8-2025_22241_.jpeg"
                   alt="Pure Stainless Steel Industrial Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-32 object-contain p-2 rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -245,7 +245,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
                 <img
                   src="/images/Screenshot_25-8-2025_17058_.jpeg"
                   alt="Foldable Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-32 object-contain p-2 rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -256,7 +256,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
                 <img
                   src="/images/Screenshot_25-8-2025_17118_.jpeg"
                   alt="Pallet Truck Scale"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-32 object-contain p-2 rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
@@ -267,7 +267,7 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
                 <img
                   src="/images/Screenshot_25-8-2025_17131_.jpeg"
                   alt="Cattle Weigher"
-                  className="w-full h-32 object-cover rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105"
+                  className="w-full h-32 object-contain p-2 rounded-lg shadow-md mb-3 transition-transform duration-300 hover:scale-105 bg-gray-50"
                   onError={handleImageError}
                   loading="lazy"
                 />
