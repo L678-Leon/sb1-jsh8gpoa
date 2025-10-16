@@ -70,7 +70,7 @@ const categories = [
 ];
 
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/weighbridge A.jpg',
+  'WEIGHBRIDGES': '/images/weighbridge%20A.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
   'FIELD SCALES': '/images/Screenshot_26-8-2025_21440_.jpeg',
