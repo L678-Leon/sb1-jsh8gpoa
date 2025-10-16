@@ -26,7 +26,7 @@ const categoryDescriptions: { [key: string]: string } = {
 const categoryImages: { [key: string]: string } = {
   'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
-  'RETAIL SCALES': '/images/Screenshot_26-8-2025_1051_.jpeg',
+  'RETAIL SCALES': '/images/Screenshot_26-8-2025_2165_.jpeg',
   'FIELD SCALES': '/images/WhatsApp Image 2025-09-12 at 15.41.27_16846bac fs.jpg',
   'PRECISION SCALES': '/images/Screenshot_26-8-2025_141420_.jpeg',
   'INDICATORS': '/images/Screenshot_26-8-2025_21629_.jpeg',
