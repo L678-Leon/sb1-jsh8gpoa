@@ -306,16 +306,6 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* Map Placeholder */}
-        <div className="mt-16">
-          <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center shadow-lg">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-600 font-medium text-lg">Interactive Map</p>
-              <p className="text-gray-500">Industrial Area, Nairobi, Kenya</p>
-            </div>
-          </div>
-        </div>
 
         {/* Emergency Contact */}
         <div className="mt-16 bg-gradient-to-r from-red-600 to-black rounded-xl p-8 text-white text-center">
