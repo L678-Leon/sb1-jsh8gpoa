@@ -182,7 +182,7 @@ const Gallery4 = ({
                   <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                     <img
                       src={item.id === 'indicators' ? '/images/Screenshot_26-8-2025_1025_.jpeg' :
-                           item.id === 'field-scales' ? '/images/Screenshot_26-8-2025_21456_.jpeg' :
+                           item.id === 'field-scales' ? '/images/XK315.jpg' :
                            item.id === 'precision-scales' ? '/images/Screenshot_26-8-2025_21621_.jpeg' :
                            item.id === 'industrial-scales' ? '/images/WhatsApp Image industrial scales.jpg' :
                            item.id === 'retail-scales' ? '/images/Screenshot_26-8-2025_21549_.jpeg' :
@@ -194,8 +194,8 @@ const Gallery4 = ({
                       alt={item.title}
                       className="absolute h-full w-full object-center transition-transform duration-300 group-hover:scale-105"
                       style={{
-                        objectFit: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' ? 'contain' : 'cover',
-                        backgroundColor: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' ? '#f8f9fa' : 'transparent'
+                        objectFit: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' || item.id === 'field-scales' ? 'contain' : 'cover',
+                        backgroundColor: item.id === 'precision-scales' || item.id === 'weighing-software' || item.id === 'personal-digital-assistants' || item.id === 'retail-scales' || item.id === 'accessories-consumables-and-spares' || item.id === 'indicators' || item.id === 'field-scales' ? '#f8f9fa' : 'transparent'
                       }}
                       loading="lazy"
                       onError={(e) => {

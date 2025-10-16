@@ -8,7 +8,7 @@ const productData = [
   },
   {
     name: "Scales Equipment",
-    image: "/images/SCALES IMAGE copy.jpg"
+    image: "/images/SCALES IMAGE.jpg"
   },
   {
     name: "EHB Precision Scale",
