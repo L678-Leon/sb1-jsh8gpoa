@@ -28,7 +28,7 @@ const categoryImages: { [key: string]: string } = {
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_2165_.jpeg',
   'FIELD SCALES': '/images/XK315.jpg',
-  'PRECISION SCALES': '/images/Screenshot_26-8-2025_21621_.jpeg',
+  'PRECISION SCALES': 'images/Screenshot_26-8-2025_21733_.jpeg',
   'INDICATORS': '/images/new fly.jpg',
   'PERSONAL DIGITAL ASSISTANTS': '/images/Screenshot_28-8-2025_32149_.jpeg',
   'WEIGHING SOFTWARE': '/images/Screenshot_26-8-2025_21832_.jpeg',
