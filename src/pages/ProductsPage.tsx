@@ -264,23 +264,25 @@ const ProductsPage = () => {
               return (
                 <div
                   key={category}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer border border-gray-200"
-                  onClick={() => setSelectedCategoryPage(category)}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
                 >
-                  <div className="h-48 relative bg-gray-50">
+                  <div className="h-48 relative bg-gray-50 cursor-pointer" onClick={(e) => {
+                    e.stopPropagation();
+                    handleImageClick(categoryImage, category);
+                  }}>
                     <img
                       src={categoryImage}
                       alt={category}
-                      className="w-full h-full object-contain p-3"
+                      className="w-full h-full object-contain p-3 hover:opacity-80 transition-opacity"
                       onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-                    <div className="absolute bottom-4 left-4 right-4">
+                    <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
                       <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">{category}</h3>
                       <p className="text-gray-200 text-sm drop-shadow-lg">{categoryProducts.length} Products</p>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 cursor-pointer" onClick={() => setSelectedCategoryPage(category)}>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {categoryDescriptions[category]}
                     </p>
