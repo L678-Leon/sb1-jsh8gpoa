@@ -194,7 +194,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <img
-                  src="/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg"
+                  src="/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
                   alt="Steel Weighbridge SBP/M Model"
                   className="w-full h-48 object-contain p-3 rounded-lg shadow-md mb-4 bg-gray-50"
                   onError={handleImageError}
@@ -234,7 +234,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
           id="steel-weighbridge"
           title="A) STEEL WEIGHBRIDGE SBP/M MODEL"
           overview="Optimised steel structure designed for concentrated loads and frequent use. Features easy installation options and high resistance to harsh environmental conditions."
-          image="/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg"
+          image="/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
           imageAlt="Steel Weighbridge SBP/M Model"
           features={[
             "Optimised steel structure designed for concentrated loads and frequent use",
