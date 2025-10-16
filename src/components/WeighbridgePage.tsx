@@ -216,7 +216,7 @@ const WeighbridgePage: React.FC<WeighbridgePageProps> = ({ onBack }) => {
               </div>
               <div className="text-center">
                 <img
-                  src="/images/WhatsApp Image 2025-10-08 at 13.03.37_27619429.jpg"
+                  src="/images/WhatsApp Image 2025-10-08 at 13.03.37_1f8bf1ea.jpg"
                   alt="Transportable Weighbridge"
                   className="w-full h-48 object-contain p-3 rounded-lg shadow-md mb-4 bg-gray-50"
                   onError={handleImageError}
