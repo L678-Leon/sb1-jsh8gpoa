@@ -299,16 +299,18 @@ const ProductsPage = () => {
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{product.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {product.specifications.slice(0, 3).map((spec, index) => (
-                        <span
-                          key={index}
-                          className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
+                    {(product.specifications || product.features || product.dimensions) && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {(product.specifications || product.features || product.dimensions || []).slice(0, 3).map((spec, index) => (
+                          <span
+                            key={index}
+                            className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full"
+                          >
+                            {spec}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <a
                       href={`https://wa.me/254722724805?text=I'm interested in ${product.name}`}
                       target="_blank"
