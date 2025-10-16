@@ -171,7 +171,7 @@ const ProductsPage = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
               />
             </div>
 
@@ -196,7 +196,7 @@ const ProductsPage = () => {
                           setShowCategoryDropdown(false);
                         }}
                         className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors ${
-                          selectedCategory === category ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                          selectedCategory === category ? 'bg-red-50 text-red-600' : 'text-gray-700'
                         }`}
                       >
                         {category}
@@ -209,13 +209,13 @@ const ProductsPage = () => {
               <div className="flex gap-1 border border-gray-300 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-3 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
+                  className={`p-3 ${viewMode === 'grid' ? 'bg-red-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-3 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
+                  className={`p-3 ${viewMode === 'list' ? 'bg-red-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -249,7 +249,7 @@ const ProductsPage = () => {
                     <p className="text-gray-600 line-clamp-3">
                       {categoryDescriptions[category]}
                     </p>
-                    <button className="mt-4 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                    <button className="mt-4 text-red-600 font-semibold hover:text-red-700 transition-colors">
                       View Products �
                     </button>
                   </div>
@@ -259,10 +259,10 @@ const ProductsPage = () => {
           </div>
         )}
 
-        {filteredProducts.length > 0 ? (
+        {selectedCategory !== 'ALL' && filteredProducts.length > 0 && (
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {selectedCategory === 'ALL' ? 'All Products' : selectedCategory}
+              {selectedCategory}
             </h2>
             <div className={
               viewMode === 'grid'
@@ -295,7 +295,7 @@ const ProductsPage = () => {
                   </div>
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <div className="mb-2">
-                      <span className="text-sm text-blue-600 font-semibold">{product.category}</span>
+                      <span className="text-sm text-red-600 font-semibold">{product.category}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{product.description}</p>
@@ -315,7 +315,7 @@ const ProductsPage = () => {
                       href={`https://wa.me/254722724805?text=I'm interested in ${product.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block w-full text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                      className="inline-block w-full text-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
                     >
                       Book a Consultation
                     </a>
@@ -324,7 +324,9 @@ const ProductsPage = () => {
               ))}
             </div>
           </div>
-        ) : (
+        )}
+
+        {selectedCategory !== 'ALL' && filteredProducts.length === 0 && (
           <div className="text-center py-12">
             <p className="text-xl text-gray-600">No products found matching your criteria.</p>
           </div>
