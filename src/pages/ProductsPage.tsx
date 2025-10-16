@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Filter, Grid2x2 as Grid, List, ChevronDown } from 'lucide-react';
 import { products, categories } from '../data/products';
 import WeighbridgePage from '../components/WeighbridgePage';
@@ -26,13 +27,13 @@ const categoryDescriptions: { [key: string]: string } = {
 const categoryImages: { [key: string]: string } = {
   'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
-  'RETAIL SCALES': '/images/Screenshot_26-8-2025_2165_.jpeg',
+  'RETAIL SCALES': '/images/Screenshot_26-8-2025_1051_.jpeg',
   'FIELD SCALES': '/images/XK315.jpg',
   'PRECISION SCALES': '/images/Screenshot_26-8-2025_21621_.jpeg',
   'INDICATORS': '/images/new fly.jpg',
-  'PERSONAL DIGITAL ASSISTANTS': 'images/Screenshot_26-8-2025_21733_.jpeg',
+  'PERSONAL DIGITAL ASSISTANTS': '/images/Screenshot_26-8-2025_21744_.jpeg',
   'WEIGHING SOFTWARE': '/images/Screenshot_26-8-2025_21832_.jpeg',
-  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg'
+  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image bags.jpg'
 };
 
 const productImages: { [key: string]: string } = {
@@ -96,6 +97,7 @@ const productImages: { [key: string]: string } = {
 };
 
 const ProductsPage = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -234,13 +236,13 @@ const ProductsPage = () => {
                   className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
                   onClick={() => setShowCategoryPage(category)}
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden bg-gray-50">
                     <img
                       src={categoryImages[category] || '/images/placeholder.jpg'}
                       alt={category}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4 transform group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                     <h3 className="absolute bottom-4 left-4 right-4 text-xl font-bold text-white">
                       {category}
                     </h3>
@@ -311,14 +313,12 @@ const ProductsPage = () => {
                         ))}
                       </div>
                     )}
-                    <a
-                      href={`https://wa.me/254722724805?text=I'm interested in ${product.name}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full text-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                    <button
+                      onClick={() => navigate('/contact', { state: { product: product.name } })}
+                      className="w-full px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
                     >
                       Book a Consultation
-                    </a>
+                    </button>
                   </div>
                 </div>
               ))}

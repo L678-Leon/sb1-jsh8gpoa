@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
+  const location = useLocation();
+  const productName = location.state?.product || '';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
-    message: ''
+    message: productName ? `I'm interested in learning more about ${productName}.` : ''
   });
+
+  useEffect(() => {
+    if (productName) {
+      setFormData(prev => ({
+        ...prev,
+        message: `I'm interested in learning more about ${productName}.`
+      }));
+    }
+  }, [productName]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
