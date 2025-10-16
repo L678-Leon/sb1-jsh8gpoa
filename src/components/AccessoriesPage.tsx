@@ -53,7 +53,7 @@ const accessories = {
     {
       id: 'junction-box',
       name: 'Junction Box',
-      image: '/images/Screenshot_26-8-2025_141457_.jpeg',
+      image: '/images/Screenshot_26-8-2025_141457_ .jpeg',
       description: 'Essential component for weighbridge load cell connections.',
       features: [
         'Weatherproof construction',
