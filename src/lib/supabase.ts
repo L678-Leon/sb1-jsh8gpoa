@@ -10,13 +10,12 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export interface ConsultationBooking {
-  full_name: string;
+  name: string;
   email: string;
-  phone: string;
+  phone_number: string;
   company_name?: string;
-  message: string;
-  preferred_date?: string;
-  preferred_time?: string;
+  business_needs: string;
+  product?: string;
 }
 
 export async function createConsultationBooking(booking: ConsultationBooking) {

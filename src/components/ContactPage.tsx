@@ -29,13 +29,11 @@ const ContactPage = () => {
 
     try {
       await createConsultationBooking({
-        full_name: formData.name,
+        name: formData.name,
         email: formData.email,
-        phone: formData.phone,
+        phone_number: formData.phone,
         company_name: formData.company || undefined,
-        message: formData.message,
-        preferred_date: formData.preferredDate || undefined,
-        preferred_time: formData.preferredTime || undefined
+        business_needs: formData.message
       });
 
       setSubmitMessage({
