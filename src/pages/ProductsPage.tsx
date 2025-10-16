@@ -24,7 +24,7 @@ const categoryDescriptions: { [key: string]: string } = {
 };
 
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/Screenshot_25-8-2025_165755_.jpeg',
+  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.33.46_d557234c.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_1051_.jpeg',
   'FIELD SCALES': '/images/WhatsApp Image 2025-09-12 at 15.41.27_16846bac fs.jpg',
@@ -32,11 +32,11 @@ const categoryImages: { [key: string]: string } = {
   'INDICATORS': '/images/Screenshot_26-8-2025_21629_.jpeg',
   'PERSONAL DIGITAL ASSISTANTS': '/images/Screenshot_28-8-2025_32149_.jpeg',
   'WEIGHING SOFTWARE': '/images/Screenshot_26-8-2025_21832_.jpeg',
-  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image accessories.jpg'
+  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image bags.jpg'
 };
 
 const productImages: { [key: string]: string } = {
-  'WEIGHBRIDGE 1': '/images/Screenshot_25-8-2025_162148_.jpeg',
+  'WEIGHBRIDGE 1': '/images/Screenshot_25-8-2025_162257_.jpeg',
   'WEIGHBRIDGE 2': '/images/Screenshot_25-8-2025_162257_.jpeg',
   'WEIGHBRIDGE 3': '/images/Weighbridge1-scaled.jpg',
   'WEIGHBRIDGE 4': '/images/weighbridge A.jpg',
@@ -73,8 +73,8 @@ const productImages: { [key: string]: string } = {
   'TCS-C': '/images/Screenshot_28-8-2025_1516_.jpeg',
   'PLATFORM SCALE 1': '/images/Screenshot_25-8-2025_165915_.jpeg',
   'PLATFORM SCALE 2': '/images/Screenshot_25-8-2025_165834_.jpeg',
-  'PLATFORM SCALE 3': '/images/Screenshot_25-8-2025_165946_.jpeg',
-  'PLATFORM SCALE 4': '/images/Screenshot_25-8-2025_17033_.jpeg',
+  'PLATFORM SCALE 3': '/images/Screenshot_25-8-2025_165915_.jpeg',
+  'PLATFORM SCALE 4': '/images/Screenshot_25-8-2025_17058_.jpeg',
   'PLATFORM SCALE 5': '/images/Screenshot_25-8-2025_17058_.jpeg',
   'PLATFORM SCALE 6': '/images/Screenshot_25-8-2025_17118_.jpeg',
   'PLATFORM SCALE 7': '/images/Screenshot_25-8-2025_17131_.jpeg',

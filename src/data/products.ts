@@ -32,7 +32,7 @@ export const products: Product[] = [
     name: 'CLASS 1 - Steel Weighbridge SBP/M Model',
     category: 'WEIGHBRIDGES',
     description: 'Optimised steel structure designed for concentrated loads and frequent use with easy installation options.',
-    image: '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
+    image: '/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg',
     features: [
       'Optimised steel structure designed for concentrated loads and frequent use',
       'Easy to install (pit-mounted or surface mounted)',
@@ -104,7 +104,7 @@ export const products: Product[] = [
     name: 'CLASS 2 - Medium Quality Weighbridge',
     category: 'WEIGHBRIDGES',
     description: 'Balanced solution offering reliable performance with optimized steel construction.',
-    image: '/images/Screenshot_25-8-2025_162148_.jpeg',
+    image: '/images/Screenshot_25-8-2025_162257_.jpeg',
     features: [
       'Optimized steel structure designed for concentrated loads and frequent use',
       'Easy to install (pit-mounted, surface mounted)',
@@ -179,7 +179,7 @@ export const products: Product[] = [
     name: 'Multi-Deck Weighbridges',
     category: 'WEIGHBRIDGES',
     description: 'Advanced multi-deck weighbridge system with independent axle weighing and integrated summation.',
-    image: '/images/Screenshot_25-8-2025_165946_.jpeg',
+    image: '/images/Screenshot_25-8-2025_165915_.jpeg',
     features: [
       'Multiple independent weighing decks',
       'Individual axle weight measurement',
@@ -208,7 +208,7 @@ export const products: Product[] = [
     name: 'Pure Mild Steel Industrial Scale',
     category: 'INDUSTRIAL SCALES',
     description: 'Rugged and durable industrial scale for indoor and outdoor use with heavy-duty design.',
-    image: '/images/Screenshot_25-8-2025_17033_.jpeg',
+    image: '/images/Screenshot_25-8-2025_17058_.jpeg',
     features: [
       'Check weighing application',
       'Accumulation function',

@@ -20,7 +20,7 @@ const productData = [
   },
   {
     name: "Weighbridge System",
-    image: "/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg"
+    image: "/images/WhatsApp Image 2025-09-30 at 21.31.20_ba617189.jpg"
   },
   {
     name: "Weighing Solutions",
