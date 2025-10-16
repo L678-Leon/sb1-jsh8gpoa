@@ -365,7 +365,7 @@ const AboutPage = () => {
               </div>
               <div className="relative">
                 <img
-                  src="public/images/group 2.jpg"
+                  src="/images/group 2.jpg"
                   alt="Our service commitment"
                   className="w-full h-80 object-cover rounded-lg shadow-2xl"
                 />
