@@ -26,7 +26,7 @@ const categoryDescriptions: { [key: string]: string } = {
 
 // Category image mappings
 const categoryImages: { [key: string]: string } = {
-  'WEIGHBRIDGES': '/images/weighbridge%20A.jpg',
+  'WEIGHBRIDGES': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
   'INDUSTRIAL SCALES': '/images/WhatsApp Image industrial scales.jpg',
   'RETAIL SCALES': '/images/Screenshot_26-8-2025_21549_.jpeg',
   'FIELD SCALES': '/images/XK315.jpg',
@@ -42,9 +42,9 @@ const productImageMappings: { [key: string]: string } = {
   'XK315 (Field Scale)': '/images/XK315.jpg',
   'XK315': '/images/XK315.jpg',
   'xk315-field-scale': '/images/XK315.jpg',
-  'CLASS 1 - Steel Weighbridge SBP/M Model': '/images/weighbridge%20A.jpg',
-  'class1-steel-weighbridge-sbp-m': '/images/weighbridge%20A.jpg',
-  'Steel Weighbridge SBP/M Model': '/images/weighbridge%20A.jpg',
+  'CLASS 1 - Steel Weighbridge SBP/M Model': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
+  'class1-steel-weighbridge-sbp-m': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
+  'Steel Weighbridge SBP/M Model': '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
   'CLASS 1 - Transportable Weighbridge': '/images/Screenshot_25-8-2025_165755_.jpeg',
   'class1-transportable-weighbridge': '/images/Screenshot_25-8-2025_165755_.jpeg',
   'Transportable Weighbridge': '/images/Screenshot_25-8-2025_165755_.jpeg',

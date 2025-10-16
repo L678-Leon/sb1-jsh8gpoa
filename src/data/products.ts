@@ -32,7 +32,7 @@ export const products: Product[] = [
     name: 'CLASS 1 - Steel Weighbridge SBP/M Model',
     category: 'WEIGHBRIDGES',
     description: 'Optimised steel structure designed for concentrated loads and frequent use with easy installation options.',
-    image: '/images/weighbridge%20A.jpg',
+    image: '/images/WhatsApp Image 2025-09-30 at 21.31.21_992705e9.jpg',
     features: [
       'Optimised steel structure designed for concentrated loads and frequent use',
       'Easy to install (pit-mounted or surface mounted)',
