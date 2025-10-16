@@ -32,7 +32,7 @@ const categoryImages: { [key: string]: string } = {
   'INDICATORS': '/images/new fly.jpg',
   'PERSONAL DIGITAL ASSISTANTS': 'images/Screenshot_26-8-2025_21733_.jpeg',
   'WEIGHING SOFTWARE': '/images/Screenshot_26-8-2025_21832_.jpeg',
-  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image bags.jpg'
+  'ACCESSORIES CONSUMABLES AND SPARES': '/images/WhatsApp Image 2025-10-01 at 03.22.01_e2866457.jpg'
 };
 
 const productImages: { [key: string]: string } = {
