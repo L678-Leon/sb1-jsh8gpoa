@@ -327,7 +327,7 @@ const AboutPage = () => {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="flex items-center justify-center">
               <img
-                src="/images/Screenshot_16-10-2025_15525_.jpeg"
+                src="/images/ddd.jpeg"
                 alt="Our Partners"
                 className="max-w-90 w-90 h-auto object-contain rounded-lg"
               />
