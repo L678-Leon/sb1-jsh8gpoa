@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { createConsultationBooking } from '../lib/supabase';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,8 +8,12 @@ const Contact = () => {
     email: '',
     phone: '',
     company: '',
-    message: ''
+    message: '',
+    preferredDate: '',
+    preferredTime: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -17,18 +22,45 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      await createConsultationBooking({
+        full_name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company_name: formData.company || undefined,
+        message: formData.message,
+        preferred_date: formData.preferredDate || undefined,
+        preferred_time: formData.preferredTime || undefined
+      });
+
+      setSubmitMessage({
+        type: 'success',
+        text: 'Thank you for your inquiry! We will get back to you soon.'
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+        preferredDate: '',
+        preferredTime: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: 'There was an error submitting your request. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -192,12 +224,52 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="preferredDate" className="block text-sm font-medium text-black mb-2">
+                    Preferred Date (Optional)
+                  </label>
+                  <input
+                    type="date"
+                    id="preferredDate"
+                    name="preferredDate"
+                    value={formData.preferredDate}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="preferredTime" className="block text-sm font-medium text-black mb-2">
+                    Preferred Time (Optional)
+                  </label>
+                  <input
+                    type="time"
+                    id="preferredTime"
+                    name="preferredTime"
+                    value={formData.preferredTime}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {submitMessage && (
+                <div className={`p-4 rounded-lg ${
+                  submitMessage.type === 'success'
+                    ? 'bg-green-50 text-green-800 border border-green-200'
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {submitMessage.text}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white py-4 rounded-lg hover:bg-red-700 transition-colors font-medium flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full bg-red-600 text-white py-4 rounded-lg hover:bg-red-700 transition-colors font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="h-5 w-5" />
-                <span>Request Consultation Call</span>
+                <span>{isSubmitting ? 'Submitting...' : 'Request Consultation Call'}</span>
               </button>
             </form>
           </div>
