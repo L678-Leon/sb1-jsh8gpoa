@@ -31,6 +31,10 @@ const productData = [
     image: "/images/new fly.jpg"
   },
   {
+    name: "Digital Indicator",
+    image: "/images/Screenshot_26-8-2025_21733_.jpeg"
+  },
+  {
     name: "Indicators & Software",
     image: "/images/Screenshot_26-8-2025_21832_.jpeg"
   },
