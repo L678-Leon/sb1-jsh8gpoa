@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Package, ChevronDown, ChevronUp, Info } from 'lucide-react';
 
 interface AccessoriesPageProps {
@@ -337,6 +338,7 @@ const accessories = {
 };
 
 const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
+  const navigate = useNavigate();
   const [expandedSections, setExpandedSections] = useState<ExpandableSection>({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState({ src: '', title: '' });
@@ -431,7 +433,7 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
                   />
                   <h4 className="text-lg font-bold text-black mb-2">{item.name}</h4>
                   <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-                  <div className="space-y-1">
+                  <div className="space-y-1 mb-3">
                     {item.features.slice(0, 3).map((feature, index) => (
                       <div key={index} className="flex items-center text-xs text-gray-600">
                         <div className="w-1 h-1 bg-red-600 rounded-full mr-2 flex-shrink-0"></div>
@@ -439,6 +441,12 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
                       </div>
                     ))}
                   </div>
+                  <button
+                    onClick={() => navigate('/contact', { state: { product: item.name } })}
+                    className="w-full px-4 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                  >
+                    Book Consultation
+                  </button>
                 </div>
               ))}
             </div>

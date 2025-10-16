@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Monitor, ChevronDown, ChevronUp, Info, Wrench, Clock } from 'lucide-react';
 
 interface WeighingSoftwarePageProps {
@@ -10,6 +11,7 @@ interface ExpandableSection {
 }
 
 const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) => {
+  const navigate = useNavigate();
   const [expandedSections, setExpandedSections] = useState<ExpandableSection>({});
 
   const toggleSection = (sectionId: string) => {
@@ -78,14 +80,12 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
               </div>
 
               {/* Book Consultation Button */}
-              <a
-                href="https://calendly.com/your-calendly-link"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => navigate('/contact', { state: { product: title } })}
                 className="inline-flex items-center justify-center w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
               >
                 Book a Consultation
-              </a>
+              </button>
             </div>
           </div>
 

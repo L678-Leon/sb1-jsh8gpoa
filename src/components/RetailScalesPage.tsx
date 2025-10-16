@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart, ChevronDown, ChevronUp, Info } from 'lucide-react';
 
 interface RetailScalesPageProps {
@@ -10,6 +11,7 @@ interface ExpandableSection {
 }
 
 const RetailScalesPage: React.FC<RetailScalesPageProps> = ({ onBack }) => {
+  const navigate = useNavigate();
   const [expandedSections, setExpandedSections] = useState<ExpandableSection>({});
 
   const toggleSection = (sectionId: string) => {
@@ -91,6 +93,12 @@ const RetailScalesPage: React.FC<RetailScalesPageProps> = ({ onBack }) => {
           {/* Expandable Detailed Specifications */}
           {isExpanded && (
             <div className="mt-6 pt-6 border-t border-gray-200">
+              <button
+                onClick={() => navigate('/contact', { state: { product: title } })}
+                className="w-full mb-6 px-6 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-md"
+              >
+                Book a Consultation for {title}
+              </button>
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Complete Features */}
                 <div>
