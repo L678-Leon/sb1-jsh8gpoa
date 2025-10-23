@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="space-y-4">
                   <p className="text-lg md:text-xl lg:text-2xl text-black leading-relaxed max-w-5xl mx-auto font-bold">
                     Transforming businesses across East Africa with cutting-edge weighing technology, 
-                    comprehensive software solutions, and unmatched precision since 2005.
+                    comprehensive software solutions and unmatched precision since 2005.
                   </p>
                   
                   <div className="space-y-3 text-sm md:text-base max-w-4xl mx-auto">
