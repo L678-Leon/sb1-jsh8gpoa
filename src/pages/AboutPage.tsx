@@ -434,7 +434,7 @@ const AboutPage = () => {
                     </div>
                     <div className="bg-white p-3 rounded-lg text-center">
                       <p className="font-medium text-black">sales1@scale-software.co.ke</p>
-                      <p className="text-xs text-gray-600">Additional Sales</p>
+                      <p className="text-xs text-gray-600">Sales Inquiries</p>
                     </div>
                   </div>
                 </div>
