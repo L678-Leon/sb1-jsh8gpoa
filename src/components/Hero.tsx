@@ -39,8 +39,7 @@ const Hero = () => {
                     </p>
                     
                     <p className="leading-relaxed text-black font-bold">
-                      Our comprehensive range includes weighbridges, industrial scales, retail solutions, precision laboratory equipment 
-                      and intelligent software systems - all backed by 24/7 technical support and maintenance services.
+                      Our comprehensive range includes weighbridges, industrial scales, retail scales, intelligent software systems, precision and laboratory scales - all backed by 24/7 technical support and maintenance services.
                     </p>
                     
                     <div className="flex flex-wrap justify-center gap-4 pt-3">
@@ -76,7 +75,7 @@ const Hero = () => {
                   <div className="text-sm text-black font-bold">Expert Support</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-black">8</div>
+                  <div className="text-2xl md:text-3xl font-bold text-black">10+</div>
                   <div className="text-sm text-black font-bold">Product Categories</div>
                 </div>
               </div>
