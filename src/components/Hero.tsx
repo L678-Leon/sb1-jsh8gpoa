@@ -34,7 +34,7 @@ const Hero = () => {
                   
                   <div className="space-y-3 text-sm md:text-base max-w-4xl mx-auto">
                     <p className="leading-relaxed text-black font-bold">
-                      From dairy cooperatives in rural Kenya to major industrial operations spanning Uganda and Rwanda, 
+                      From dairy cooperatives in rural Kenya to major industrial operations spanning the Eastern African region and Africa at large, 
                       we deliver innovative weighing solutions that enhance business efficiency and profitability.
                     </p>
                     
