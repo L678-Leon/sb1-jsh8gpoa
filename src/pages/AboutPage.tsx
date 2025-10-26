@@ -28,13 +28,13 @@ const AboutPage = () => {
               <div className="prose prose-lg text-gray-700 leading-relaxed">
                 <p className="mb-6">
                   Established in 2005, Scales & Software (K) Ltd began as a vision to revolutionize 
-                  weighing technology across East Africa. What started as a small enterprise has grown 
+                  weighing technology across Eastern Africa. What started as a small enterprise has grown 
                   into the region's most trusted partner in precision weighing solutions.
                 </p>
                 <p className="mb-6">
                   Over nearly two decades, we have built lasting relationships with businesses across 
                   multiple industries, from dairy cooperatives in rural Kenya to major industrial 
-                  operations spanning Uganda, Rwanda, and beyond.
+                  operations spanning Eatern Africa and beyond.
                 </p>
                 <p>
                   Our journey is marked by continuous innovation, unwavering commitment to quality, 
@@ -97,7 +97,7 @@ const AboutPage = () => {
               </div>
               <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
                 To deliver innovative, reliable weighing solutions that enhance business efficiency 
-                and profitability for our clients across East Africa, while maintaining the highest 
+                and profitability for our clients across Eastern Africa, while maintaining the highest 
                 standards of precision, service excellence, and technological advancement.
               </p>
             </div>
@@ -140,7 +140,7 @@ const AboutPage = () => {
                 <h2 className="text-4xl font-serif font-bold">Our Vision</h2>
               </div>
               <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
-                To be East Africa's leading weighing solutions provider, recognized for excellence, 
+                To be Africa's leading weighing solutions provider, recognized for excellence, 
                 innovation, and exceptional customer service, while contributing to the economic 
                 growth and industrial development of the region.
               </p>
@@ -158,7 +158,7 @@ const AboutPage = () => {
               <h2 className="text-4xl font-serif font-bold text-black">Our Clients</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Trusted by leading companies across multiple industries in East Africa
+              Trusted by leading companies across multiple industries in Eastern Africa
             </p>
           </div>
 
@@ -236,7 +236,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               {/* Tea Sector */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-                <h3 className="text-2xl font-serif font-bold text-red-700 mb-6">2. Tea Sector (Private & KTDA)</h3>
+                <h3 className="text-2xl font-serif font-bold text-red-700 mb-6">2. Tea Sector </h3>
                            
                 <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
                   {[
