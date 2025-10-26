@@ -230,18 +230,18 @@ const HomePage = () => {
       <Hero />
       
       {/* Comprehensive Weighing Solutions Section */}
-      <div className="py-6 bg-white">
+      <div className="py-2 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Gallery4 
+          <Gallery4
             title="Complete Solution Categories"
             description="Comprehensive weighing solutions for every industry and application across East Africa"
-            items={solutionCategories} 
+            items={solutionCategories}
           />
         </div>
       </div>
-      
+
       {/* Company News and New Release Section */}
-      <BackgroundBeamsWithCollision className="bg-gradient-to-b from-white to-gray-50 h-auto min-h-[32rem]">
+      <BackgroundBeamsWithCollision className="bg-gradient-to-b from-gray-900 to-black h-auto min-h-[32rem]">
         <div className="relative z-10 py-6">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-8">
@@ -424,7 +424,7 @@ const HomePage = () => {
       </BackgroundBeamsWithCollision>
       
       {/* Our Services Section with Animated Background */}
-      <BackgroundBeamsWithCollision className="bg-gradient-to-b from-gray-50 to-white h-auto min-h-[28rem]">
+      <BackgroundBeamsWithCollision className="bg-gradient-to-b from-gray-900 to-black h-auto min-h-[28rem]">
         <div className="relative z-10 py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

@@ -417,6 +417,16 @@ const AboutPage = () => {
                     <p className="text-xl font-bold text-black">+254-738-829064</p>
                     <p className="text-sm text-gray-600">Secondary Line</p>
                   </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <Phone className="h-6 w-6 text-red-600 mx-auto mb-2" />
+                    <p className="text-xl font-bold text-black">+254733781832</p>
+                    <p className="text-sm text-gray-600">Eldoret Numbers</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <Phone className="h-6 w-6 text-red-600 mx-auto mb-2" />
+                    <p className="text-xl font-bold text-black">0532032561</p>
+                    <p className="text-sm text-gray-600">Eldoret Numbers</p>
+                  </div>
                 </div>
               </div>
 
@@ -461,7 +471,6 @@ const AboutPage = () => {
                       <p className="font-semibold text-black mb-2">Eldoret Office</p>
                       <p className="text-gray-600">KFA Building opposite Uchumi</p>
                       <p className="text-gray-600">Eldoret, Kenya</p>
-                      <p className="text-sm font-medium text-black mt-2">+254733781832, 0532032561</p>
                     </div>
                   </div>
                 </div>

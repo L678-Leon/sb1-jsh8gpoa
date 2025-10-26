@@ -118,8 +118,7 @@ const ContactPage = () => {
                       <p className="font-semibold text-gray-800">Eldoret Office</p>
                       <p className="text-gray-600">
                         KFA Building opposite Uchumi<br />
-                        Eldoret, Kenya<br />
-                        +254733781832, 0532032561
+                        Eldoret, Kenya
                       </p>
                     </div>
                   </div>
@@ -135,6 +134,11 @@ const ContactPage = () => {
                   <p className="text-gray-600">
                     +254-722-303505<br />
                     +254-738-829064
+                  </p>
+                  <p className="text-sm text-gray-500 mt-2">Eldoret Numbers:</p>
+                  <p className="text-gray-600">
+                    +254733781832<br />
+                    0532032561
                   </p>
                 </div>
               </div>

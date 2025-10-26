@@ -87,8 +87,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <span className="font-semibold">Eldoret:</span><br />
-                    KFA Building opposite Uchumi<br />
-                    +254733781832, 0532032561
+                    KFA Building opposite Uchumi
                   </div>
                 </div>
               </div>
@@ -96,7 +95,10 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-red-400 flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
                   +254-722-303505<br />
-                  +254-738-829064
+                  +254-738-829064<br />
+                  <span className="text-xs text-gray-400">Eldoret Numbers:</span><br />
+                  +254733781832<br />
+                  0532032561
                 </div>
               </div>
               <div className="flex items-center space-x-3">
