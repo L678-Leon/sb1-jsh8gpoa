@@ -80,9 +80,16 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-red-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
-                  The Filing Room (ground Floor),<br />
-                  Near Panari Hotel, Mombasa Rd.<br />
-                  Nairobi, Kenya
+                  <div className="mb-2">
+                    <span className="font-semibold">Nairobi:</span><br />
+                    The Filing Room (ground Floor),<br />
+                    Near Panari Hotel, Mombasa Rd.
+                  </div>
+                  <div>
+                    <span className="font-semibold">Eldoret:</span><br />
+                    KFA Building opposite Uchumi<br />
+                    +254733781832, 0532032561
+                  </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

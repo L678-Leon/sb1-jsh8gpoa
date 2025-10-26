@@ -132,7 +132,7 @@ const ServicesPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-red-600">
               <h3 className="text-2xl font-serif font-bold text-black mb-4">Kenya</h3>
               <p className="text-gray-600 mb-4">Complete coverage across all counties with local service teams</p>
@@ -143,7 +143,7 @@ const ServicesPage = () => {
                 <li>• Northern Kenya</li>
               </ul>
             </div>
-            
+
             <div className="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-gray-600">
               <h3 className="text-2xl font-serif font-bold text-black mb-4">Uganda</h3>
               <p className="text-gray-600 mb-4">Strategic partnerships and service centers</p>
@@ -154,7 +154,7 @@ const ServicesPage = () => {
                 <li>• Northern Region</li>
               </ul>
             </div>
-            
+
             <div className="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-red-600">
               <h3 className="text-2xl font-serif font-bold text-black mb-4">Rwanda</h3>
               <p className="text-gray-600 mb-4">Growing presence with dedicated service support</p>
@@ -163,6 +163,28 @@ const ServicesPage = () => {
                 <li>• Southern Province</li>
                 <li>• Western Province</li>
                 <li>• Northern Province</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-gray-600">
+              <h3 className="text-2xl font-serif font-bold text-black mb-4">Tanzania</h3>
+              <p className="text-gray-600 mb-4">Expanding service network and partnerships</p>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Dar es Salaam</li>
+                <li>• Arusha Region</li>
+                <li>• Mwanza Region</li>
+                <li>• Other Major Cities</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-red-600">
+              <h3 className="text-2xl font-serif font-bold text-black mb-4">Liberia</h3>
+              <p className="text-gray-600 mb-4">Specialized service and support solutions</p>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Monrovia Region</li>
+                <li>• Port Services</li>
+                <li>• Industrial Areas</li>
+                <li>• On-demand Support</li>
               </ul>
             </div>
           </div>

@@ -7,7 +7,9 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-serif font-bold mb-6">About Scales & Software (K) Ltd</h1>
+          <h1 className="text-5xl font-serif font-bold mb-6">
+            About <span className="text-red-600">Scales</span> & Software (<span className="text-red-600">K</span>) Ltd
+          </h1>
           <p className="text-xl font-light max-w-3xl mx-auto leading-relaxed">
             East Africa's most trusted partner in precision weighing solutions since 2005
           </p>
@@ -442,13 +444,25 @@ const AboutPage = () => {
                 {/* Location Section */}
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h3 className="text-xl font-serif font-semibold text-black mb-4 text-center">Visit Us</h3>
-                  <div className="bg-white p-4 rounded-lg text-center">
-                    <div className="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Phone className="h-6 w-6 text-white" />
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded-lg text-center">
+                      <div className="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Phone className="h-6 w-6 text-white" />
+                      </div>
+                      <p className="font-semibold text-black mb-2">Nairobi Office</p>
+                      <p className="text-gray-600">The Filing Room (ground Floor),</p>
+                      <p className="text-gray-600">Near Panari Hotel, Mombasa Rd.</p>
+                      <p className="text-gray-600">Nairobi, Kenya</p>
                     </div>
-                    <p className="text-gray-600">The Filing Room (ground Floor),</p>
-                    <p className="text-gray-600">Near Panari Hotel, Mombasa Rd.</p>
-                    <p className="text-gray-600">Nairobi, Kenya</p>
+                    <div className="bg-white p-4 rounded-lg text-center">
+                      <div className="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Phone className="h-6 w-6 text-white" />
+                      </div>
+                      <p className="font-semibold text-black mb-2">Eldoret Office</p>
+                      <p className="text-gray-600">KFA Building opposite Uchumi</p>
+                      <p className="text-gray-600">Eldoret, Kenya</p>
+                      <p className="text-sm font-medium text-black mt-2">+254733781832, 0532032561</p>
+                    </div>
                   </div>
                 </div>
               </div>

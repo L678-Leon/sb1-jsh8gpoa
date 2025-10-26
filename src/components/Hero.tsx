@@ -91,7 +91,7 @@ const Hero = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-center px-6 py-3 bg-white text-black font-semibold rounded-xl border-2 border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="group inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black to-gray-900 text-white font-semibold rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Book Consultation
                   <Zap className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
@@ -100,10 +100,10 @@ const Hero = () => {
             </div>
 
             {/* Additional Stats Section */}
-            <div className="text-center mt-12">
-              <p className="text-lg text-black font-bold mb-4">Trusted by Over 1000+ Companies Across East Africa</p>
+            <div className="text-center mt-8">
+              <p className="text-lg text-black font-bold mb-2">Trusted by Over 1000+ Companies Across East Africa</p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-black font-bold">
-              
+
               </div>
             </div>
           </div>

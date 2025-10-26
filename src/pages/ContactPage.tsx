@@ -104,12 +104,25 @@ const ContactPage = () => {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif font-semibold text-black mb-2">Our Location</h3>
-                  <p className="text-gray-600">
-                    The Filing Room (ground Floor),<br />
-                    Near Panari Hotel, Mombasa Rd.<br />
-                    Nairobi, Kenya
-                  </p>
+                  <h3 className="text-xl font-serif font-semibold text-black mb-2">Our Locations</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="font-semibold text-gray-800">Nairobi Office</p>
+                      <p className="text-gray-600">
+                        The Filing Room (ground Floor),<br />
+                        Near Panari Hotel, Mombasa Rd.<br />
+                        Nairobi, Kenya
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-800">Eldoret Office</p>
+                      <p className="text-gray-600">
+                        KFA Building opposite Uchumi<br />
+                        Eldoret, Kenya<br />
+                        +254733781832, 0532032561
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
