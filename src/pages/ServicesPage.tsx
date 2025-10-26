@@ -128,7 +128,7 @@ const ServicesPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-serif font-bold text-black mb-4">Service Coverage</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive service coverage across East Africa
+              Comprehensive service coverage across Africa
             </p>
           </div>
           
