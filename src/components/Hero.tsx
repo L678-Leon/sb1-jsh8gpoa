@@ -39,7 +39,7 @@ const Hero = () => {
                     </p>
                     
                     <p className="leading-relaxed text-black font-bold">
-                      Our comprehensive range includes weighbridges, industrial scales, retail solutions, precision laboratory equipment, 
+                      Our comprehensive range includes weighbridges, industrial scales, retail solutions, precision laboratory equipment 
                       and intelligent software systems - all backed by 24/7 technical support and maintenance services.
                     </p>
                     
