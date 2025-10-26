@@ -103,11 +103,7 @@ const Hero = () => {
             <div className="text-center mt-12">
               <p className="text-lg text-black font-bold mb-4">Trusted by Over 1000+ Companies Across East Africa</p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-black font-bold">
-                <span>🏭 Industrial Solutions</span>
-                <span>🥛 Dairy Cooperatives</span>
-                <span>🚛 Weighbridge Systems</span>
-                <span>🔬 Laboratory Equipment</span>
-                <span>📱 Digital Solutions</span>
+              
               </div>
             </div>
           </div>
