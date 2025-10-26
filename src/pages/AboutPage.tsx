@@ -203,7 +203,7 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-serif font-bold text-red-700 mb-6">5. Food & Processing</h3>
                 <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
                   {[
-                    "FEAST FOODS", "KENYA MEAT COMMISSION", "KAREN ROSES",
+                    "FEAST FOODS", "AFRICADO-TZ", "KENYA MEAT COMMISSION", "SAFICADO LTD", "KAREN ROSES",
                     "KATHY FRESH", "BUNGOMA COUNTY", "ENNSVALLEY", "FARMERS CHOICE"
                   ].map((client, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -220,7 +220,7 @@ const AboutPage = () => {
                 <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
                   {[
                     "NAKURU WEIGHBRIDGE", "ELDORET WEIGHBRIDGE", "PCEA WEIGHBRIDGE",
-                    "NAROK WEIGHBRIDGE", "LAIKIPIA COUNTY GOVERNMENT", "KAPENGURIA WEIGHBRIDGE",
+                    "NAROK WEIGHBRIDGE", "LAIKIPIA COUNTY GOVERNMENT", "KAPENGURIA WEIGHBRIDGE", " APM TERMINALS LIBERIA LTD - LIBERIA",
                     "KITALE WEIGHBRIDGE", "ELFAM WEIGHBRIDGE"
                   ].map((client, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -262,10 +262,10 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-serif font-bold text-red-700 mb-6">4. Milling Sector</h3>
                 <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
                   {[
-                    "NATIONAL CEREALS BOARD", "UNGA LTD", "BUFFALO MILLERS", "TUNGA FEEDS LTD KAMPALA",
+                    "NATIONAL CEREALS BOARD", "UNGA LTD", "BUFFALO MILLERS", "TUNGA FEEDS LTD-UGANDA",
                     "AGROWAYS JINJA-UGANDA", "AGROWAYS NAMULESA-UGANDA", "AGROWAYS MBARARA-UGANDA",
                     "KOMOOL FARM", "LALELA FARM", "GICHEHA FARM", "KENCHIC",
-                    "TUSUSWO WEIGHBRIDGE", "BAKHRESA-RWANDA"
+                    "TUISUSWO WEIGHBRIDGE", "BAKHRESA-RWANDA"
                   ].map((client, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
