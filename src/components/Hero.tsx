@@ -101,7 +101,7 @@ const Hero = () => {
 
             {/* Additional Stats Section */}
             <div className="text-center mt-8">
-              <p className="text-lg text-black font-bold mb-2">Trusted by Over 1000+ Companies Across East Africa</p>
+              <p className="text-lg text-black font-bold mb-2">Trusted by Over 1000+ Companies Across Eastern Africa</p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-black font-bold">
 
               </div>
