@@ -312,31 +312,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Our Partners */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-red-600 p-3 rounded-full mr-4">
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-serif font-bold text-black">Our Partners</h2>
-            </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strategic partnerships that enable us to deliver comprehensive solutions across East Africa
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="flex items-center justify-center">
-              <img
-                src="/images/ddd.jpeg"
-                alt="Our Partners"
-                className="max-w-90 w-90 h-auto object-contain rounded-lg"
-              />
-            </div>
-          </div>
-        </section>
-
+       
         {/* Promise to You */}
         <section className="mb-20">
           <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
@@ -385,8 +361,34 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        </section> 
+
+        {/* Our Partners */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-red-600 p-3 rounded-full mr-4">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h2 className="text-4xl font-serif font-bold text-black">Our Partners</h2>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Strategic partnerships that enable us to deliver comprehensive solutions across East Africa
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-center justify-center">
+              <img
+                src="/images/ddd.jpeg"
+                alt="Our Partners"
+                className="max-w-90 w-90 h-auto object-contain rounded-lg"
+              />
+            </div>
+          </div>
         </section>
 
+       
         {/* Contact Us */}
         <section className="mb-20 bg-white rounded-xl shadow-lg">
           <div className="p-12">
