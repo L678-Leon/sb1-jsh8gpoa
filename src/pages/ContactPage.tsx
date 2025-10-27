@@ -152,6 +152,7 @@ const ContactPage = () => {
                   <p className="text-gray-600">
                     info@scale-software.co.ke<br />
                     sales@scale-software.co.ke
+                   sales1@scale-software.co.ke 
                   </p>
                 </div>
               </div>
@@ -163,8 +164,8 @@ const ContactPage = () => {
                 <div>
                   <h3 className="text-xl font-serif font-semibold text-black mb-2">Business Hours</h3>
                   <p className="text-gray-600">
-                    Monday - Friday: 8:00 AM - 6:00 PM<br />
-                    Saturday: 9:00 AM - 4:00 PM<br />
+                    Monday - Friday: 8:00 AM - 5:00 PM<br />
+                    Saturday: 9:00 AM - 1:00 PM<br />
                     Sunday: Emergency Service Only
                   </p>
                 </div>
