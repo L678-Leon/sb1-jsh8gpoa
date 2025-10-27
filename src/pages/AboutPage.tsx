@@ -150,6 +150,57 @@ const AboutPage = () => {
           </div>
         </section>
 
+         {/* Promise to You */}
+        <section className="mb-20">
+          <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center mb-6">
+                  <Handshake className="h-10 w-10 text-red-200 mr-4" />
+                  <h2 className="text-4xl font-serif font-bold">Our Promise to You</h2>
+                </div>
+                <p className="text-lg font-light leading-relaxed mb-8">
+                  We are committed to delivering exceptional value through our comprehensive services. 
+                  Our promise is built on five core pillars that drive everything we do.
+                </p>
+                <div className="space-y-4">
+                  {[
+                    "Efficiency in every solution we deliver",
+                    "Freedom to Choose the best options for your needs",
+                    "Improved Profits through optimized operations",
+                    "Timely Deliveries that meet your schedules",
+                    "Effective Customer Care that exceeds expectations"
+                  ].map((promise, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <div className="w-3 h-3 bg-red-200 rounded-full flex-shrink-0"></div>
+                      <span className="text-lg font-medium">{promise}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative">
+                <img
+                  src="/images/group 2.jpg"
+                  alt="Our service commitment"
+                  className="w-full h-80 object-cover rounded-lg shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-red-600 p-3 rounded-full">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-black">24/7 Support</div>
+                      <div className="text-sm text-gray-600">Always Available</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
+
+
         {/* Clients */}
         <section className="mb-20">
           <div className="text-center mb-12">
@@ -313,56 +364,7 @@ const AboutPage = () => {
         </section>
 
        
-        {/* Promise to You */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center mb-6">
-                  <Handshake className="h-10 w-10 text-red-200 mr-4" />
-                  <h2 className="text-4xl font-serif font-bold">Our Promise to You</h2>
-                </div>
-                <p className="text-lg font-light leading-relaxed mb-8">
-                  We are committed to delivering exceptional value through our comprehensive services. 
-                  Our promise is built on five core pillars that drive everything we do.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "Efficiency in every solution we deliver",
-                    "Freedom to Choose the best options for your needs",
-                    "Improved Profits through optimized operations",
-                    "Timely Deliveries that meet your schedules",
-                    "Effective Customer Care that exceeds expectations"
-                  ].map((promise, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="w-3 h-3 bg-red-200 rounded-full flex-shrink-0"></div>
-                      <span className="text-lg font-medium">{promise}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="/images/group 2.jpg"
-                  alt="Our service commitment"
-                  className="w-full h-80 object-cover rounded-lg shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-red-600 p-3 rounded-full">
-                      <Award className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-black">24/7 Support</div>
-                      <div className="text-sm text-gray-600">Always Available</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> 
-
+       
         {/* Our Partners */}
         <section className="mb-20">
           <div className="text-center mb-12">
