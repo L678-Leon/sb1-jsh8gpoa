@@ -151,7 +151,7 @@ const ContactPage = () => {
                   <h3 className="text-xl font-serif font-semibold text-black mb-2">Email Address</h3>
                   <p className="text-gray-600">
                     info@scale-software.co.ke<br />
-                    sales@scale-software.co.ke
+                    sales@scale-software.co.ke<br />
                    sales1@scale-software.co.ke 
                   </p>
                 </div>
