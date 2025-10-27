@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://scalesandsoftware.com/</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/about</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/contact</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/project</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Product Categories -->
+  <url>
+    <loc>https://scalesandsoftware.com/products/indicators</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/precision-scales</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/retail-scales</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/field-scales</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/personal-digital-assistants</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/weighing-software</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/accessories</loc>
+    <lastmod>2025-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Example Individual Product Pages -->
+  <url><loc>https://scalesandsoftware.com/products/indicators/dd1010</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/indicators/dd1050</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/indicators/dd700</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/indicators/d39</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/precision-scales/ehb</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/precision-scales/ahw</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/retail-scales/mepl</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/retail-scales/ksp</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/retail-scales/sm5300x</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/personal-digital-assistants/cilico-series</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/personal-digital-assistants/v1h</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/personal-digital-assistants/swell-v710</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/weighing-software/pimapp</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/weighing-software/smartweigh-factory</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/weighing-software/smartweigh-weighbridge</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/accessories/load-cells</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/accessories/test-weights</loc></url>
+
+</urlset>
