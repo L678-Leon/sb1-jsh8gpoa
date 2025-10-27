@@ -232,6 +232,22 @@ const AboutPage = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Sugar Sector */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
+                <h3 className="text-2xl font-serif font-bold text-red-600 mb-6">8. Sugar Sector</h3>
+                <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
+                  {[
+                    "WEST VALLEY SUGAR FACTORY", "KIPSITET CANE COLLECTION CENTRE", "CHEMASE CANE COLLECTION CENTRE", "TRANSMARA SUGAR FACTORY ",
+                    "SONGHOR CANE COLLECTION CENTRE", "KIMWANI CANE COLLECTION CENTRE", "KIBOS SUGAR FACTORY", "SOIT SUGAR FACTORY"
+                  ].map((client, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
+                      <span className="font-medium">{client}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Right Column */}
@@ -284,22 +300,6 @@ const AboutPage = () => {
                   {[
                     "TOTAL OIL", "NATIONAL OIL", "RUBIS KENYA",
                     "OLA ENERGY", "GULF ENERGY", "GALANA OIL"
-                  ].map((client, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
-                      <span className="font-medium">{client}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Sugar Sector */}
-              <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-                <h3 className="text-2xl font-serif font-bold text-red-600 mb-6">8. Sugar Sector</h3>
-                <div className="grid grid-cols-1 gap-3 text-sm text-gray-700">
-                  {[
-                    "WEST VALLEY SUGAR FACTORY", "KIPSITET CANE COLLECTION CENTRE", "CHEMASE CANE COLLECTION CENTRE", "TRANSMARA SUGAR FACTORY ",
-                    "SONGHOR CANE COLLECTION CENTRE", "KIMWANI CANE COLLECTION CENTRE", "KIBOS SUGAR FACTORY", "SOIT SUGAR FACTORY"
                   ].map((client, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
