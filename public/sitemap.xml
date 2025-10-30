@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Main Pages -->
   <url>
@@ -29,43 +33,15 @@
   </url>
 
   <!-- Product Categories -->
-  <url>
-    <loc>https://scalesandsoftware.com/products/indicators</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/precision-scales</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/retail-scales</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/field-scales</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/personal-digital-assistants</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/weighing-software</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/accessories</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://scalesandsoftware.com/products/indicators</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/precision-scales</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/retail-scales</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/field-scales</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/personal-digital-assistants</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/weighing-software</loc></url>
+  <url><loc>https://scalesandsoftware.com/products/accessories</loc></url>
 
-  <!-- Example Individual Product Pages -->
+  <!-- Individual Product Examples -->
   <url><loc>https://scalesandsoftware.com/products/indicators/dd1010</loc></url>
   <url><loc>https://scalesandsoftware.com/products/indicators/dd1050</loc></url>
   <url><loc>https://scalesandsoftware.com/products/indicators/dd700</loc></url>
@@ -83,5 +59,4 @@
   <url><loc>https://scalesandsoftware.com/products/weighing-software/smartweigh-weighbridge</loc></url>
   <url><loc>https://scalesandsoftware.com/products/accessories/load-cells</loc></url>
   <url><loc>https://scalesandsoftware.com/products/accessories/test-weights</loc></url>
-
 </urlset>
