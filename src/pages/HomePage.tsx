@@ -473,7 +473,5 @@ const HomePage = () => {
         title={modalImage.title}
       />
     </div>
-  );
-};
-
-export default HomePage;
+  </>
+);
