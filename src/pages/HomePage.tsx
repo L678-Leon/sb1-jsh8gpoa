@@ -466,14 +466,13 @@ const HomePage = () => {
       </BackgroundBeamsWithCollision>
       
       {/* Image Modal */}
-      <ImageModal
+            <ImageModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         imageSrc={modalImage.src}
         title={modalImage.title}
       />
     </div>
-   </> 
   );
 };
 
