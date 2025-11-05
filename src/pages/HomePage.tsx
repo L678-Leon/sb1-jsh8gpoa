@@ -99,7 +99,6 @@ const categoryDescriptions: { [key: string]: string } = {
 const generateSolutionCategories = () => {
   return categories.map((category) => {
     const urlCategory = category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
-    
     return {
       id: urlCategory,
       title: category,
@@ -117,7 +116,7 @@ const newsItems = [
   {
     id: 1,
     title: "EAGC Kenya Members Breakfast Meeting",
-    description: "Scales & software representative contributing during EAGC Kenya Members Breakfast meeting at Swiss-Bel Hotel in Nairobi 1st Sep 2025",
+    description: "Scales & Software representative contributing during EAGC Kenya Members Breakfast meeting at Swiss-Bel Hotel in Nairobi 1st Sep 2025",
     date: "2025-09-26",
     category: "Event",
     image: "/images/WhatsApp Image 2025-09-12 at 15.27.09_339150d4  news 1.jpg"
@@ -125,7 +124,7 @@ const newsItems = [
   {
     id: 2,
     title: "Farmers Agricultural Open Day",
-    description: "Scales and software exhibition stand @pwani university during the farmers agricultural open day on 7th Aug. 2025",
+    description: "Scales and Software exhibition stand @ Pwani University during the farmers agricultural open day on 7th Aug. 2025",
     date: "2025-09-26",
     category: "Exhibition",
     image: "/images/WhatsApp Image 2025-09-12 at 15.34.16_30bda9ab news 2.jpg"
@@ -133,7 +132,7 @@ const newsItems = [
   {
     id: 3,
     title: "Weighbridge Installation",
-    description: "Ongoing weighbridge installation by skilled technical team from scales and software @ the soon to be launched soit sugar factory 2025",
+    description: "Ongoing weighbridge installation by skilled technical team from Scales and Software @ the soon to be launched Soit Sugar Factory 2025",
     date: "2025-09-26",
     category: "Installation",
     image: "/images/WhatsApp Image 2025-09-12 at 15.37.23_cc8694bf news 3.jpg"
@@ -179,20 +178,20 @@ const HomePage = () => {
   const [newsAutoPaused, setNewsAutoPaused] = useState(false);
   const [productAutoPaused, setProductAutoPaused] = useState(false);
 
-  // Auto-advance slideshows
+// Auto-advance slideshows
   useEffect(() => {
     let newsInterval: NodeJS.Timeout;
     if (!newsAutoPaused) {
       newsInterval = setInterval(() => {
         setCurrentNewsIndex((prev) => (prev + 1) % newsItems.length);
-      }, 8000); // Increased to 8 seconds for better reading time
+      }, 8000); // Increased to 8 seconds for better reading time 
     }
 
     let productInterval: NodeJS.Timeout;
     if (!productAutoPaused) {
       productInterval = setInterval(() => {
         setCurrentProductIndex((prev) => (prev + 1) % newReleaseProducts.length);
-      }, 8500); // Increased to 8.5 seconds for better reading time
+      }, 8500);  // Increased to 8.5 seconds for better reading time
     }
 
     return () => {
@@ -206,7 +205,7 @@ const HomePage = () => {
     setModalOpen(true);
   };
 
-  const nextNews = () => {
+ const nextNews = () => {
     setCurrentNewsIndex((prev) => (prev + 1) % newsItems.length);
     setNewsAutoPaused(true); // Pause auto-advance when user manually navigates
   };
@@ -228,7 +227,7 @@ const HomePage = () => {
 
   return (
     <>
-      {/* ✅ SEO Meta Tags */}
+         {/* ✅ SEO Meta Tags */}
       <Helmet>
         <title>Scales & Software | Kenya’s Trusted Weighing Technology Partner</title>
         <meta
@@ -248,20 +247,21 @@ const HomePage = () => {
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-home-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/" />
       </Helmet>
-      
-    <div>
-      <Hero />
-      
-      {/* Comprehensive Weighing Solutions Section */}
-      <div className="py-2 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Gallery4
-            title="Complete Solution Categories"
-            description="Comprehensive weighing solutions for every industry and application across East Africa"
-            items={solutionCategories}
-          />
+
+      <div>
+        <Hero />
+
+          {/* Comprehensive Weighing Solutions Section */}
+        <div className="py-2 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Gallery4
+              title="Complete Solution Categories"
+              description="Comprehensive weighing solutions for every industry and application across East Africa"
+              items={solutionCategories}
+            />
+          </div>
         </div>
-      </div>
+
 
       {/* Company News and New Release Section */}
       <BackgroundBeamsWithCollision className="bg-gradient-to-b from-gray-900 to-black h-auto min-h-[32rem]">
@@ -466,13 +466,16 @@ const HomePage = () => {
       </BackgroundBeamsWithCollision>
       
       {/* Image Modal */}
-            <ImageModal
-      isOpen={modalOpen}
-      onClose={() => setModalOpen(false)}
-      imageSrc={modalImage.src}
-      title={modalImage.title}
-    />
-  </div>
-);
+           <ImageModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          imageSrc={modalImage.src}
+          title={modalImage.title}
+        />
+      </div>
+    </>
+  );
+};
 
+export default HomePage;
 
