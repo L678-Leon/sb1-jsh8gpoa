@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 interface Project {
   id: number;
@@ -89,6 +90,32 @@ const ProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
+    <>
+      {/* ✅ SEO Helmet Block */}
+      <Helmet>
+        <title>Projects | Scales & Software Kenya — Weighbridge & Industrial Installations</title>
+        <meta
+          name="description"
+          content="Explore Scales & Software's completed projects across Kenya — from weighbridge installations to industrial, mining, and agricultural weighing systems."
+        />
+        <meta
+          name="keywords"
+          content="weighbridge installations Kenya, industrial weighing projects, weighing systems Kenya, scales and software projects, weighing equipment installation, factory weighbridge setup"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Scales & Software Projects — Kenya’s Trusted Weighbridge and Industrial Scale Experts"
+        />
+        <meta
+          property="og:description"
+          content="See our weighbridge and industrial scale installations across Kenya and East Africa. Trusted by factories, farms, and logistics companies."
+        />
+        <meta property="og:url" content="https://scalesandsoftware.com/projects" />
+        <meta property="og:image" content="https://scalesandsoftware.com/images/og-projects-preview.jpg" />
+        <link rel="canonical" href="https://scalesandsoftware.com/projects" />
+      </Helmet>
+      
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -183,6 +210,7 @@ const ProjectsPage: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 };
 
