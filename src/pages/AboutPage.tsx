@@ -1,16 +1,25 @@
-import React from 'react';
-import { History, Target, Eye, Heart, Users, Award, Handshake, Phone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { History, Target, Eye, Heart, Users, Award, Handshake, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const AboutPage = () => {
   return (
     <>
       <Helmet>
         <title>About Scales & Software | Trusted Weighing Technology Partner</title>
-        <meta name="description" content="Learn about Scales & Software, Kenya’s trusted provider of industrial, retail, and weighbridge weighing systems. We deliver precision, reliability, and innovation across Africa." />
-        <meta name="keywords" content="about scales and software, weighing company kenya, industrial weighing, retail weighing, weighbridge systems, precision weighing experts" />
+        <meta
+          name="description"
+          content="Learn about Scales & Software, Kenya’s trusted provider of industrial, retail, and weighbridge weighing systems. We deliver precision, reliability, and innovation across Africa."
+        />
+        <meta
+          name="keywords"
+          content="about scales and software, weighing company kenya, industrial weighing, retail weighing, weighbridge systems, precision weighing experts"
+        />
         <meta property="og:title" content="About Scales & Software | Reliable Weighing Experts" />
-        <meta property="og:description" content="Scales & Software delivers trusted, accurate weighing systems across Kenya and Africa." />
+        <meta
+          property="og:description"
+          content="Scales & Software delivers trusted, accurate weighing systems across Kenya and Africa."
+        />
         <meta property="og:url" content="https://scalesandsoftware.com/about" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/about" />
@@ -28,205 +37,191 @@ const AboutPage = () => {
             </p>
           </div>
         </section>
-        
-        {/* rest of your page code remains unchanged */}
 
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-serif font-bold mb-6">
-            About <span className="text-red-600">Scales</span> & Software (<span className="text-red-600">K</span>) Ltd
-          </h1>
-          <p className="text-xl font-light max-w-3xl mx-auto leading-relaxed">
-            East Africa's most trusted partner in precision weighing solutions since 2005
-          </p>
-        </div>
-      </section>
-
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        {/* Our Story */}
-        <section className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="flex items-center mb-6">
-                <div className="bg-red-600 p-3 rounded-full mr-4">
-                  <History className="h-8 w-8 text-white" />
-                </div>
-                <h2 className="text-4xl font-serif font-bold text-red-600">Our Story</h2>
-              </div>
-              <div className="prose prose-lg text-gray-700 leading-relaxed">
-                <p className="mb-6">
-                  Established in 2005, Scales & Software (K) Ltd began as a vision to revolutionize 
-                  weighing technology across Eastern Africa. What started as a small enterprise has grown 
-                  into the region's most trusted partner in precision weighing solutions.
-                </p>
-                <p className="mb-6">
-                  Over nearly two decades, we have built lasting relationships with businesses across 
-                  multiple industries, from dairy cooperatives in rural Kenya to major industrial 
-                  operations spanning Eatern Africa and beyond.
-                </p>
-                <p>
-                  Our journey is marked by continuous innovation, unwavering commitment to quality, 
-                  and a deep understanding of our clients' unique challenges in the East African market.
-                </p>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <img
-                src="/images/group 1.jpg"
-                alt="Our company heritage"
-                className="w-full h-96 object-cover rounded-lg shadow-xl border-4 border-gray-100"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Expertise */}
-        <section className="mb-20 bg-white rounded-xl shadow-lg p-12">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-red-600 p-3 rounded-full mr-4">
-                <Award className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-serif font-bold text-black">Our Expertise</h2>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-red-50 rounded-lg">
-              <h3 className="text-xl font-serif font-semibold text-black mb-4">Technical Excellence</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Nearly two decades of experience in precision weighing technology, 
-                from installation to maintenance across all industrial sectors.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <h3 className="text-xl font-serif font-semibold text-black mb-4">Regional Leadership</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Comprehensive coverage across East Africa with local expertise 
-                and understanding of regional business requirements.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-red-50 rounded-lg">
-              <h3 className="text-xl font-serif font-semibold text-black mb-4">Industry Specialization</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Deep knowledge across dairy, tea, mining, milling, and industrial 
-                sectors with tailored solutions for each industry.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-r from-red-600 to-black text-white rounded-xl p-12">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-6">
-                <Target className="h-12 w-12 text-red-200 mr-4" />
-                <h2 className="text-4xl font-serif font-bold">Our Mission</h2>
-              </div>
-              <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
-                To deliver innovative, reliable weighing solutions that enhance business efficiency 
-                and profitability for our clients across Eastern Africa, while maintaining the highest 
-                standards of precision, service excellence, and technological advancement.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-red-600 p-3 rounded-full mr-4">
-                <Heart className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-serif font-bold text-black">Core Values</h2>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Precision & Accuracy", desc: "Unwavering commitment to measurement excellence" },
-              { title: "Customer Excellence", desc: "Exceeding expectations in every interaction" },
-              { title: "Innovation & Quality", desc: "Continuous advancement in weighing technology" },
-              { title: "Integrity & Trust", desc: "Building lasting relationships through honesty" },
-              { title: "Continuous Improvement", desc: "Always striving for better solutions" },
-              { title: "Regional Expertise", desc: "Deep understanding of East African markets" }
-            ].map((value, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md border-l-4 border-red-600">
-                <h3 className="text-xl font-serif font-semibold text-black mb-3">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Vision */}
-        <section className="mb-20">
-          <div className="bg-black text-white rounded-xl p-12">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-6">
-                <Eye className="h-12 w-12 text-red-400 mr-4" />
-                <h2 className="text-4xl font-serif font-bold">Our Vision</h2>
-              </div>
-              <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
-                To be Africa's leading weighing solutions provider, recognized for excellence, 
-                innovation, and exceptional customer service, while contributing to the economic 
-                growth and industrial development of the region.
-              </p>
-            </div>
-          </div>
-        </section>
-
-         {/* Promise to You */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          {/* Our Story */}
+          <section className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="order-2 lg:order-1">
                 <div className="flex items-center mb-6">
-                  <Handshake className="h-10 w-10 text-red-200 mr-4" />
-                  <h2 className="text-4xl font-serif font-bold">Our Promise to You</h2>
+                  <div className="bg-red-600 p-3 rounded-full mr-4">
+                    <History className="h-8 w-8 text-white" />
+                  </div>
+                  <h2 className="text-4xl font-serif font-bold text-red-600">Our Story</h2>
                 </div>
-                <p className="text-lg font-light leading-relaxed mb-8">
-                  We are committed to delivering exceptional value through our comprehensive services. 
-                  Our promise is built on five core pillars that drive everything we do.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "Efficiency in every solution we deliver",
-                    "Freedom to Choose the best options for your needs",
-                    "Improved Profits through optimized operations",
-                    "Timely Deliveries that meet your schedules",
-                    "Effective Customer Care that exceeds expectations"
-                  ].map((promise, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="w-3 h-3 bg-red-200 rounded-full flex-shrink-0"></div>
-                      <span className="text-lg font-medium">{promise}</span>
-                    </div>
-                  ))}
+                <div className="prose prose-lg text-gray-700 leading-relaxed">
+                  <p className="mb-6">
+                    Established in 2005, Scales & Software (K) Ltd began as a vision to revolutionize weighing
+                    technology across Eastern Africa. What started as a small enterprise has grown into the region's
+                    most trusted partner in precision weighing solutions.
+                  </p>
+                  <p className="mb-6">
+                    Over nearly two decades, we have built lasting relationships with businesses across multiple
+                    industries, from dairy cooperatives in rural Kenya to major industrial operations spanning Eastern
+                    Africa and beyond.
+                  </p>
+                  <p>
+                    Our journey is marked by continuous innovation, unwavering commitment to quality, and a deep
+                    understanding of our clients' unique challenges in the East African market.
+                  </p>
                 </div>
               </div>
-              <div className="relative">
+              <div className="order-1 lg:order-2">
                 <img
-                  src="/images/group 2.jpg"
-                  alt="Our service commitment"
-                  className="w-full h-80 object-cover rounded-lg shadow-2xl"
+                  src="/images/group 1.jpg"
+                  alt="Our company heritage"
+                  className="w-full h-96 object-cover rounded-lg shadow-xl border-4 border-gray-100"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-red-600 p-3 rounded-full">
-                      <Award className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-black">24/7 Support</div>
-                      <div className="text-sm text-gray-600">Always Available</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Expertise */}
+          <section className="mb-20 bg-white rounded-xl shadow-lg p-12">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-red-600 p-3 rounded-full mr-4">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h2 className="text-4xl font-serif font-bold text-black">Our Expertise</h2>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-6 bg-red-50 rounded-lg">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Technical Excellence</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Nearly two decades of experience in precision weighing technology, from installation to maintenance
+                  across all industrial sectors.
+                </p>
+              </div>
+              <div className="text-center p-6 bg-gray-50 rounded-lg">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Regional Leadership</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Comprehensive coverage across East Africa with local expertise and understanding of regional business
+                  requirements.
+                </p>
+              </div>
+              <div className="text-center p-6 bg-red-50 rounded-lg">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Industry Specialization</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Deep knowledge across dairy, tea, mining, milling, and industrial sectors with tailored solutions for
+                  each industry.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Mission */}
+          <section className="mb-20">
+            <div className="bg-gradient-to-r from-red-600 to-black text-white rounded-xl p-12">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-6">
+                  <Target className="h-12 w-12 text-red-200 mr-4" />
+                  <h2 className="text-4xl font-serif font-bold">Our Mission</h2>
+                </div>
+                <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
+                  To deliver innovative, reliable weighing solutions that enhance business efficiency and profitability
+                  for our clients across Eastern Africa, while maintaining the highest standards of precision, service
+                  excellence, and technological advancement.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Values */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-red-600 p-3 rounded-full mr-4">
+                  <Heart className="h-8 w-8 text-white" />
+                </div>
+                <h2 className="text-4xl font-serif font-bold text-black">Core Values</h2>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Precision & Accuracy", desc: "Unwavering commitment to measurement excellence" },
+                { title: "Customer Excellence", desc: "Exceeding expectations in every interaction" },
+                { title: "Innovation & Quality", desc: "Continuous advancement in weighing technology" },
+                { title: "Integrity & Trust", desc: "Building lasting relationships through honesty" },
+                { title: "Continuous Improvement", desc: "Always striving for better solutions" },
+                { title: "Regional Expertise", desc: "Deep understanding of East African markets" },
+              ].map((value, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-md border-l-4 border-red-600">
+                  <h3 className="text-xl font-serif font-semibold text-black mb-3">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{value.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Vision */}
+          <section className="mb-20">
+            <div className="bg-black text-white rounded-xl p-12">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-6">
+                  <Eye className="h-12 w-12 text-red-400 mr-4" />
+                  <h2 className="text-4xl font-serif font-bold">Our Vision</h2>
+                </div>
+                <p className="text-xl font-light leading-relaxed max-w-4xl mx-auto">
+                  To be Africa's leading weighing solutions provider, recognized for excellence, innovation, and
+                  exceptional customer service, while contributing to the economic growth and industrial development of
+                  the region.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Promise to You */}
+          <section className="mb-20">
+            <div className="bg-gradient-to-r from-red-600 to-black rounded-xl p-12 text-white">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center mb-6">
+                    <Handshake className="h-10 w-10 text-red-200 mr-4" />
+                    <h2 className="text-4xl font-serif font-bold">Our Promise to You</h2>
+                  </div>
+                  <p className="text-lg font-light leading-relaxed mb-8">
+                    We are committed to delivering exceptional value through our comprehensive services. Our promise is
+                    built on five core pillars that drive everything we do.
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      "Efficiency in every solution we deliver",
+                      "Freedom to Choose the best options for your needs",
+                      "Improved Profits through optimized operations",
+                      "Timely Deliveries that meet your schedules",
+                      "Effective Customer Care that exceeds expectations",
+                    ].map((promise, index) => (
+                      <div key={index} className="flex items-center space-x-4">
+                        <div className="w-3 h-3 bg-red-200 rounded-full flex-shrink-0"></div>
+                        <span className="text-lg font-medium">{promise}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="/images/group 2.jpg"
+                    alt="Our service commitment"
+                    className="w-full h-80 object-cover rounded-lg shadow-2xl"
+                  />
+                  <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-red-600 p-3 rounded-full">
+                        <Award className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-black">24/7 Support</div>
+                        <div className="text-sm text-gray-600">Always Available</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section> 
+          </section>
+
 
 
         {/* Clients */}
