@@ -5,6 +5,7 @@ import { Gallery4 } from '../components/ui/gallery4';
 import { GlowingEffectDemo } from '../components/ui/glowing-effect-demo';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 // Image Modal Component
 const ImageModal = ({ 
@@ -226,6 +227,28 @@ const HomePage = () => {
   };
 
   return (
+    <>
+      {/* ✅ SEO Meta Tags */}
+      <Helmet>
+        <title>Scales & Software | Kenya’s Trusted Weighing Technology Partner</title>
+        <meta
+          name="description"
+          content="Scales & Software (K) Ltd provides innovative weighbridge, industrial, retail, and precision weighing solutions across Kenya and East Africa. Explore our full range of products and services."
+        />
+        <meta
+          name="keywords"
+          content="weighbridge kenya, industrial scales kenya, precision weighing systems, retail weighing solutions, weighing software kenya, scale automation"
+        />
+        <meta property="og:title" content="Scales & Software | Reliable Weighing Systems for Every Industry" />
+        <meta
+          property="og:description"
+          content="Kenya’s leading supplier of industrial, retail, and precision weighing systems. Accurate. Durable. Smart."
+        />
+        <meta property="og:url" content="https://scalesandsoftware.com/" />
+        <meta property="og:image" content="https://scalesandsoftware.com/images/og-home-preview.jpg" />
+        <link rel="canonical" href="https://scalesandsoftware.com/" />
+      </Helmet>
+      
     <div>
       <Hero />
       
