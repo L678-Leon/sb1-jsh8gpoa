@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -21,21 +22,23 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-white">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen bg-white">
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
