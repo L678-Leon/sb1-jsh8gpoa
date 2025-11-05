@@ -1,5 +1,6 @@
 import React from 'react';
 import { History, Target, Eye, Heart, Users, Award, Handshake, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AboutPage = () => {
   return (
