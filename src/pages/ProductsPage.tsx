@@ -155,6 +155,29 @@ const ProductsPage = () => {
   }
 
   return (
+    <>
+      {/* ✅ SEO HELMET BLOCK */}
+      <Helmet>
+        <title>Products | Scales & Software Kenya — Industrial, Retail & Precision Weighing Systems</title>
+        <meta
+          name="description"
+          content="Explore Scales & Software Kenya’s complete range of industrial scales, weighbridges, precision balances, PDAs, and weighing software. Accurate, reliable weighing systems for every industry."
+        />
+        <meta
+          name="keywords"
+          content="scales kenya, industrial scales, weighbridge, weighing systems, platform scale, precision scale, retail scales, smartweigh, weighing software, PDA, load cell"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Scales & Software Products — Complete Weighing Solutions" />
+        <meta
+          property="og:description"
+          content="From heavy-duty weighbridges to analytical balances and automation software — explore Kenya’s most trusted weighing technology."
+        />
+        <meta property="og:url" content="https://scalesandsoftware.com/products" />
+        <meta property="og:image" content="https://scalesandsoftware.com/images/og-products-preview.jpg" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products" />
+      </Helmet>
+      
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -352,11 +375,12 @@ const ProductsPage = () => {
               className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
             >
               �
-            </button>
+             </button>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 
