@@ -512,7 +512,6 @@ const AboutPage = () => {
         </section>
       </div>
     </div>
-        </>
   );
 };
 
