@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { createConsultationBooking } from '../lib/supabase';
+import { Helmet } from 'react-helmet';
+
 
 const ContactPage = () => {
   const location = useLocation();
@@ -76,6 +78,20 @@ const ContactPage = () => {
   };
 
   return (
+  <>
+    <Helmet>
+      <title>Contact Scales & Software Kenya | Get a Weighing Quote</title>
+      <meta name="description" content="Get in touch with Scales & Software Kenya for weighbridge installations, weighing software, and technical support. Contact us for custom solutions today." />
+      <meta name="keywords" content="contact scales and software, weighing support kenya, weighbridge quotation, industrial scale supplier, smartweigh kenya, weighing systems customer service" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Contact Scales & Software Kenya" />
+      <meta property="og:description" content="Reach Scales & Software Kenya for reliable industrial weighing solutions, SmartWeigh software, and weighbridge support." />
+      <meta property="og:url" content="https://scalesandsoftware.com/contact" />
+      <meta property="og:image" content="https://scalesandsoftware.com/images/og-preview.jpg" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+    </Helmet>
+
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
