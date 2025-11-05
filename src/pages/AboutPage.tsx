@@ -4,6 +4,33 @@ import { Helmet } from 'react-helmet-async';
 
 const AboutPage = () => {
   return (
+    <>
+      <Helmet>
+        <title>About Scales & Software | Trusted Weighing Technology Partner</title>
+        <meta name="description" content="Learn about Scales & Software, Kenya’s trusted provider of industrial, retail, and weighbridge weighing systems. We deliver precision, reliability, and innovation across Africa." />
+        <meta name="keywords" content="about scales and software, weighing company kenya, industrial weighing, retail weighing, weighbridge systems, precision weighing experts" />
+        <meta property="og:title" content="About Scales & Software | Reliable Weighing Experts" />
+        <meta property="og:description" content="Scales & Software delivers trusted, accurate weighing systems across Kenya and Africa." />
+        <meta property="og:url" content="https://scalesandsoftware.com/about" />
+        <meta property="og:image" content="https://scalesandsoftware.com/images/og-preview.jpg" />
+        <link rel="canonical" href="https://scalesandsoftware.com/about" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h1 className="text-5xl font-serif font-bold mb-6">
+              About <span className="text-red-600">Scales</span> & Software (<span className="text-red-600">K</span>) Ltd
+            </h1>
+            <p className="text-xl font-light max-w-3xl mx-auto leading-relaxed">
+              East Africa's most trusted partner in precision weighing solutions since 2005
+            </p>
+          </div>
+        </section>
+        
+        {/* rest of your page code remains unchanged */}
+
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
