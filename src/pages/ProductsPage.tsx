@@ -11,6 +11,8 @@ import IndicatorsPage from '../components/IndicatorsPage';
 import WeighingSoftwarePage from '../components/WeighingSoftwarePage';
 import AccessoriesPage from '../components/AccessoriesPage';
 import PersonalDigitalAssistantsPage from '../components/PersonalDigitalAssistantsPage';
+import { Helmet } from 'react-helmet-async';
+
 
 const categoryDescriptions: { [key: string]: string } = {
   'WEIGHBRIDGES': 'Heavy-duty weighing solutions for trucks and large vehicles with advanced digital indicators and comprehensive software integration.',
