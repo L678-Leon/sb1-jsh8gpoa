@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wrench, Clock, Settings, Users, Award, Truck, CheckCircle, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const ServicesPage = () => {
   const services = [
@@ -86,6 +87,29 @@ const ServicesPage = () => {
   ];
 
   return (
+    <>
+      {/* ✅ SEO HELMET BLOCK */}
+    <Helmet>
+        <title>Services | Scales & Software Kenya — Installation, Maintenance & Technical Support</title>
+        <meta
+          name="description"
+          content="Professional weighing services in Kenya and East Africa: installation, maintenance, calibration, and on-site support for weighbridges, industrial, retail, and precision scales."
+        />
+        <meta
+          name="keywords"
+          content="scale installation kenya, weighbridge service, weighing maintenance, scale calibration, technical support, weighing solutions kenya, field service"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Weighing Equipment Services — Scales & Software Kenya" />
+        <meta
+          property="og:description"
+          content="Expert installation, calibration, maintenance, and training for industrial and commercial weighing systems. Serving Kenya, Uganda, Tanzania, and beyond."
+        />
+        <meta property="og:url" content="https://scalesandsoftware.com/services" />
+        <meta property="og:image" content="https://scalesandsoftware.com/images/og-services-preview.jpg" />
+        <link rel="canonical" href="https://scalesandsoftware.com/services" />
+      </Helmet>
+
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
@@ -227,6 +251,7 @@ const ServicesPage = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 
