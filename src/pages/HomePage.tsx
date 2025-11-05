@@ -473,7 +473,7 @@ const HomePage = () => {
         title={modalImage.title}
       />
     </div>
-   </> 
+   
   );
 };
 
