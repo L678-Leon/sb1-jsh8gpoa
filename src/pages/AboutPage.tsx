@@ -222,8 +222,6 @@ const AboutPage = () => {
             </div>
           </section>
 
-
-
         {/* Clients */}
         <section className="mb-20">
           <div className="text-center mb-12">
