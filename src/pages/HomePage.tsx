@@ -467,13 +467,12 @@ const HomePage = () => {
       
       {/* Image Modal */}
             <ImageModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        imageSrc={modalImage.src}
-        title={modalImage.title}
-      />
-    </div>
-  </>
+      isOpen={modalOpen}
+      onClose={() => setModalOpen(false)}
+      imageSrc={modalImage.src}
+      title={modalImage.title}
+    />
+  </div>
 );
 
-export default HomePage;
+
