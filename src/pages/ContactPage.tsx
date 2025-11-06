@@ -111,8 +111,8 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <div className="max-w-6xl mx-auto px-6 py-16">
-          <div className="grid lg:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-black mb-6">Get In Touch</h3>
@@ -193,11 +193,11 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-black mb-6">Book a Consultation Call</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg w-full">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">Book a Consultation Call</h3>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="w-full">
                     <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                       Full Name *
                     </label>
@@ -208,11 +208,11 @@ const ContactPage = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                       placeholder="Your full name"
                     />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                       Email Address *
                     </label>
@@ -223,14 +223,14 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="w-full">
                     <label htmlFor="phone" className="block text-sm font-medium text-black mb-2">
                       Phone Number
                     </label>
@@ -240,11 +240,11 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                       placeholder="+254 700 000 000"
                     />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <label htmlFor="company" className="block text-sm font-medium text-black mb-2">
                       Company Name
                     </label>
@@ -254,13 +254,13 @@ const ContactPage = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                       placeholder="Your company name"
                     />
                   </div>
                 </div>
 
-                <div>
+                <div className="w-full">
                   <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                     Tell us about your needs *
                   </label>
@@ -271,13 +271,13 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-2 focus:ring-red-600 focus:border-transparent text-base resize-none"
                     placeholder="Describe your business needs and which products you'd like to learn more about..."
                   ></textarea>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="w-full">
                     <label htmlFor="preferredDate" className="block text-sm font-medium text-black mb-2">
                       Preferred Date (Optional)
                     </label>
@@ -287,10 +287,10 @@ const ContactPage = () => {
                       name="preferredDate"
                       value={formData.preferredDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                     />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <label htmlFor="preferredTime" className="block text-sm font-medium text-black mb-2">
                       Preferred Time (Optional)
                     </label>
@@ -300,7 +300,7 @@ const ContactPage = () => {
                       name="preferredTime"
                       value={formData.preferredTime}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent text-base"
                     />
                   </div>
                 </div>
@@ -318,7 +318,7 @@ const ContactPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-600 text-white py-4 rounded-lg hover:bg-red-700 transition-colors font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-lg hover:bg-red-700 transition-colors font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
                   <Send className="h-5 w-5" />
                   <span>{isSubmitting ? 'Submitting...' : 'Request Consultation Call'}</span>
