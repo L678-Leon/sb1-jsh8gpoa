@@ -178,27 +178,25 @@ const HomePage = () => {
   const [newsAutoPaused, setNewsAutoPaused] = useState(false);
   const [productAutoPaused, setProductAutoPaused] = useState(false);
 
-// Auto-advance slideshows
   useEffect(() => {
-    let newsInterval: NodeJS.Timeout;
     if (!newsAutoPaused) {
-      newsInterval = setInterval(() => {
-        setCurrentNewsIndex((prev) => (prev + 1) % newsItems.length);
-      }, 8000); // Increased to 8 seconds for better reading time 
-    }
+      const newsInterval = setInterval(() => {
+        setCurrentNewsIndex((prev) => (prev + 1) % 3);
+      }, 8000);
 
-    let productInterval: NodeJS.Timeout;
+      return () => clearInterval(newsInterval);
+    }
+  }, [newsAutoPaused]);
+
+  useEffect(() => {
     if (!productAutoPaused) {
-      productInterval = setInterval(() => {
-        setCurrentProductIndex((prev) => (prev + 1) % newReleaseProducts.length);
-      }, 8500);  // Increased to 8.5 seconds for better reading time
-    }
+      const productInterval = setInterval(() => {
+        setCurrentProductIndex((prev) => (prev + 1) % 3);
+      }, 8500);
 
-    return () => {
-      if (newsInterval) clearInterval(newsInterval);
-      if (productInterval) clearInterval(productInterval);
-    };
-  }, [newsAutoPaused, productAutoPaused]);
+      return () => clearInterval(productInterval);
+    }
+  }, [productAutoPaused]);
 
   const handleImageClick = (imageSrc: string, title: string) => {
     setModalImage({ src: imageSrc, title });
