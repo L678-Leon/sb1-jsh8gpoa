@@ -43,7 +43,7 @@ const ContactPage = () => {
     setSubmitMessage(null);
 
     try {
-      await createConsultationBooking({
+      console.log('Submitting form with data:', {
         name: formData.name,
         email: formData.email,
         phone_number: formData.phone,
@@ -51,6 +51,17 @@ const ContactPage = () => {
         business_needs: formData.message,
         product: productName || undefined
       });
+
+      const result = await createConsultationBooking({
+        name: formData.name,
+        email: formData.email,
+        phone_number: formData.phone,
+        company_name: formData.company || undefined,
+        business_needs: formData.message,
+        product: productName || undefined
+      });
+
+      console.log('Form submission successful:', result);
 
       setSubmitMessage({
         type: 'success',
@@ -68,9 +79,12 @@ const ContactPage = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      console.error('Error details:', errorMessage);
+
       setSubmitMessage({
         type: 'error',
-        text: 'There was an error submitting your request. Please try again.'
+        text: `There was an error submitting your request: ${errorMessage}. Please try again.`
       });
     } finally {
       setIsSubmitting(false);
@@ -306,10 +320,10 @@ const ContactPage = () => {
                 </div>
 
                 {submitMessage && (
-                  <div className={`p-4 rounded-lg ${
+                  <div className={`p-4 rounded-lg font-medium text-sm sm:text-base ${
                     submitMessage.type === 'success'
-                      ? 'bg-green-50 text-green-800 border border-green-200'
-                      : 'bg-red-50 text-red-800 border border-red-200'
+                      ? 'bg-green-50 text-green-800 border-2 border-green-500'
+                      : 'bg-red-50 text-red-800 border-2 border-red-500'
                   }`}>
                     {submitMessage.text}
                   </div>

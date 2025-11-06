@@ -28,6 +28,8 @@ export async function createConsultationBooking(booking: ConsultationBooking) {
     status: 'pending'
   };
 
+  console.log('Attempting to insert into database:', dbBooking);
+
   const { data, error } = await supabase
     .from('consultation_bookings')
     .insert([dbBooking])
@@ -35,8 +37,10 @@ export async function createConsultationBooking(booking: ConsultationBooking) {
     .maybeSingle();
 
   if (error) {
-    throw error;
+    console.error('Database insert error:', error);
+    throw new Error(`Database error: ${error.message} (Code: ${error.code})`);
   }
 
+  console.log('Database insert successful:', data);
   return data;
 }
