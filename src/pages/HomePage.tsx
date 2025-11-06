@@ -265,16 +265,16 @@ const HomePage = () => {
 
       {/* Company News and New Release Section */}
       <BackgroundBeamsWithCollision className="bg-gradient-to-b from-gray-900 to-black h-auto min-h-[32rem]">
-        <div className="relative z-10 py-6">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8">
+        <div className="relative z-10 py-6 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               
               {/* Company News Section */}
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                <div className="p-4 border-b border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-serif font-bold text-red-600">Company News</h2>
-                    <div className="flex items-center space-x-2">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 w-full overflow-hidden">
+                <div className="p-3 sm:p-4 border-b border-gray-200">
+                  <div className="flex items-center justify-between w-full">
+                    <h2 className="text-lg sm:text-xl font-serif font-bold text-red-600 truncate flex-shrink min-w-0">Company News</h2>
+                    <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
                       <button
                         onClick={prevNews}
                         className="p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -294,14 +294,14 @@ const HomePage = () => {
                 </div>
 
                 {/* News Slideshow */}
-                <div className="relative overflow-hidden" style={{ height: '500px' }}>
+                <div className="relative overflow-hidden w-full" style={{ height: '440px', maxHeight: '500px' }}>
                   <div
                     className="flex transition-transform duration-500 ease-in-out h-full"
                     style={{ transform: `translateX(-${currentNewsIndex * 100}%)` }}
                   >
                     {newsItems.map((news) => (
-                      <div key={news.id} className="w-full flex-shrink-0 p-4 flex flex-col h-full">
-                        <div className="mb-4 bg-white rounded-lg p-2" style={{ height: '240px' }}>
+                      <div key={news.id} className="w-full flex-shrink-0 p-3 sm:p-4 flex flex-col h-full min-w-0">
+                        <div className="mb-3 sm:mb-4 bg-white rounded-lg p-2 flex-shrink-0" style={{ height: '200px' }}>
                           <img
                             src={news.image}
                             alt={news.title}
@@ -310,16 +310,16 @@ const HomePage = () => {
                             onError={(e) => { e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg'; }}
                           />
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg flex-shrink-0">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-orange-100 text-orange-700">
+                        <div className="p-3 sm:p-4 bg-gray-50 rounded-lg flex-shrink-0 overflow-hidden">
+                            <div className="flex items-center space-x-2 mb-2 overflow-hidden">
+                              <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-orange-100 text-orange-700 truncate max-w-full">
                                 {news.category}
                               </span>
                             </div>
-                            <h3 className="text-base font-serif font-bold text-gray-900 mb-2 leading-tight">
+                            <h3 className="text-sm sm:text-base font-serif font-bold text-gray-900 mb-2 leading-tight break-words">
                               {news.title}
                             </h3>
-                            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 sm:mb-4 break-words line-clamp-3">
                               {news.description}
                             </p>
                             <p className="text-xs text-gray-500">
@@ -336,7 +336,7 @@ const HomePage = () => {
                 </div>
 
                 {/* News Indicators */}
-                <div className="flex justify-center space-x-2 p-4">
+                <div className="flex justify-center space-x-2 p-3 sm:p-4">
                   {newsItems.map((_, index) => (
                     <button
                       key={index}
@@ -351,11 +351,11 @@ const HomePage = () => {
               </div>
 
               {/* New Releases Section */}
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                <div className="p-4 border-b border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-serif font-bold text-red-600">New Releases</h2>
-                    <div className="flex items-center space-x-2">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 w-full overflow-hidden">
+                <div className="p-3 sm:p-4 border-b border-gray-200">
+                  <div className="flex items-center justify-between w-full">
+                    <h2 className="text-lg sm:text-xl font-serif font-bold text-red-600 truncate flex-shrink min-w-0">New Releases</h2>
+                    <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
                       <button
                         onClick={prevProduct}
                         className="p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -375,19 +375,19 @@ const HomePage = () => {
                 </div>
 
                 {/* Products Slideshow */}
-                <div className="relative overflow-hidden" style={{ height: '500px' }}>
+                <div className="relative overflow-hidden w-full" style={{ height: '440px', maxHeight: '500px' }}>
                   <div
                     className="flex transition-transform duration-500 ease-in-out h-full"
                     style={{ transform: `translateX(-${currentProductIndex * 100}%)` }}
                   >
                     {newReleaseProducts.map((product) => (
-                      <div key={product.id} className="w-full flex-shrink-0 p-4 flex flex-col h-full">
-                        <div className="mb-4" style={{ height: '240px' }}>
-                          <div className="relative h-full">
+                      <div key={product.id} className="w-full flex-shrink-0 p-3 sm:p-4 flex flex-col h-full min-w-0">
+                        <div className="mb-3 sm:mb-4 flex-shrink-0" style={{ height: '200px' }}>
+                          <div className="relative h-full w-full overflow-hidden">
                             <img
                               src={product.image}
                               alt={product.name}
-                              className="w-full h-full object-contain rounded-lg cursor-pointer hover:opacity-80 transition-opacity bg-gray-50 p-4"
+                              className="w-full h-full object-contain rounded-lg cursor-pointer hover:opacity-80 transition-opacity bg-gray-50 p-2 sm:p-4"
                               onClick={() => handleImageClick(product.image, product.name)}
                               onError={(e) => {
                                 e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg';
@@ -400,23 +400,23 @@ const HomePage = () => {
                             )}
                           </div>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg flex-shrink-0">
-                          <div className="mb-3">
-                            <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
+                        <div className="p-3 sm:p-4 bg-gray-50 rounded-lg flex-shrink-0 overflow-hidden">
+                          <div className="mb-2 sm:mb-3 overflow-hidden">
+                            <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700 truncate max-w-full">
                               {product.category}
                             </span>
                           </div>
-                          <h3 className="text-base font-serif font-bold text-gray-900 mb-2">
+                          <h3 className="text-sm sm:text-base font-serif font-bold text-gray-900 mb-2 break-words">
                             {product.name}
                           </h3>
-                          <p className="text-gray-600 text-xs leading-relaxed mb-3">
+                          <p className="text-gray-600 text-xs leading-relaxed mb-2 sm:mb-3 break-words line-clamp-2">
                             {product.description}
                           </p>
-                          <div className="space-y-2">
+                          <div className="space-y-1 sm:space-y-2">
                             {product.keyBenefits.slice(0, 3).map((benefit, index) => (
-                              <div key={index} className="flex items-center text-xs text-gray-600">
-                                <div className="w-1 h-1 bg-red-600 rounded-full mr-2 flex-shrink-0"></div>
-                                {benefit}
+                              <div key={index} className="flex items-start text-xs text-gray-600 w-full">
+                                <div className="w-1 h-1 bg-red-600 rounded-full mr-2 flex-shrink-0 mt-1.5"></div>
+                                <span className="break-words flex-1 min-w-0">{benefit}</span>
                               </div>
                             ))}
                           </div>
@@ -427,7 +427,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Product Indicators */}
-                <div className="flex justify-center space-x-2 p-4">
+                <div className="flex justify-center space-x-2 p-3 sm:p-4">
                   {newReleaseProducts.map((_, index) => (
                     <button
                       key={index}
