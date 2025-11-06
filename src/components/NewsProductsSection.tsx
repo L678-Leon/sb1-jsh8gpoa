@@ -154,16 +154,16 @@ const NewsProductsSection = () => {
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           
           {/* Left Column - New Release (Products) */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-            <div className="p-4 border-b border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <div className="p-3 sm:p-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-serif font-bold text-gray-900">New Release</h2>
-                <div className="flex items-center space-x-2">
+                <h2 className="text-lg sm:text-xl font-serif font-bold text-gray-900">New Release</h2>
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <button
                     onClick={prevProduct}
                     className="p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -178,8 +178,8 @@ const NewsProductsSection = () => {
                   >
                     <ChevronRight className="h-5 w-5 text-gray-600" />
                   </button>
-                  <button className="text-gray-500 hover:text-gray-700 text-sm font-medium flex items-center">
-                    More <ArrowRight className="h-4 w-4 ml-1" />
+                  <button className="text-gray-500 hover:text-gray-700 text-xs sm:text-sm font-medium flex items-center">
+                    <span className="hidden sm:inline">More</span> <ArrowRight className="h-4 w-4 sm:ml-1" />
                   </button>
                 </div>
               </div>
@@ -187,18 +187,19 @@ const NewsProductsSection = () => {
 
             {/* Products Slideshow */}
             <div className="relative overflow-hidden h-80">
-              <div 
+              <div
                 className="flex transition-transform duration-500 ease-in-out h-full"
                 style={{ transform: `translateX(-${currentProductIndex * 100}%)` }}
               >
                 {products.map((product) => (
-                  <div key={product.id} className="w-full flex-shrink-0 p-4 flex">
-                    <div className="w-1/2 pr-4">
+                  <div key={product.id} className="w-full flex-shrink-0 p-3 sm:p-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <div className="w-full sm:w-1/2">
                       <div className="relative">
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-40 object-cover rounded-lg"
+                          className="w-full h-32 sm:h-40 object-cover rounded-lg"
                         />
                         {product.isNew && (
                           <div className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
@@ -207,19 +208,19 @@ const NewsProductsSection = () => {
                         )}
                       </div>
                     </div>
-                    <div className="w-1/2 pl-4">
-                      <div className="mb-3">
+                    <div className="w-full sm:w-1/2">
+                      <div className="mb-2">
                         <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
                           {product.category}
                         </span>
                       </div>
-                      <h3 className="text-base font-serif font-bold text-gray-900 mb-2">
+                      <h3 className="text-sm sm:text-base font-serif font-bold text-gray-900 mb-2">
                         {product.name}
                       </h3>
-                      <p className="text-gray-600 text-xs leading-relaxed mb-3">
+                      <p className="text-gray-600 text-xs leading-relaxed mb-2 sm:mb-3">
                         {product.description}
                       </p>
-                      <div className="space-y-2">
+                      <div className="space-y-1 sm:space-y-2">
                         {product.keyBenefits.slice(0, 3).map((benefit, index) => (
                           <div key={index} className="flex items-center text-xs text-gray-600">
                             <div className="w-1 h-1 bg-red-600 rounded-full mr-2 flex-shrink-0"></div>
@@ -228,13 +229,14 @@ const NewsProductsSection = () => {
                         ))}
                       </div>
                     </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Product Indicators */}
-            <div className="flex justify-center space-x-2 p-4">
+            <div className="flex justify-center space-x-2 p-3 sm:p-4">
               {products.map((_, index) => (
                 <button
                   key={index}
@@ -249,11 +251,11 @@ const NewsProductsSection = () => {
           </div>
 
           {/* Right Column - Company News */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-            <div className="p-4 border-b border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <div className="p-3 sm:p-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-serif font-bold text-gray-900">Company News</h2>
-                <div className="flex items-center space-x-2">
+                <h2 className="text-lg sm:text-xl font-serif font-bold text-gray-900">Company News</h2>
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <button
                     onClick={prevNews}
                     className="p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -268,28 +270,28 @@ const NewsProductsSection = () => {
                   >
                     <ChevronRight className="h-5 w-5 text-gray-600" />
                   </button>
-                  <button className="text-gray-500 hover:text-gray-700 text-sm font-medium flex items-center">
-                    More <ArrowRight className="h-4 w-4 ml-1" />
+                  <button className="text-gray-500 hover:text-gray-700 text-xs sm:text-sm font-medium flex items-center">
+                    <span className="hidden sm:inline">More</span> <ArrowRight className="h-4 w-4 sm:ml-1" />
                   </button>
                 </div>
               </div>
             </div>
 
             {/* News Content */}
-            <div className="p-4">
-              <div className="flex space-x-3 mb-4">
+            <div className="p-3 sm:p-4">
+              <div className="flex space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                 <img
                   src={newsItems[currentNewsIndex].image}
                   alt={newsItems[currentNewsIndex].title}
-                  className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg flex-shrink-0"
                 />
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-2">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center space-x-2 mb-1 sm:mb-2">
                     <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-orange-100 text-orange-700">
                       news
                     </span>
                   </div>
-                  <h3 className="text-base font-serif font-bold text-gray-900 mb-2 leading-tight">
+                  <h3 className="text-sm sm:text-base font-serif font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">
                     {newsItems[currentNewsIndex].title}
                   </h3>
                   <p className="text-sm text-gray-500">
@@ -314,7 +316,7 @@ const NewsProductsSection = () => {
             </div>
 
             {/* News Indicators */}
-            <div className="flex justify-center space-x-2 p-4">
+            <div className="flex justify-center space-x-2 p-3 sm:p-4">
               {newsItems.map((_, index) => (
                 <button
                   key={index}
