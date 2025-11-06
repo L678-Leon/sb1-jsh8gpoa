@@ -20,12 +20,12 @@ export interface ConsultationBooking {
 
 export async function createConsultationBooking(booking: ConsultationBooking) {
   const dbBooking = {
-    full_name: booking.name,
+    name: booking.name,
     email: booking.email,
-    phone: booking.phone_number,
-    company_name: booking.company_name,
-    message: booking.business_needs,
-    status: 'pending'
+    phone_number: booking.phone_number,
+    company_name: booking.company_name || '',
+    business_needs: booking.business_needs || '',
+    product: booking.product || ''
   };
 
   console.log('Attempting to insert into database:', dbBooking);
