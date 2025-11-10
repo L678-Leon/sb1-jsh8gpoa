@@ -25,7 +25,7 @@ const AboutPage = () => {
         <link rel="canonical" href="https://scalesandsoftware.com/about" />
 
         {/* ✅ Add this canonical tag */}
-  <link rel="canonical" href="https://scalesandsoftware.com/aboutus" />
+  <link rel="canonical" href="https://scalesandsoftware.com/about" />
         
       </Helmet>
 
