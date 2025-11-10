@@ -114,6 +114,10 @@ const ProjectsPage: React.FC = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/projects" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-projects-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/projects" />
+
+        {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/projects" />
+        
       </Helmet>
       
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
