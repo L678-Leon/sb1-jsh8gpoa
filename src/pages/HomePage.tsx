@@ -246,7 +246,7 @@ const HomePage = () => {
         <link rel="canonical" href="https://scalesandsoftware.com/" />
 
         {/* ✅ Add this canonical tag */}
-  <link rel="canonical" href="https://scalesandsoftware.com/home" />
+  <link rel="canonical" href="https://scalesandsoftware.com" />
       </Helmet>
 
       <div>
