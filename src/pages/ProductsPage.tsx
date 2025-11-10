@@ -176,6 +176,10 @@ const ProductsPage = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/products" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-products-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/products" />
+
+        {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/products" />
+        
       </Helmet>
       
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20 pb-12">
