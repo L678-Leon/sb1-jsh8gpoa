@@ -108,6 +108,9 @@ const ServicesPage = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/services" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-services-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/services" />
+
+     {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/services" /> 
       </Helmet>
 
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
