@@ -244,6 +244,9 @@ const HomePage = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-home-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/" />
+
+        {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/home" />
       </Helmet>
 
       <div>
