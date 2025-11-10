@@ -23,6 +23,10 @@ const AboutPage = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/about" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/about" />
+
+        {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/aboutus" />
+        
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
