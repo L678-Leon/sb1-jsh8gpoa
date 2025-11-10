@@ -113,6 +113,10 @@ const ContactPage = () => {
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-preview.jpg" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
+
+        {/* ✅ Add this canonical tag */}
+  <link rel="canonical" href="https://scalesandsoftware.com/contact" />
+        
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
