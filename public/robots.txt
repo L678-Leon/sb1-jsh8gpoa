@@ -1,5 +1,5 @@
 # robots.txt for https://scalesandsoftware.com
-# Managed by Lee AI Automation Agency
+# Managed by Leo.AI Automation Agency
 
 User-agent: *
 Allow: /
@@ -10,22 +10,11 @@ Disallow: /admin/
 Disallow: /server/
 Disallow: /tmp/
 
-# Sitemap location (very important)
+# Sitemap location
 Sitemap: https://scalesandsoftware.com/sitemap.xml
 
-# Crawl-delay to manage server load (optional but safe)
-Crawl-delay: 5
-
-# Encourage Google to crawl updated content frequently
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 2
-
-# Bing and others
+# Specific rules (optional)
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 3
 
-# Contact information for webmasters
-# If Google or Bing need to contact you
-Host: scalesandsoftware.com
