@@ -171,33 +171,40 @@ const RetailScalesPage: React.FC<RetailScalesPageProps> = ({ onBack }) => {
             <div className="bg-red-600 p-3 rounded-full">
               <ShoppingCart className="h-8 w-8 text-white" />
             </div>
-
-            {/* Overview */}
             <div>
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h2 className="text-2xl font-bold text-black mb-4">Product Overview</h2>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  SCALES & SOFTWARE (K) LTD provides the ideal choice for retail scales which are quick, easy to install, and calibrate.
-                </p>
-                <p className="text-lg text-gray-700 mb-8">Available models:</p>
-                <div className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-xl border border-red-200">
-                  <div className="grid md:grid-cols-3 gap-4 text-center">
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="font-bold text-red-600">A) MEPL SCALE</h4>
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="font-bold text-red-600">B) KSP SCALE</h4>
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="font-bold text-red-600">C) SM-5300X</h4>
-                    </div>
-                  </div>
+              <h1 className="text-4xl font-bold text-black">RETAIL SCALES</h1>
+              <p className="text-gray-600 mt-1">Comprehensive Technical Specifications & Product Information</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Introduction */}
+        <div className="mb-16">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 className="text-2xl font-bold text-black mb-4">Product Overview</h2>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              SCALES & SOFTWARE (K) LTD provides the ideal choice for retail scales which are quick, easy to install, and calibrate.
+            </p>
+            <p className="text-lg text-gray-700 mb-8">Available models:</p>
+            <div className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-xl border border-red-200">
+              <div className="grid md:grid-cols-3 gap-4 text-center">
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                  <h4 className="font-bold text-red-600">A) MEPL SCALE</h4>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                  <h4 className="font-bold text-red-600">B) KSP SCALE</h4>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                  <h4 className="font-bold text-red-600">C) SM-5300X</h4>
                 </div>
               </div>
-            </div> {/* closes overview wrapper */}
-          </div> {/* closes header flex wrapper */}
-        </div> {/* closes max-w container */}
-      </div> {/* closes header bg wrapper */}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* MEPL Scale */}
       <ExpandableCard
