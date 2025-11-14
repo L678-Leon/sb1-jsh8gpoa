@@ -190,40 +190,46 @@ const ProductsPage = () => {
     setShowSearchSuggestions(false);
   };
 
+  const handleBackToProducts = () => {
+    setShowCategoryPage(null);
+    setSelectedCategory('ALL');
+    setSearchTerm('');
+  };
+
   if (showCategoryPage === 'WEIGHBRIDGES') {
-    return <WeighbridgePage onBack={() => setShowCategoryPage(null)} />;
+    return <WeighbridgePage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'INDUSTRIAL SCALES') {
-    return <IndustrialScalesPage onBack={() => setShowCategoryPage(null)} />;
+    return <IndustrialScalesPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'RETAIL SCALES') {
-    return <RetailScalesPage onBack={() => setShowCategoryPage(null)} />;
+    return <RetailScalesPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'FIELD SCALES') {
-    return <FieldScalesPage onBack={() => setShowCategoryPage(null)} />;
+    return <FieldScalesPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'PRECISION SCALES') {
-    return <PrecisionScalesPage onBack={() => setShowCategoryPage(null)} />;
+    return <PrecisionScalesPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'INDICATORS') {
-    return <IndicatorsPage onBack={() => setShowCategoryPage(null)} />;
+    return <IndicatorsPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'WEIGHING SOFTWARE') {
-    return <WeighingSoftwarePage onBack={() => setShowCategoryPage(null)} />;
+    return <WeighingSoftwarePage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'ACCESSORIES CONSUMABLES AND SPARES') {
-    return <AccessoriesPage onBack={() => setShowCategoryPage(null)} />;
+    return <AccessoriesPage onBack={handleBackToProducts} />;
   }
 
   if (showCategoryPage === 'PERSONAL DIGITAL ASSISTANTS') {
-    return <PersonalDigitalAssistantsPage onBack={() => setShowCategoryPage(null)} />;
+    return <PersonalDigitalAssistantsPage onBack={handleBackToProducts} />;
   }
 
   return (
