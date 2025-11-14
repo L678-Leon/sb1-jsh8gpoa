@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Filter, Grid2x2 as Grid, List, ChevronDown } from 'lucide-react';
+import { Search, Filter, Grid2x2 as Grid, List, ChevronDown, X } from 'lucide-react';
 import { products, categories } from '../data/products';
 import WeighbridgePage from '../components/WeighbridgePage';
 import IndustrialScalesPage from '../components/IndustrialScalesPage';
@@ -106,17 +106,89 @@ const ProductsPage = () => {
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [showCategoryPage, setShowCategoryPage] = useState<string | null>(null);
+  const [showSearchSuggestions, setShowSearchSuggestions] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const categoryTopRef = useRef<HTMLDivElement>(null);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
       const matchesCategory = selectedCategory === 'ALL' || product.category === selectedCategory;
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.description.toLowerCase().includes(searchTerm.toLowerCase());
+        product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.category.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchTerm]);
 
+  const searchSuggestions = useMemo(() => {
+    if (searchTerm.trim().length === 0) return [];
+
+    const uniqueSuggestions = new Set<{name: string; category: string; type: 'product' | 'category'}>();
+
+    products.forEach(product => {
+      if (product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          product.category.toLowerCase().includes(searchTerm.toLowerCase())) {
+        uniqueSuggestions.add({
+          name: product.name,
+          category: product.category,
+          type: 'product'
+        });
+      }
+    });
+
+    categories.forEach(category => {
+      if (category.toLowerCase().includes(searchTerm.toLowerCase())) {
+        uniqueSuggestions.add({
+          name: category,
+          category: category,
+          type: 'category'
+        });
+      }
+    });
+
+    return Array.from(uniqueSuggestions).slice(0, 8);
+  }, [searchTerm]);
+
   const uniqueCategories = useMemo(() => ['ALL', ...categories], []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowSearchSuggestions(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    if (selectedCategory !== 'ALL' && categoryTopRef.current) {
+      categoryTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    if (showCategoryPage && window.scrollY > 0) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [showCategoryPage]);
+
+  const handleSearchSuggestionClick = (suggestion: {name: string; category: string; type: 'product' | 'category'}) => {
+    if (suggestion.type === 'category') {
+      setSelectedCategory(suggestion.category);
+      setSearchTerm('');
+    } else {
+      setSearchTerm(suggestion.name);
+      setSelectedCategory(suggestion.category);
+    }
+    setShowSearchSuggestions(false);
+  };
+
+  const clearSearch = () => {
+    setSearchTerm('');
+    setShowSearchSuggestions(false);
+  };
 
   if (showCategoryPage === 'WEIGHBRIDGES') {
     return <WeighbridgePage onBack={() => setShowCategoryPage(null)} />;
@@ -195,15 +267,58 @@ const ProductsPage = () => {
 
         <div className="mb-8 space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative flex-1" ref={searchRef}>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Search products by name, category, or keyword..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setShowSearchSuggestions(e.target.value.trim().length > 0);
+                }}
+                onFocus={() => searchTerm.trim().length > 0 && setShowSearchSuggestions(true)}
+                className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
               />
+              {searchTerm && (
+                <button
+                  onClick={clearSearch}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 z-10"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
+
+              {showSearchSuggestions && searchSuggestions.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-96 overflow-y-auto">
+                  <div className="p-2">
+                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      Search Results ({searchSuggestions.length})
+                    </div>
+                    {searchSuggestions.map((suggestion, index) => (
+                      <button
+                        key={`${suggestion.type}-${suggestion.name}-${index}`}
+                        onClick={() => handleSearchSuggestionClick(suggestion)}
+                        className="w-full text-left px-3 py-3 hover:bg-gray-50 rounded-lg transition-colors group"
+                      >
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-gray-900 group-hover:text-red-600 transition-colors truncate">
+                              {suggestion.name}
+                            </div>
+                            <div className="text-sm text-gray-500 mt-1">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-700">
+                                {suggestion.type === 'category' ? 'Category' : suggestion.category}
+                              </span>
+                            </div>
+                          </div>
+                          <Search className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2 mt-1" />
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="flex gap-2">
@@ -270,6 +385,11 @@ const ProductsPage = () => {
                       src={categoryImages[category] || '/images/placeholder.jpg'}
                       alt={category}
                       className="w-full h-full object-contain p-4 transform group-hover:scale-105 transition-transform duration-300"
+                      loading="eager"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = 'https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800';
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                     <h3 className="absolute bottom-4 left-4 right-4 text-xl font-bold text-white">
@@ -292,9 +412,11 @@ const ProductsPage = () => {
 
         {selectedCategory !== 'ALL' && filteredProducts.length > 0 && (
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {selectedCategory}
-            </h2>
+            <div ref={categoryTopRef} className="scroll-mt-24">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                {selectedCategory}
+              </h2>
+            </div>
             <div className={
               viewMode === 'grid'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
@@ -317,6 +439,11 @@ const ProductsPage = () => {
                       src={productImages[product.name] || '/images/placeholder.jpg'}
                       alt={product.name}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = 'https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800';
+                      }}
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                       <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
