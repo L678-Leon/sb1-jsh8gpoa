@@ -163,8 +163,8 @@ const ProductsPage = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedCategory !== 'ALL' && categoryTopRef.current) {
-      categoryTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (selectedCategory !== 'ALL' && selectedCategory !== '') {
+      setShowCategoryPage(selectedCategory);
     }
   }, [selectedCategory]);
 
@@ -176,11 +176,11 @@ const ProductsPage = () => {
 
   const handleSearchSuggestionClick = (suggestion: {name: string; category: string; type: 'product' | 'category'}) => {
     if (suggestion.type === 'category') {
-      setSelectedCategory(suggestion.category);
+      setShowCategoryPage(suggestion.category);
       setSearchTerm('');
     } else {
-      setSearchTerm(suggestion.name);
-      setSelectedCategory(suggestion.category);
+      setShowCategoryPage(suggestion.category);
+      setSearchTerm('');
     }
     setShowSearchSuggestions(false);
   };
