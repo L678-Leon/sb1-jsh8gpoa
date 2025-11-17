@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,13 +24,31 @@ const Footer = () => {
               industrial, and medical applications.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
+              <a
+                href="https://www.facebook.com/scalesnsoftware"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors"
+                aria-label="Visit our Facebook page"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gray-600 p-2 rounded-full hover:bg-gray-700 transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a
+                href="https://www.instagram.com/scalessoftware?igsh=emZzNG15OWprbHY0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors"
+                aria-label="Visit our Instagram page"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
+              <a
+                href="https://www.linkedin.com/company/scales-software-k-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors"
+                aria-label="Visit our LinkedIn page"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
