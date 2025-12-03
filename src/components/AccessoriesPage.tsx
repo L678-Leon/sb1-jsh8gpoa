@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Package, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface AccessoriesPageProps {
   onBack: () => void;
@@ -458,6 +459,41 @@ const AccessoriesPage: React.FC<AccessoriesPageProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Scale Accessories & Spare Parts | Scales & Software Kenya</title>
+        <meta name="description" content="Load cells, junction boxes, printers, test weights, and spare parts for all weighing systems. Quality components for maintenance and upgrades." />
+        <meta name="keywords" content="scale accessories kenya, load cells, junction boxes, scale printers, test weights, weighing spare parts" />
+        <meta property="og:title" content="Scale Accessories & Spare Parts | Scales & Software" />
+        <meta property="og:description" content="Load cells, junction boxes, printers, test weights, and spare parts for all weighing systems." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/accessories" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/accessories" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Accessories & Spares",
+                "item": "https://scalesandsoftware.com/products/accessories"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

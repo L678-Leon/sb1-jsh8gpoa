@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface RetailScalesPageProps {
   onBack: () => void;
@@ -156,6 +157,41 @@ const RetailScalesPage: React.FC<RetailScalesPageProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Retail Scales - Commercial Weighing Solutions | Scales & Software Kenya</title>
+        <meta name="description" content="Precision retail scales for shops, supermarkets, and markets. Features PLU programming, receipt printing, and accurate weighing for commercial applications." />
+        <meta name="keywords" content="retail scales kenya, shop scales, supermarket scales, price computing scales, commercial scales" />
+        <meta property="og:title" content="Retail Scales - Commercial Weighing Solutions | Scales & Software" />
+        <meta property="og:description" content="Precision retail scales for shops, supermarkets, and markets with PLU programming and receipt printing." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/retail-scales" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/retail-scales" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Retail Scales",
+                "item": "https://scalesandsoftware.com/products/retail-scales"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

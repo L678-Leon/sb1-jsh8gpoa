@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Info, ChevronDown, ChevronUp } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 interface PDADevicePageProps {
   onBack: () => void;
@@ -218,6 +219,41 @@ const PersonalDigitalAssistantsPage: React.FC<PDADevicePageProps> = ({ onBack })
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Personal Digital Assistants - PDAs for Field Data | Scales & Software Kenya</title>
+        <meta name="description" content="Rugged mobile devices for field data collection with advanced connectivity. Perfect for tea, milk collection, and agricultural applications." />
+        <meta name="keywords" content="pda kenya, field data collection, mobile devices, rugged pda, data collection devices" />
+        <meta property="og:title" content="Personal Digital Assistants - PDAs for Field Data | Scales & Software" />
+        <meta property="og:description" content="Rugged mobile devices for field data collection with advanced connectivity for agricultural applications." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/personal-digital-assistants" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/personal-digital-assistants" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Personal Digital Assistants",
+                "item": "https://scalesandsoftware.com/products/personal-digital-assistants"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

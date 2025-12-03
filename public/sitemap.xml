@@ -8,153 +8,97 @@
   <!-- Main Pages -->
   <url>
     <loc>https://scalesandsoftware.com/</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/about</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/contact</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/projects</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/services</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/products</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <!-- Product Categories -->
   <url>
-    <loc>https://scalesandsoftware.com/products/indicators</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.80</priority>
+    <loc>https://scalesandsoftware.com/products/weighbridges</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://scalesandsoftware.com/products/precision-scales</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.80</priority>
+    <loc>https://scalesandsoftware.com/products/industrial-scales</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/products/retail-scales</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/products/field-scales</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://scalesandsoftware.com/products/personal-digital-assistants</loc>
-    <lastmod>2025-11-11</lastmod>
+    <loc>https://scalesandsoftware.com/products/precision-scales</loc>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/indicators</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/products/weighing-software</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://scalesandsoftware.com/products/personal-digital-assistants</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://scalesandsoftware.com/products/accessories</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Individual Product Examples -->
-  <url>
-    <loc>https://scalesandsoftware.com/products/indicators/dd1010</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/indicators/dd1050</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/indicators/dd700</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/indicators/d39</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/precision-scales/ehb</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/precision-scales/ahw</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/retail-scales/mepl</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/retail-scales/ksp</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/retail-scales/sm5300x</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/personal-digital-assistants/cilico-series</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/personal-digital-assistants/v1h</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/personal-digital-assistants/swell-v710</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/weighing-software/pimapp</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/weighing-software/smartweigh-factory</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/weighing-software/smartweigh-weighbridge</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/accessories/load-cells</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://scalesandsoftware.com/products/accessories/test-weights</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.70</priority>
-  </url>
 
 </urlset>
 

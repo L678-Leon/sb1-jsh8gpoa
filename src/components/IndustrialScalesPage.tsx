@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Factory, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface IndustrialScalesPageProps {
   onBack: () => void;
@@ -165,6 +166,41 @@ const IndustrialScalesPage: React.FC<IndustrialScalesPageProps> = ({ onBack }) =
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Industrial Scales - Platform & Floor Scales | Scales & Software Kenya</title>
+        <meta name="description" content="Rugged industrial weighing solutions including platform scales, floor scales, and heavy-duty systems for factories, warehouses, and manufacturing facilities across Kenya." />
+        <meta name="keywords" content="industrial scales kenya, platform scales, floor scales, heavy duty scales, factory scales, warehouse scales" />
+        <meta property="og:title" content="Industrial Scales - Platform & Floor Scales | Scales & Software" />
+        <meta property="og:description" content="Rugged industrial weighing solutions including platform scales, floor scales, and heavy-duty systems for factories and warehouses." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/industrial-scales" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/industrial-scales" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Industrial Scales",
+                "item": "https://scalesandsoftware.com/products/industrial-scales"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Search, Filter, Grid2x2 as Grid, List, ChevronDown, X } from 'lucide-react';
 import { products, categories } from '../data/products';
 import WeighbridgePage from '../components/WeighbridgePage';
@@ -13,6 +13,18 @@ import AccessoriesPage from '../components/AccessoriesPage';
 import PersonalDigitalAssistantsPage from '../components/PersonalDigitalAssistantsPage';
 import { Helmet } from 'react-helmet-async';
 
+
+const categoryToSlug: { [key: string]: string } = {
+  'WEIGHBRIDGES': 'weighbridges',
+  'INDUSTRIAL SCALES': 'industrial-scales',
+  'RETAIL SCALES': 'retail-scales',
+  'FIELD SCALES': 'field-scales',
+  'PRECISION SCALES': 'precision-scales',
+  'INDICATORS': 'indicators',
+  'PERSONAL DIGITAL ASSISTANTS': 'personal-digital-assistants',
+  'WEIGHING SOFTWARE': 'weighing-software',
+  'ACCESSORIES CONSUMABLES AND SPARES': 'accessories'
+};
 
 const categoryDescriptions: { [key: string]: string } = {
   'WEIGHBRIDGES': 'Heavy-duty weighing solutions for trucks and large vehicles with advanced digital indicators and comprehensive software integration.',
@@ -381,10 +393,10 @@ const ProductsPage = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Product Categories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categories.map((category) => (
-                <div
+                <Link
                   key={category}
-                  className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
-                  onClick={() => setShowCategoryPage(category)}
+                  to={`/products/${categoryToSlug[category]}`}
+                  className="block group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="relative h-64 overflow-hidden bg-gray-50">
                     <img
@@ -406,11 +418,11 @@ const ProductsPage = () => {
                     <p className="text-gray-600 line-clamp-3">
                       {categoryDescriptions[category]}
                     </p>
-                    <button className="mt-4 text-red-600 font-semibold hover:text-red-700 transition-colors">
+                    <span className="mt-4 inline-block text-red-600 font-semibold hover:text-red-700 transition-colors">
                       View Products �
-                    </button>
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

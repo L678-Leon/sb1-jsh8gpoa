@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Microscope, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface PrecisionScalesPageProps {
   onBack: () => void;
@@ -161,6 +162,41 @@ const PrecisionScalesPage: React.FC<PrecisionScalesPageProps> = ({ onBack }) => 
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Precision & Laboratory Scales | Scales & Software Kenya</title>
+        <meta name="description" content="High-precision analytical and laboratory scales for medical, pharmaceutical, and research applications. Accurate to 0.001g for critical measurements." />
+        <meta name="keywords" content="precision scales kenya, laboratory scales, analytical scales, medical scales, pharmaceutical scales, precision balance" />
+        <meta property="og:title" content="Precision & Laboratory Scales | Scales & Software" />
+        <meta property="og:description" content="High-precision analytical and laboratory scales for medical, pharmaceutical, and research applications." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/precision-scales" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/precision-scales" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Precision Scales",
+                "item": "https://scalesandsoftware.com/products/precision-scales"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

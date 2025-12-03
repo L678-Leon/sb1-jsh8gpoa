@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Monitor, ChevronDown, ChevronUp, Info, Wrench, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface WeighingSoftwarePageProps {
   onBack: () => void;
@@ -159,6 +160,41 @@ const WeighingSoftwarePage: React.FC<WeighingSoftwarePageProps> = ({ onBack }) =
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Weighing Software - SMARTWEIGH & PIMAPP | Scales & Software Kenya</title>
+        <meta name="description" content="Automated weighing software solutions including SMARTWEIGH and PIMAPP for data management, ERP integration, and weighbridge automation." />
+        <meta name="keywords" content="weighing software kenya, smartweigh, pimapp, weighbridge software, automated weighing, ERP integration" />
+        <meta property="og:title" content="Weighing Software - SMARTWEIGH & PIMAPP | Scales & Software" />
+        <meta property="og:description" content="Automated weighing software solutions including SMARTWEIGH and PIMAPP for data management and ERP integration." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/weighing-software" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/weighing-software" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Weighing Software",
+                "item": "https://scalesandsoftware.com/products/weighing-software"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

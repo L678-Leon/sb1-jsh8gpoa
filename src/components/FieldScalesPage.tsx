@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Wheat, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface FieldScalesPageProps {
   onBack: () => void;
@@ -135,6 +136,41 @@ const FieldScalesPage: React.FC<FieldScalesPageProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Field Scales - Portable Weighing Solutions | Scales & Software Kenya</title>
+        <meta name="description" content="Portable field scales for tea collection, milk collection, and agricultural applications. Rugged design for outdoor use across Kenya's farming regions." />
+        <meta name="keywords" content="field scales kenya, tea collection scales, milk collection scales, agricultural scales, portable scales, farm scales" />
+        <meta property="og:title" content="Field Scales - Portable Weighing Solutions | Scales & Software" />
+        <meta property="og:description" content="Portable field scales for tea collection, milk collection, and agricultural applications across Kenya." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/field-scales" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/field-scales" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Field Scales",
+                "item": "https://scalesandsoftware.com/products/field-scales"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Zap, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface IndicatorsPageProps {
   onBack: () => void;
@@ -156,6 +157,41 @@ const IndicatorsPage: React.FC<IndicatorsPageProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Weighing Indicators & Displays | Scales & Software Kenya</title>
+        <meta name="description" content="Digital weighing indicators and control systems with advanced connectivity, data management, and integration capabilities for all scale types." />
+        <meta name="keywords" content="weighing indicators kenya, digital indicators, scale displays, weighing controllers, load cell indicators" />
+        <meta property="og:title" content="Weighing Indicators & Displays | Scales & Software" />
+        <meta property="og:description" content="Digital weighing indicators and control systems with advanced connectivity and data management capabilities." />
+        <meta property="og:url" content="https://scalesandsoftware.com/products/indicators" />
+        <link rel="canonical" href="https://scalesandsoftware.com/products/indicators" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://scalesandsoftware.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://scalesandsoftware.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Weighing Indicators",
+                "item": "https://scalesandsoftware.com/products/indicators"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
