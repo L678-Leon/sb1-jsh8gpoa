@@ -1,97 +1,213 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface Project {
-  id: number;
+  id: string;
   title: string;
   description: string;
   image: string;
-  category: string;
-  date: string;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Chemusian Tea Factory Weighbridge",
-    description: "Installed weighbridge at Chemusian Tea Factory",
+interface ProjectCategory {
+  name: string;
+  image: string;
+  description: string;
+  projects: Project[];
+}
+
+const projectCategories: { [key: string]: ProjectCategory } = {
+  tea: {
+    name: "Tea",
     image: "/images/teafactory.jpg",
-    category: "Tea",
-    date: "2025"
+    description: "Tea factory and collection center weighbridge installations",
+    projects: [
+      {
+        id: "tea-1",
+        title: "Chemusian Tea Factory Weighbridge",
+        description: "Installed weighbridge at Chemusian Tea Factory for accurate tea leaf weighing and quality control during collection and processing.",
+        image: "/images/teafactory.jpg"
+      }
+    ]
   },
-  {
-    id: 2,
-    title: "Brookside Collection Center",
-    description: "Installed damp tank at Brookside collection center",
+  milk: {
+    name: "Milk",
     image: "/images/brooksideproject.jpg",
-    category: "Milk",
-    date: "2025"
+    description: "Milk collection center and dairy farming weighing solutions",
+    projects: [
+      {
+        id: "milk-1",
+        title: "Brookside Collection Center",
+        description: "Installed damp tank and weighing system at Brookside collection center for accurate milk collection and quality assurance.",
+        image: "/images/brooksideproject.jpg"
+      }
+    ]
   },
-  {
-    id: 3,
-    title: "Ilmutiok Quarry Weighbridge",
-    description: "Installed weighbridge at Ilmutiok in Laikipia county for weighing quarry sand and stone",
+  mining: {
+    name: "Mining",
     image: "/images/mining.jpg",
-    category: "Mining",
-    date: "2025"
+    description: "Quarry and mining site weighbridge installations",
+    projects: [
+      {
+        id: "mining-1",
+        title: "Ilmutiok Quarry Weighbridge",
+        description: "Installed weighbridge at Ilmutiok in Laikipia county for weighing quarry sand, stone, and aggregate materials with precision.",
+        image: "/images/mining.jpg"
+      }
+    ]
   },
-  {
-    id: 4,
-    title: "Kenya Meat Commission",
-    description: "Installation of a cattle weigher at Kenya Meat Commission",
-    image: "/images/food and processing.jpg",
-    category: "Food & Processing",
-    date: "2025"
-  },
-  {
-    id: 5,
-    title: "Total Petrol Station",
-    description: "Digital Platform scale for weighing gas cylinders at Total Petrol Station",
+  oilgas: {
+    name: "Oil & Gas",
     image: "/images/oil and gas.jpg",
-    category: "Oil & Gas",
-    date: "2025"
+    description: "Petroleum station and fuel distribution weighing systems",
+    projects: [
+      {
+        id: "oilgas-1",
+        title: "Total Petrol Station",
+        description: "Digital platform scale installation at Total Petrol Station for weighing gas cylinders and monitoring fuel distribution operations.",
+        image: "/images/oil and gas.jpg"
+      }
+    ]
   },
-  {
-    id: 6,
-    title: "Soit Sugar Factory",
-    description: "Weighbridge installation at Soit Sugar Factory",
+  foodprocessing: {
+    name: "Food & Processing",
+    image: "/images/food and processing.jpg",
+    description: "Food production and meat processing facility scales",
+    projects: [
+      {
+        id: "food-1",
+        title: "Kenya Meat Commission",
+        description: "Installation of a cattle weigher at Kenya Meat Commission for livestock weighing and processing quality control.",
+        image: "/images/food and processing.jpg"
+      }
+    ]
+  },
+  sugar: {
+    name: "Sugar",
     image: "/images/proj.jpg",
-    category: "Sugar",
-    date: "2025"
+    description: "Sugar factory and mill weighbridge installations",
+    projects: [
+      {
+        id: "sugar-1",
+        title: "Soit Sugar Factory",
+        description: "Weighbridge installation at Soit Sugar Factory for weighing raw sugar cane and monitoring production operations.",
+        image: "/images/proj.jpg"
+      }
+    ]
   },
-  {
-    id: 7,
-    title: "UNGA Ltd Milling",
-    description: "Installed weighbridge at UNGA Ltd",
+  milling: {
+    name: "Milling",
     image: "/images/weighbridge uasin project.jpg",
-    category: "Milling",
-    date: "2025"
+    description: "Grain mills and flour production weighing solutions",
+    projects: [
+      {
+        id: "milling-1",
+        title: "UNGA Ltd Milling",
+        description: "Installed weighbridge at UNGA Ltd for grain intake, inventory management, and flour production monitoring.",
+        image: "/images/weighbridge uasin project.jpg"
+      }
+    ]
   },
-  {
-    id: 8,
-    title: "Commercial Weighbridge - Moiben",
-    description: "Installation of a commercial weighbridge at Moiben, Uasin Gishu County",
+  commercial: {
+    name: "Commercial Weighbridge",
     image: "/images/commercial.jpg",
-    category: "Commercial",
-    date: "2025"
+    description: "General commercial and trade weighbridge installations",
+    projects: [
+      {
+        id: "commercial-1",
+        title: "Commercial Weighbridge - Moiben",
+        description: "Installation of a commercial weighbridge at Moiben, Uasin Gishu County for general cargo and goods weighing.",
+        image: "/images/commercial.jpg"
+      }
+    ]
   },
-  {
-    id: 9,
-    title: "Private Weighbridge - Komool Farm",
-    description: "Private weighbridge installed at Komool Farm in Uasin Gishu County",
+  private: {
+    name: "Private Weighbridge",
     image: "/images/private weighbridge.jpg",
-    category: "Private",
-    date: "2025"
+    description: "Private farm and business weighbridge installations",
+    projects: [
+      {
+        id: "private-1",
+        title: "Private Weighbridge - Komool Farm",
+        description: "Private weighbridge installed at Komool Farm in Uasin Gishu County for farm operations and produce weighing.",
+        image: "/images/private weighbridge.jpg"
+      }
+    ]
   }
-];
+};
 
 const ProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<{ [key: string]: boolean }>({});
+
+  const toggleCategory = (categoryKey: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryKey]: !prev[categoryKey]
+    }));
+  };
+
+  const categoryKeys = Object.keys(projectCategories);
+
+  const CategorySection = ({
+    categoryKey,
+    category
+  }: {
+    categoryKey: string;
+    category: ProjectCategory;
+  }) => {
+    const isExpanded = expandedCategories[categoryKey];
+
+    return (
+      <div className="mb-8">
+        <button
+          onClick={() => toggleCategory(categoryKey)}
+          className="w-full bg-red-600 text-white p-6 rounded-t-xl flex items-center justify-between hover:bg-red-700 transition-colors"
+        >
+          <h3 className="text-2xl font-bold">{category.name}</h3>
+          {isExpanded ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
+        </button>
+
+        {isExpanded && (
+          <div className="bg-white border border-gray-200 rounded-b-xl p-6 shadow-lg">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {category.projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-56 object-contain rounded-lg mb-3 hover:opacity-80 transition-opacity bg-white"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800';
+                    }}
+                  />
+                  <h4 className="text-lg font-bold text-black mb-2">{project.title}</h4>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{project.description}</p>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
+                    className="w-full px-4 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                  >
+                    View Details
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <>
-      {/* ✅ SEO Helmet Block */}
       <Helmet>
         <title>Projects | Scales & Software Kenya — Weighbridge & Industrial Installations</title>
         <meta
@@ -105,7 +221,7 @@ const ProjectsPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Scales & Software Projects — Kenya’s Trusted Weighbridge and Industrial Scale Experts"
+          content="Scales & Software Projects — Kenya's Trusted Weighbridge and Industrial Scale Experts"
         />
         <meta
           property="og:description"
@@ -114,106 +230,71 @@ const ProjectsPage: React.FC = () => {
         <meta property="og:url" content="https://scalesandsoftware.com/projects" />
         <meta property="og:image" content="https://scalesandsoftware.com/images/og-projects-preview.jpg" />
         <link rel="canonical" href="https://scalesandsoftware.com/projects" />
-
-        {/* ✅ Add this canonical tag */}
-  <link rel="canonical" href="https://scalesandsoftware.com/projects" />
-        
       </Helmet>
-      
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-black mb-4">Our Projects</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Showcasing our successful implementations and installations across various industries
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: project.id * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-200 group"
-              onClick={() => setSelectedProject(project)}
-            >
-              <div className="h-72 overflow-hidden bg-gray-50 relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    e.currentTarget.src = '/images/Screenshot_26-8-2025_21235_.jpeg';
-                  }}
-                />
-                <div className="absolute top-4 right-4">
-                  <span className="inline-block px-4 py-2 bg-red-600 text-white text-xs font-bold rounded-full shadow-lg">
-                    {project.category}
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-red-600 transition-colors">{project.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{project.description}</p>
-              </div>
-            </motion.div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="mb-12">
+            <h1 className="text-4xl font-bold text-black mb-4">Our Projects</h1>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Showcasing our successful implementations and installations across various industries in Kenya and East Africa.
+            </p>
+          </div>
+
+          {categoryKeys.map((categoryKey) => (
+            <CategorySection
+              key={categoryKey}
+              categoryKey={categoryKey}
+              category={projectCategories[categoryKey]}
+            />
           ))}
         </div>
 
-      </div>
-
-      <AnimatePresence>
-        {selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4"
-            onClick={() => setSelectedProject(null)}
-          >
+        <AnimatePresence>
+          {selectedProject && (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25 }}
-              className="relative max-w-5xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4"
+              onClick={() => setSelectedProject(null)}
             >
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-6 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-colors shadow-lg"
-                aria-label="Close modal"
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25 }}
+                className="relative max-w-5xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-6 right-6 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-colors shadow-lg"
+                  aria-label="Close modal"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
 
-              <div className="max-h-[85vh] overflow-y-auto">
-                <div className="h-[500px] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 relative">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-full object-contain p-8"
-                  />
-                </div>
-                <div className="p-8 bg-white">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="inline-block px-5 py-2 bg-red-600 text-white text-sm font-bold rounded-full shadow-md">
-                      {selectedProject.category}
-                    </span>
+                <div className="max-h-[85vh] overflow-y-auto">
+                  <div className="h-[500px] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 relative">
+                    <img
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      className="w-full h-full object-contain p-8"
+                    />
                   </div>
-                  <h2 className="text-4xl font-bold text-black mb-4 leading-tight">{selectedProject.title}</h2>
-                  <p className="text-gray-700 text-lg leading-relaxed">{selectedProject.description}</p>
+                  <div className="p-8 bg-white">
+                    <h2 className="text-4xl font-bold text-black mb-4 leading-tight">{selectedProject.title}</h2>
+                    <p className="text-gray-700 text-lg leading-relaxed">{selectedProject.description}</p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+          )}
+        </AnimatePresence>
+      </div>
     </>
   );
 };
