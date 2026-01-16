@@ -80,6 +80,12 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "Kenya Meat Commission",
         description: "Installation of a cattle weigher at Kenya Meat Commission for livestock weighing and processing quality control.",
         image: "/images/food and processing.jpg"
+      },
+      {
+        id: "food-2",
+        title: "Saficado Weighbridge - Juja",
+        description: "Weighbridge installation at Saficado, Juja, Nairobi Kenya for food processing operations, inventory management, and quality control weighing.",
+        image: "/images/saf_1_2026-01-12_at_11.39.51.jpeg"
       }
     ]
   },
