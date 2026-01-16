@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Project {
   id: string;
   title: string;
   description: string;
   image: string;
+  images?: string[];
 }
 
 interface ProjectCategory {
@@ -85,7 +86,16 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         id: "food-2",
         title: "Saficado Weighbridge - Juja",
         description: "Weighbridge installation at Saficado, Juja, Nairobi Kenya for food processing operations, inventory management, and quality control weighing.",
-        image: "/images/saf_1_2026-01-12_at_11.39.51.jpeg"
+        image: "/images/saf_1_2026-01-12_at_11.39.51.jpeg",
+        images: [
+          "/images/saf_1_2026-01-12_at_11.39.51.jpeg",
+          "/images/saf_2_image_2026-01-12_at_11.39.53.jpeg",
+          "/images/saf3_image_2026-01-12_at_11.39.54.jpeg",
+          "/images/saf4_image_2026-01-12_at_11.39.57.jpeg",
+          "/images/saf5_image_2026-01-12_at_11.39.58.jpeg",
+          "/images/saf6.jpeg",
+          "/images/saf7_image_2026-01-12_at_11.40.00.jpeg"
+        ]
       }
     ]
   },
@@ -145,6 +155,7 @@ const projectCategories: { [key: string]: ProjectCategory } = {
 
 const ProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [expandedCategories, setExpandedCategories] = useState<{ [key: string]: boolean }>({});
 
   const toggleCategory = (categoryKey: string) => {
@@ -152,6 +163,27 @@ const ProjectsPage: React.FC = () => {
       ...prev,
       [categoryKey]: !prev[categoryKey]
     }));
+  };
+
+  const handleProjectSelect = (project: Project) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
+
+  const handleNextImage = () => {
+    if (selectedProject?.images) {
+      setCurrentImageIndex((prev) =>
+        prev === selectedProject.images!.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedProject?.images) {
+      setCurrentImageIndex((prev) =>
+        prev === 0 ? selectedProject.images!.length - 1 : prev - 1
+      );
+    }
   };
 
   const categoryKeys = Object.keys(projectCategories);
@@ -182,7 +214,7 @@ const ProjectsPage: React.FC = () => {
                 <div
                   key={project.id}
                   className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
-                  onClick={() => setSelectedProject(project)}
+                  onClick={() => handleProjectSelect(project)}
                 >
                   <img
                     src={project.image}
@@ -197,7 +229,7 @@ const ProjectsPage: React.FC = () => {
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedProject(project);
+                      handleProjectSelect(project);
                     }}
                     className="w-full px-4 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors"
                   >
@@ -286,14 +318,58 @@ const ProjectsPage: React.FC = () => {
                 <div className="max-h-[85vh] overflow-y-auto">
                   <div className="h-[500px] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 relative">
                     <img
-                      src={selectedProject.image}
+                      src={selectedProject.images?.[currentImageIndex] || selectedProject.image}
                       alt={selectedProject.title}
                       className="w-full h-full object-contain p-8"
                     />
+
+                    {selectedProject.images && selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={handlePrevImage}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-colors shadow-lg"
+                          aria-label="Previous image"
+                        >
+                          <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                          onClick={handleNextImage}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-colors shadow-lg"
+                          aria-label="Next image"
+                        >
+                          <ChevronRight className="w-6 h-6" />
+                        </button>
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-medium">
+                          {currentImageIndex + 1} / {selectedProject.images.length}
+                        </div>
+                      </>
+                    )}
                   </div>
                   <div className="p-8 bg-white">
                     <h2 className="text-4xl font-bold text-black mb-4 leading-tight">{selectedProject.title}</h2>
                     <p className="text-gray-700 text-lg leading-relaxed">{selectedProject.description}</p>
+
+                    {selectedProject.images && selectedProject.images.length > 1 && (
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {selectedProject.images.map((img, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setCurrentImageIndex(idx)}
+                            className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                              currentImageIndex === idx
+                                ? 'border-red-600 ring-2 ring-red-600 ring-offset-2'
+                                : 'border-gray-300 hover:border-red-400'
+                            }`}
+                          >
+                            <img
+                              src={img}
+                              alt={`${selectedProject.title} ${idx + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
