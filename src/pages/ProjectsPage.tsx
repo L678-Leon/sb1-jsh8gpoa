@@ -96,6 +96,19 @@ const projectCategories: { [key: string]: ProjectCategory } = {
           "/images/saf6.jpeg",
           "/images/saf7_image_2026-01-12_at_11.40.00.jpeg"
         ]
+      },
+      {
+        id: "food-3",
+        title: "Kenchic Weighbridge Service & Maintenance",
+        description: "Weighbridge service, maintenance and calibration at Kenchic for ensuring accurate weighing operations and compliance with industry standards.",
+        image: "/images/save_1_image_2026-01-15_at_11.26.07.jpeg",
+        images: [
+          "/images/save_1_image_2026-01-15_at_11.26.07.jpeg",
+          "/images/save_2_image_2026-01-15_at_11.26.10.jpeg",
+          "/images/save_3_image_2026-01-15_at_11.26.11.jpeg",
+          "/images/save_4_image_2026-01-15_at_11.26.12.jpeg",
+          "/images/save_5_image_2026-01-15_at_11.26.04.jpeg"
+        ]
       }
     ]
   },
