@@ -109,6 +109,21 @@ const projectCategories: { [key: string]: ProjectCategory } = {
           "/images/save_4_image_2026-01-15_at_11.26.12.jpeg",
           "/images/save_5_image_2026-01-15_at_11.26.04.jpeg"
         ]
+      },
+      {
+        id: "food-4",
+        title: "Soit Sugar Company Ltd Weighbridge Installation",
+        description: "Weighbridge installation at Soit Sugar Company Ltd for weighing raw materials and finished products in sugar production operations.",
+        image: "/images/tr1_image_2026-01-19_at_12.54.57.jpeg",
+        images: [
+          "/images/tr1_image_2026-01-19_at_12.54.57.jpeg",
+          "/images/tr2.jpeg",
+          "/images/tr3_image_2026-01-19_at_12.54.59.jpeg",
+          "/images/tr4_image_2026-01-19_at_12.54.59.jpeg",
+          "/images/tr5_image_2026-01-19_at_12.55.00.jpeg",
+          "/images/tr6_image_2026-01-19_at_12.55.01.jpeg",
+          "/images/tr7_image_2026-01-19_at_12.55.03.jpeg"
+        ]
       }
     ]
   },
