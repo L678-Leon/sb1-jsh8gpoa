@@ -71,7 +71,7 @@ const projectCategories: { [key: string]: ProjectCategory } = {
     ]
   },
   oilgas: {
-    name: "Oil & Gas",
+    name: "Oil, Gas and Chemicals",
     image: "/images/oil and gas.jpg",
     description: "Petroleum station and fuel distribution weighing systems",
     projects: [
