@@ -33,6 +33,14 @@ const NewsProductsSection = () => {
   const newsItems: NewsItem[] = [
     {
       id: 1,
+      title: "ZEMIC Representatives Visit Nairobi Office",
+      description: "Visit by representatives from ZEMIC to our Nairobi office to talk about expanding reach of ZEMIC products in the Kenyan market, January 2026.",
+      date: "2026-01-23",
+      category: "Partnership",
+      image: "/images/grp_photo_2026-01-23_at_18.31.58.jpeg"
+    },
+    {
+      id: 2,
       title: "2025 East Africa Weighing Excellence Awards",
       description: "Scales & Software (K) Ltd recognized as the leading weighing solutions provider in East Africa for outstanding service delivery and innovation.",
       date: "2025-01-15",
@@ -40,7 +48,7 @@ const NewsProductsSection = () => {
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-      id: 2,
+      id: 3,
       title: "Scales & Software Shines at Interweighing 2024",
       description: "Our team showcased cutting-edge weighing technology at the international trade fair, attracting global attention to our innovative solutions.",
       date: "2024-11-28",
@@ -48,7 +56,7 @@ const NewsProductsSection = () => {
       image: "https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-      id: 3,
+      id: 4,
       title: "Weighbridge Installation Success",
       description: "Successfully completed major weighbridge installation project, enhancing weighing accuracy and operational efficiency for our client.",
       date: "2024-09-15",
@@ -56,7 +64,7 @@ const NewsProductsSection = () => {
       image: "/images/WhatsApp Image 2025-09-12 at 15.37.23_cc8694bf news 3.jpg"
     },
     {
-      id: 4,
+      id: 5,
       title: "Year-End Recap: Record Breaking Performance",
       description: "2024 marked our most successful year with 40% growth in client satisfaction and expansion across three new regions in East Africa.",
       date: "2024-12-31",

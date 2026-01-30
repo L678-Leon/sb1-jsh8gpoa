@@ -29,6 +29,18 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "Chemusian Tea Factory Weighbridge",
         description: "Installed weighbridge at Chemusian Tea Factory for accurate tea leaf weighing and quality control during collection and processing.",
         image: "/images/teafactory.jpg"
+      },
+      {
+        id: "tea-2",
+        title: "Gatitu Tea Factory Weighbridge Service",
+        description: "Weighbridge service, maintenance and calibration at Gatitu Tea Factory (Nyayo Tea Zone) for ensuring accurate tea leaf weighing and quality control.",
+        image: "/images/b1_image_2026-01-26_at_09.24.39.jpeg",
+        images: [
+          "/images/b1_image_2026-01-26_at_09.24.39.jpeg",
+          "/images/b2_image_2026-01-26_at_09.24.40.jpeg",
+          "/images/b3_image_2026-01-26_at_09.24.40.jpeg",
+          "/images/b4_image_2026-01-26_at_09.24.40.jpeg"
+        ]
       }
     ]
   },
@@ -68,6 +80,19 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "Total Petrol Station",
         description: "Digital platform scale installation at Total Petrol Station for weighing gas cylinders and monitoring fuel distribution operations.",
         image: "/images/oil and gas.jpg"
+      },
+      {
+        id: "oilgas-2",
+        title: "Syrensis Ltd Weighbridge Service",
+        description: "Weighbridge service, maintenance and calibration at Syrensis Ltd in Industrial Area, Nairobi for petroleum distribution and logistics operations.",
+        image: "/images/c1_image_2026-01-26_at_09.26.20.jpeg",
+        images: [
+          "/images/c1_image_2026-01-26_at_09.26.20.jpeg",
+          "/images/c2_image_2026-01-26_at_09.26.21.jpeg",
+          "/images/c3_image_2026-01-26_at_09.26.21.jpeg",
+          "/images/c4_image_2026-01-26_at_09.26.22.jpeg",
+          "/images/c5_image_2026-01-26_at_09.26.22.jpeg"
+        ]
       }
     ]
   },
@@ -150,6 +175,17 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "UNGA Ltd Milling",
         description: "Installed weighbridge at UNGA Ltd for grain intake, inventory management, and flour production monitoring.",
         image: "/images/weighbridge uasin project.jpg"
+      },
+      {
+        id: "milling-2",
+        title: "Lesiolo Grains (Cargill) Weighbridge Service",
+        description: "Weighbridge service, maintenance, calibration and stamping at Lesiolo Grains (Cargill) in Nakuru for grain processing and logistics operations.",
+        image: "/images/d1_image_2026-01-29_at_12.08.49.jpeg",
+        images: [
+          "/images/d1_image_2026-01-29_at_12.08.49.jpeg",
+          "/images/d2_image_2026-01-29_at_12.08.50.jpeg",
+          "/images/d3_image_2026-01-29_at_12.08.50.jpeg"
+        ]
       }
     ]
   },
@@ -163,6 +199,21 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "Commercial Weighbridge - Moiben",
         description: "Installation of a commercial weighbridge at Moiben, Uasin Gishu County for general cargo and goods weighing.",
         image: "/images/commercial.jpg"
+      },
+      {
+        id: "commercial-2",
+        title: "Laikipia County Cess Weighbridge Service",
+        description: "Weighbridge service, maintenance and calibration at Laikipia County Cess weighbridge for commercial vehicle weighing and compliance verification.",
+        image: "/images/zx_image_2026-01-26_at_09.23.25.jpeg",
+        images: [
+          "/images/zx_image_2026-01-26_at_09.23.25.jpeg",
+          "/images/zx2image_2026-01-26_at_09.23.25.jpeg",
+          "/images/zx3_image_2026-01-26_at_09.23.26.jpeg",
+          "/images/zx4_image_2026-01-26_at_09.23.27.jpeg",
+          "/images/zx5_image_2026-01-26_at_09.23.27.jpeg",
+          "/images/zx6_image_2026-01-26_at_09.23.27.jpeg",
+          "/images/zx7_image_2026-01-26_at_09.23.28.jpeg"
+        ]
       }
     ]
   },
@@ -176,6 +227,29 @@ const projectCategories: { [key: string]: ProjectCategory } = {
         title: "Private Weighbridge - Komool Farm",
         description: "Private weighbridge installed at Komool Farm in Uasin Gishu County for farm operations and produce weighing.",
         image: "/images/private weighbridge.jpg"
+      }
+    ]
+  },
+  cargohandling: {
+    name: "Cargo Handling/Hauling",
+    image: "/images/xv1_image_2026-01-26_at_09.19.34.jpeg",
+    description: "Cargo handling and logistics weighing solutions",
+    projects: [
+      {
+        id: "cargo-1",
+        title: "AFS Cargo Section Mini Weighbridge",
+        description: "Mini weighbridge installation, maintenance and calibration at AFS Cargo section for efficient cargo weighing and logistics management.",
+        image: "/images/xv1_image_2026-01-26_at_09.19.34.jpeg",
+        images: [
+          "/images/xv1_image_2026-01-26_at_09.19.34.jpeg",
+          "/images/xv2_image_2026-01-26_at_09.19.35.jpeg",
+          "/images/xv3_image_2026-01-26_at_09.19.39.jpeg",
+          "/images/xv4_image_2026-01-26_at_09.19.41.jpeg",
+          "/images/xv5_image_2026-01-26_at_09.21.05.jpeg",
+          "/images/xv6_image_2026-01-26_at_09.21.20.jpeg",
+          "/images/xv7_image_2026-01-26_at_09.21.19.jpeg",
+          "/images/xv8_image_2026-01-26_at_09.21.21.jpeg"
+        ]
       }
     ]
   }
