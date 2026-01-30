@@ -115,6 +115,14 @@ const solutionCategories = generateSolutionCategories();
 const newsItems = [
   {
     id: 1,
+    title: "ZEMIC Representatives Visit Nairobi Office",
+    description: "Visit by representatives from ZEMIC to our Nairobi office to talk about expanding reach of ZEMIC products in the Kenyan market, January 2026",
+    date: "2026-01-23",
+    category: "Partnership",
+    image: "/images/grp_photo_2026-01-23_at_18.31.58.jpeg"
+  },
+  {
+    id: 2,
     title: "Saficado Weighbridge Installation - Juja",
     description: "Weighbridge installation at Saficado, Juja, Nairobi Kenya for food processing operations, inventory management, and quality control weighing.",
     date: "2026-01-12",
@@ -122,7 +130,7 @@ const newsItems = [
     image: "/images/saf_1_2026-01-12_at_11.39.51.jpeg"
   },
   {
-    id: 2,
+    id: 3,
     title: "Kenchic Weighbridge Service & Maintenance",
     description: "Weighbridge service, maintenance and calibration at Kenchic for ensuring accurate weighing operations and compliance with industry standards.",
     date: "2026-01-15",
@@ -130,7 +138,7 @@ const newsItems = [
     image: "/images/save_1_image_2026-01-15_at_11.26.07.jpeg"
   },
   {
-    id: 3,
+    id: 4,
     title: "EAGC Kenya Members Breakfast Meeting",
     description: "Scales & Software representative contributing during EAGC Kenya Members Breakfast meeting at Swiss-Bel Hotel in Nairobi 1st Sep 2025",
     date: "2025-09-26",
@@ -138,7 +146,7 @@ const newsItems = [
     image: "/images/WhatsApp Image 2025-09-12 at 15.27.09_339150d4  news 1.jpg"
   },
   {
-    id: 4,
+    id: 5,
     title: "Farmers Agricultural Open Day",
     description: "Scales and Software exhibition stand @ Pwani University during the farmers agricultural open day on 7th Aug. 2025",
     date: "2025-09-26",
@@ -146,7 +154,7 @@ const newsItems = [
     image: "/images/WhatsApp Image 2025-09-12 at 15.34.16_30bda9ab news 2.jpg"
   },
   {
-    id: 5,
+    id: 6,
     title: "Weighbridge Installation",
     description: "Ongoing weighbridge installation by skilled technical team from Scales and Software @ the soon to be launched Soit Sugar Factory 2025",
     date: "2025-09-26",
