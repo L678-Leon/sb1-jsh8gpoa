@@ -186,6 +186,20 @@ const projectCategories: { [key: string]: ProjectCategory } = {
           "/images/d2_image_2026-01-29_at_12.08.50.jpeg",
           "/images/d3_image_2026-01-29_at_12.08.50.jpeg"
         ]
+      },
+      {
+        id: "milling-3",
+        title: "Weighbridge service, maintenance and calibration at UNGA LTD",
+        description: "Comprehensive weighbridge service, maintenance and calibration at UNGA LTD for ensuring accurate grain weighing operations and regulatory compliance.",
+        image: "/images/h1_image_2026-02-05_at_19.48.33.jpeg",
+        images: [
+          "/images/h1_image_2026-02-05_at_19.48.33.jpeg",
+          "/images/h2_image_2026-02-05_at_19.48.37.jpeg",
+          "/images/h3_image_2026-02-05_at_19.48.38.jpeg",
+          "/images/h4_image_2026-02-05_at_19.48.42.jpeg",
+          "/images/h5_image_2026-02-05_at_19.48.43.jpeg",
+          "/images/h6_image_2026-02-05_at_19.48.43.jpeg"
+        ]
       }
     ]
   },
@@ -213,6 +227,19 @@ const projectCategories: { [key: string]: ProjectCategory } = {
           "/images/zx5_image_2026-01-26_at_09.23.27.jpeg",
           "/images/zx6_image_2026-01-26_at_09.23.27.jpeg",
           "/images/zx7_image_2026-01-26_at_09.23.28.jpeg"
+        ]
+      },
+      {
+        id: "commercial-3",
+        title: "Affordable housing weighbridge service and calibration, Bahati, Nakuru County",
+        description: "Professional weighbridge service and calibration at affordable housing project in Bahati, Nakuru County for construction material weighing and quality control operations.",
+        image: "/images/k1_image_2026-01-30_at_10.13.49.jpeg",
+        images: [
+          "/images/k1_image_2026-01-30_at_10.13.49.jpeg",
+          "/images/k2_image_2026-01-30_at_10.13.49.jpeg",
+          "/images/k3_image_2026-01-30_at_10.13.50.jpeg",
+          "/images/k4_image_2026-01-30_at_10.13.51.jpeg",
+          "/images/k5_image_2026-01-30_at_10.13.51.jpeg"
         ]
       }
     ]
